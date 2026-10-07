@@ -1,0 +1,54 @@
+﻿
+=== q=8, d=6: |G|=32768, |H|=64  [exact CRT (primes (2147483497, 2147483489)) agrees]  (0.6s)
+  Var_G/q^(d+1) = 4.748336 (KR 4);  Var_H/q^(d+1) = 79.093506;  ratio = 16.657099
+  Psi on H: min 2093888, max 2132992, mean q^(d+1) = 2097152
+  Var_H/q^7 / q^2 = 1.2358;   Var_H/q^7 / q^4 = 0.019310
+  Legendre deviations (phi = Psi - q^7), 64 classes: 5 most negative [-3264, -3264, -3264, -3264, -3264], 5 most positive [35840, 35840, 35840, 35840, 35840]
+  share of sum_H phi^2 carried by the identity class: 5600/46281 = 0.1210
+  distinct Legendre deviations: 3; by |phi| (value, count, phi/q^5, share of sum_H phi^2):
+              35840  x8     phi/q^5 = +1.0938   share 0.9680
+              -3264  x28    phi/q^5 = -0.0996   share 0.0281
+               1216  x28    phi/q^5 = +0.0371   share 0.0039
+  quadratic characters (odd power sums [1, 3, 5]): 1 + sum rho = 16.657099 (ratio 16.657099)
+     support (1,):    7 chars, sum rho = +1.0291, min +0.1470, max +0.1470
+     support (1, 3):   49 chars, sum rho = +1.2110, min +0.0212, max +0.0294
+     support (1, 3, 5):  343 chars, sum rho = +9.1319, min -0.0188, max +0.0509
+     support (1, 5):   49 chars, sum rho = +2.7521, min +0.0336, max +0.0731
+     support (3,):    7 chars, sum rho = +0.2061, min +0.0294, max +0.0294
+     support (3, 5):   49 chars, sum rho = +1.0920, min +0.0143, max +0.0395
+     support (5,):    7 chars, sum rho = +0.2349, min +0.0336, max +0.0336
+
+=== q=16, d=6: |G|=1048576, |H|=256  [exact CRT (primes (2147483497, 2147483489)) agrees]  (1.6s)
+  Var_G/q^(d+1) = 4.351375 (KR 4);  Var_H/q^(d+1) = 225.505600;  ratio = 51.823992
+  Psi on H: min 267452416, max 268447488, mean q^(d+1) = 268435456
+  Var_H/q^7 / q^2 = 0.8809;   Var_H/q^7 / q^4 = 0.003441
+  Legendre deviations (phi = Psi - q^7), 256 classes: 5 most negative [-983040, -983040, -983040, -983040, -983040], 5 most positive [12032, 12032, 12032, 12032, 12032]
+  share of sum_H phi^2 carried by the identity class: 61440/985249 = 0.0624
+  distinct Legendre deviations: 3; by |phi| (value, count, phi/q^5, share of sum_H phi^2):
+            -983040  x16    phi/q^5 = -0.9375   share 0.9978
+             -12032  x120   phi/q^5 = -0.0115   share 0.0011
+              12032  x120   phi/q^5 = +0.0115   share 0.0011
+  quadratic characters (odd power sums [1, 3, 5]): 1 + sum rho = 51.823992 (ratio 51.823992)
+     support (1,):   15 chars, sum rho = +1.2108, min +0.0807, max +0.0807
+     support (1, 3):  225 chars, sum rho = +1.6589, min +0.0053, max +0.0156
+     support (1, 3, 5): 3375 chars, sum rho = +41.6581, min +0.0088, max +0.0245
+     support (1, 5):  225 chars, sum rho = +3.2062, min +0.0081, max +0.0150
+     support (3,):   15 chars, sum rho = +0.1307, min +0.0053, max +0.0156
+     support (3, 5):  225 chars, sum rho = +2.7359, min +0.0100, max +0.0245
+     support (5,):   15 chars, sum rho = +0.2233, min +0.0145, max +0.0150
+
+=== q=32, d=6: |G|=33554432, |H|=1024  [float only, max rounding deviation 0.0e+00]  (27.3s)
+  Var_G/q^(d+1) = 4.208574 (KR 4);  Var_H/q^(d+1) = 1100.884360;  ratio = 261.581348
+  Psi on H: min 34358922240, max 34394275840, mean q^(d+1) = 34359738368
+  Var_H/q^7 / q^2 = 1.0751;   Var_H/q^7 / q^4 = 0.001050
+  Legendre deviations (phi = Psi - q^7), 1024 classes: 5 most negative [-816128, -816128, -816128, -816128, -816128], 5 most positive [34537472, 34537472, 34537472, 34537472, 34537472]
+  share of sum_H phi^2 carried by the identity class: 1146752/37237449 = 0.0308
+  distinct Legendre deviations: 3; by |phi| (value, count, phi/q^5, share of sum_H phi^2):
+           34537472  x32    phi/q^5 = +1.0293   share 0.9855
+            -816128  x496   phi/q^5 = -0.0243   share 0.0085
+             685056  x496   phi/q^5 = +0.0204   share 0.0060
+
+summary: q d Var_G/q^(d+1) Var_H/q^(d+1) ratio
+     8 6 4.748336 79.0935 16.6571
+    16 6 4.351375 225.5056 51.8240
+    32 6 4.208574 1100.8844 261.5813

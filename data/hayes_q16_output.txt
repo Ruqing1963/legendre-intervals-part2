@@ -1,0 +1,54 @@
+﻿
+=== q=16, d=4: |G|=4096, |H|=16  [exact CRT (primes (2147483629, 2147483549)) agrees]  (1.1s)
+  Var_G/q^(d+1) = 2.812500 (KR 2);  Var_H/q^(d+1) = 240.000000;  ratio = 85.333333
+  Psi on H: min 987136, max 1052672, mean q^(d+1) = 1048576
+  q(q-1) = 240: Var_H/q^5 == q(q-1): True;  3-3/q: True;  q^2/3: True
+  closed formula vs FFT, all 4096 classes: IDENTICAL  (max |diff| = 0)
+
+=== q=32, d=4: |G|=32768, |H|=32  [exact CRT (primes (2147483629, 2147483549)) agrees]  (0.1s)
+  Var_G/q^(d+1) = 2.906250 (KR 2);  Var_H/q^(d+1) = 992.000000;  ratio = 341.333333
+  Psi on H: min 32538624, max 33521664, mean q^(d+1) = 33554432
+  q(q-1) = 992: Var_H/q^5 == q(q-1): True;  3-3/q: True;  q^2/3: True
+  closed formula vs FFT, all 32768 classes: IDENTICAL  (max |diff| = 0)
+
+=== q=64, d=4: |G|=262144, |H|=64  [exact CRT (primes (2147483629, 2147483549)) agrees]  (0.3s)
+  Var_G/q^(d+1) = 2.953125 (KR 2);  Var_H/q^(d+1) = 4032.000000;  ratio = 1365.333333
+  Psi on H: min 1057226752, max 1074003968, mean q^(d+1) = 1073741824
+  q(q-1) = 4032: Var_H/q^5 == q(q-1): True;  3-3/q: True;  q^2/3: True
+  closed formula vs FFT, all 262144 classes: IDENTICAL  (max |diff| = 0)
+
+=== q=128, d=4: |G|=2097152, |H|=128  [float only, max rounding deviation 0.0e+00]  (1.1s)
+  Var_G/q^(d+1) = 2.976562 (KR 2);  Var_H/q^(d+1) = 16256.000000;  ratio = 5461.333333
+  Psi on H: min 34093400064, max 34357641216, mean q^(d+1) = 34359738368
+  q(q-1) = 16256: Var_H/q^5 == q(q-1): True;  3-3/q: True;  q^2/3: True
+  closed formula vs FFT, all 2097152 classes: IDENTICAL  (max |diff| = 0)
+
+=== q=16, d=6: |G|=1048576, |H|=256  [exact CRT (primes (2147483497, 2147483489)) agrees]  (1.6s)
+  Var_G/q^(d+1) = 4.351375 (KR 4);  Var_H/q^(d+1) = 225.505600;  ratio = 51.823992
+  Psi on H: min 267452416, max 268447488, mean q^(d+1) = 268435456
+  Var_H/q^7 / q^2 = 0.8809;   Var_H/q^7 / q^4 = 0.003441
+  Legendre deviations (phi = Psi - q^7), 256 classes: 5 most negative [-983040, -983040, -983040, -983040, -983040], 5 most positive [12032, 12032, 12032, 12032, 12032]
+  share of sum_H phi^2 carried by the identity class: 61440/985249 = 0.0624
+  quadratic characters (odd power sums [1, 3, 5]): 1 + sum rho = 51.823992 (ratio 51.823992)
+     support (1,):   15 chars, sum rho = +1.2108, min +0.0807, max +0.0807
+     support (1, 3):  225 chars, sum rho = +1.6589, min +0.0053, max +0.0156
+     support (1, 3, 5): 3375 chars, sum rho = +41.6581, min +0.0088, max +0.0245
+     support (1, 5):  225 chars, sum rho = +3.2062, min +0.0081, max +0.0150
+     support (3,):   15 chars, sum rho = +0.1307, min +0.0053, max +0.0156
+     support (3, 5):  225 chars, sum rho = +2.7359, min +0.0100, max +0.0245
+     support (5,):   15 chars, sum rho = +0.2233, min +0.0145, max +0.0150
+
+=== q=32, d=6: |G|=33554432, |H|=1024  [float only, max rounding deviation 0.0e+00]  (28.3s)
+  Var_G/q^(d+1) = 4.208574 (KR 4);  Var_H/q^(d+1) = 1100.884360;  ratio = 261.581348
+  Psi on H: min 34358922240, max 34394275840, mean q^(d+1) = 34359738368
+  Var_H/q^7 / q^2 = 1.0751;   Var_H/q^7 / q^4 = 0.001050
+  Legendre deviations (phi = Psi - q^7), 1024 classes: 5 most negative [-816128, -816128, -816128, -816128, -816128], 5 most positive [34537472, 34537472, 34537472, 34537472, 34537472]
+  share of sum_H phi^2 carried by the identity class: 1146752/37237449 = 0.0308
+
+summary: q d Var_G/q^(d+1) Var_H/q^(d+1) ratio
+    16 4 2.812500 240.0000 85.3333
+    32 4 2.906250 992.0000 341.3333
+    64 4 2.953125 4032.0000 1365.3333
+   128 4 2.976562 16256.0000 5461.3333
+    16 6 4.351375 225.5056 51.8240
+    32 6 4.208574 1100.8844 261.5813

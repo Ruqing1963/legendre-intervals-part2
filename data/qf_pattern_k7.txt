@@ -1,0 +1,15 @@
+﻿
+=== k=7, q=128, N=84 bits  [223.4s]
+  A6 = 9223376400541548544;  q^9 + (-1)^(k+1)(q-1)q^5 = 9223376400541548544: True
+  X  = 4432406249472;  (-1)^(k+1) q^6 + q^5 = 4432406249472: True
+
+k=7, q=128: W is a function of j; #{j: W!=0} = 63 (= (q-2)/2 = 63)
+   exponents m with {j: W!=0} = {j: Tr(j^m) = c}: []
+   Tr(j+1/j)=0 set equals J+: False;  Tr=1 set equals J+: False
+   Tr(1/j)=0 set equals J+: False;  Tr=1 set equals J+: False
+   Tr(j^3)=0 set equals J+: False;  Tr=1 set equals J+: False
+   Tr(j^5)=0 set equals J+: False;  Tr=1 set equals J+: False
+   Tr(j^15)=0 set equals J+: False;  Tr=1 set equals J+: False
+   Tr(j^(1/3))=0 set equals J+: False;  Tr=1 set equals J+: False
+   Tr(j^(1/5))=0 set equals J+: False;  Tr=1 set equals J+: False
+   Tr(j^(1/15))=0 set equals J+: False;  Tr=1 set equals J+: False

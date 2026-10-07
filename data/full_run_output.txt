@@ -1,0 +1,431 @@
+﻿
+=== q=8, d=4  (n=8, l=3, field GF(2^24))  [24.9s]
+  |G|=512  |H|=8  mean=q^(d+1)=32768  Psi in [29184, 33792]
+  Var_G/q^(d+1) = 21/8 = 2.625000   (KR limit 2)
+  Var_H/q^(d+1) = 56 = 56.000000   (about the global mean)
+  Var_H own-mean/q^(d+1) = 63/2 = 31.500000,  mean_H/q^(d+1) = 249/256
+  ratio Var_H/Var_G = 64/3 = 21.333333;   1 + sum rho = 64/3  [identity OK]
+  q(q-1) = 56  ->  Var_H/q^5 == q(q-1): True
+  q^2/3  = 64/3  ->  ratio == q^2/3: True
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0, 0):    29184      -3584
+     (0, 1, 0):    32256       -512
+     (0, 2, 0):    32256       -512
+     (0, 3, 0):    32256       -512
+     (0, 4, 0):    32256       -512
+     (0, 5, 0):    32256       -512
+     (0, 6, 0):    32256       -512
+     (0, 7, 0):    32256       -512
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3]:
+     support (1,):   7 chars, sum rho = 7 = +7.0000, values [1.0]
+     support (1, 3):  49 chars, sum rho = 35/3 = +11.6667, values [0.23809523809523808]
+     support (3,):   7 chars, sum rho = 5/3 = +1.6667, values [0.23809523809523808]
+
+  --- d=4 slice structure for q=8: F = h^2 + t b^2, b = b1 t + b0; a3 = b1^2, a1 = b0^2 ---
+   c=idx0: b=0 slice irreducibles=0; b!=0 slices: total irreducibles=3584 over 63 slices, distinct per-slice counts [0, 64]
+   c=idx1: b=0 slice irreducibles=0; b!=0 slices: total irreducibles=3968 over 63 slices, distinct per-slice counts [48, 52, 64, 68]
+   c=idx2: b=0 slice irreducibles=0; b!=0 slices: total irreducibles=3968 over 63 slices, distinct per-slice counts [48, 52, 64, 68]
+   c=idx3: b=0 slice irreducibles=0; b!=0 slices: total irreducibles=3968 over 63 slices, distinct per-slice counts [48, 52, 64, 68]
+   c=idx4: b=0 slice irreducibles=0; b!=0 slices: total irreducibles=3968 over 63 slices, distinct per-slice counts [48, 52, 64, 68]
+   c=idx5: b=0 slice irreducibles=0; b!=0 slices: total irreducibles=3968 over 63 slices, distinct per-slice counts [48, 52, 64, 68]
+   c=idx6: b=0 slice irreducibles=0; b!=0 slices: total irreducibles=3968 over 63 slices, distinct per-slice counts [48, 52, 64, 68]
+   c=idx7: b=0 slice irreducibles=0; b!=0 slices: total irreducibles=3968 over 63 slices, distinct per-slice counts [48, 52, 64, 68]
+   c=idx0: Psi=29184, 8*N_irr=28672, prime-power part E=512 (q^3=512)
+   c=idx1: Psi=32256, 8*N_irr=31744, prime-power part E=512 (q^3=512)
+   c=idx2: Psi=32256, 8*N_irr=31744, prime-power part E=512 (q^3=512)
+   c=idx3: Psi=32256, 8*N_irr=31744, prime-power part E=512 (q^3=512)
+   c=idx4: Psi=32256, 8*N_irr=31744, prime-power part E=512 (q^3=512)
+   c=idx5: Psi=32256, 8*N_irr=31744, prime-power part E=512 (q^3=512)
+   c=idx6: Psi=32256, 8*N_irr=31744, prime-power part E=512 (q^3=512)
+   c=idx7: Psi=32256, 8*N_irr=31744, prime-power part E=512 (q^3=512)
+
+  --- d=4 exponential-sum reduction for q=8 (field GF(2^24)) ---
+   A = sum_c Psi(0,c,0) = #{alpha: Tr a=0, Tr a^3=0} = 254976   (q^6 = 262144, A - q^6 = -7168)
+   Psi(id) = #{alpha: e1=e2=e3=0} = 29184   (q^5 - q^4 + q^3 = 29184)
+   Psi(0,c,0) for c=idx1: 32256  = q^5 + (-512)   [q^3 = 512]
+   Psi(0,c,0) for c=idx2: 32256  = q^5 + (-512)   [q^3 = 512]
+   Psi(0,c,0) for c=idx3: 32256  = q^5 + (-512)   [q^3 = 512]
+   Psi(0,c,0) for c=idx4: 32256  = q^5 + (-512)   [q^3 = 512]
+   Psi(0,c,0) for c=idx5: 32256  = q^5 + (-512)   [q^3 = 512]
+   Psi(0,c,0) for c=idx6: 32256  = q^5 + (-512)   [q^3 = 512]
+   Psi(0,c,0) for c=idx7: 32256  = q^5 + (-512)   [q^3 = 512]
+   classes with c1 != 0: 448 classes, max |Psi - q^5| = 0  (theorem T1 <=> 0)
+   W(nu) = sum_beta (-1)^Tr(nu(b^(q+2)+b^(2q+1))), nu in F_q^*: [-65536, -65536, -65536, -65536, -65536, -65536, -65536]
+   check A = q^6 + q^-2 sum_nu W(nu): 254976 == 254976: True
+   S(l1,l3) multiset for each l3 != 0: [[-8192, -8192, -8192, -8192, -8192, -8192, -8192, -8192], [-8192, -8192, -8192, -8192, -8192, -8192, -8192, -8192], [-8192, -8192, -8192, -8192, -8192, -8192, -8192, -8192], [-8192, -8192, -8192, -8192, -8192, -8192, -8192, -8192], [-8192, -8192, -8192, -8192, -8192, -8192, -8192, -8192], [-8192, -8192, -8192, -8192, -8192, -8192, -8192, -8192], [-8192, -8192, -8192, -8192, -8192, -8192, -8192, -8192]]
+   check sum_{l1} S(l1,l3) == W(l3): True
+   sum_G phi^2 = 44040192 = 3 q^7 (q-1)? True;   sum_H phi^2 = 14680064 = q^7 (q-1)? True
+   k odd => every eps with lambda_3 != 0 should have rho = (q-3)/(3(q-1)) = 5/21
+   observed: [Fraction(5, 21)]  (56 characters)
+
+=== q=2, d=3  (n=6, l=2, field GF(2^6))  [0.0s]
+  |G|=4  |H|=2  mean=q^(d+1)=16  Psi in [12, 20]
+  Var_G/q^(d+1) = 1/2 = 0.500000   (KR limit 1)
+  Var_H/q^(d+1) = 0 = 0.000000   (about the global mean)
+  Var_H own-mean/q^(d+1) = 0 = 0.000000,  mean_H/q^(d+1) = 1
+  ratio Var_H/Var_G = 0 = 0.000000;   1 + sum rho = 0  [identity OK]
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0):       16         +0
+     (0, 1):       16         +0
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1]:
+     support (1,):   1 chars, sum rho = -1 = -1.0000, values [-1.0]
+
+=== q=2, d=5  (n=10, l=4, field GF(2^10))  [0.0s]
+  |G|=16  |H|=4  mean=q^(d+1)=64  Psi in [50, 80]
+  Var_G/q^(d+1) = 75/64 = 1.171875   (KR limit 3)
+  Var_H/q^(d+1) = 5/4 = 1.250000   (about the global mean)
+  Var_H own-mean/q^(d+1) = 1 = 1.000000,  mean_H/q^(d+1) = 17/16
+  ratio Var_H/Var_G = 16/15 = 1.066667;   1 + sum rho = 16/15  [identity OK]
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0, 0, 0):       76        +12
+     (0, 0, 0, 1):       60         -4
+     (0, 1, 0, 0):       76        +12
+     (0, 1, 0, 1):       60         -4
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3]:
+     support (1,):   1 chars, sum rho = 23/75 = +0.3067, values [0.30666666666666664]
+     support (1, 3):   1 chars, sum rho = -9/25 = -0.3600, values [-0.36]
+     support (3,):   1 chars, sum rho = 3/25 = +0.1200, values [0.12]
+
+=== q=2, d=6  (n=12, l=5, field GF(2^12))  [0.0s]
+  |G|=32  |H|=4  mean=q^(d+1)=128  Psi in [48, 168]
+  Var_G/q^(d+1) = 737/128 = 5.757812   (KR limit 4)
+  Var_H/q^(d+1) = 249/16 = 15.562500   (about the global mean)
+  Var_H own-mean/q^(d+1) = 241/16 = 15.062500,  mean_H/q^(d+1) = 17/16
+  ratio Var_H/Var_G = 1992/737 = 2.702849;   1 + sum rho = 1992/737  [identity OK]
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0, 0, 0, 0):      160        +32
+     (0, 0, 0, 1, 0):      160        +32
+     (0, 1, 0, 0, 0):      164        +36
+     (0, 1, 0, 1, 0):       60        -68
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3, 5]:
+     support (1,):   1 chars, sum rho = 337/737 = +0.4573, values [0.45725915875169604]
+     support (1, 3):   1 chars, sum rho = -13/67 = -0.1940, values [-0.19402985074626866]
+     support (1, 3, 5):   1 chars, sum rho = 481/737 = +0.6526, values [0.6526458616010855]
+     support (1, 5):   1 chars, sum rho = 193/737 = +0.2619, values [0.2618724559023066]
+     support (3,):   1 chars, sum rho = 97/737 = +0.1316, values [0.13161465400271372]
+     support (3, 5):   1 chars, sum rho = 337/737 = +0.4573, values [0.45725915875169604]
+     support (5,):   1 chars, sum rho = -47/737 = -0.0638, values [-0.06377204884667571]
+
+=== q=2, d=7  (n=14, l=6, field GF(2^14))  [0.0s]
+  |G|=64  |H|=8  mean=q^(d+1)=256  Psi in [196, 336]
+  Var_G/q^(d+1) = 1989/512 = 3.884766   (KR limit 5)
+  Var_H/q^(d+1) = 247/32 = 7.718750   (about the global mean)
+  Var_H own-mean/q^(d+1) = 229/32 = 7.156250,  mean_H/q^(d+1) = 67/64
+  ratio Var_H/Var_G = 304/153 = 1.986928;   1 + sum rho = 304/153  [identity OK]
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0, 0, 0, 0, 0):      288        +32
+     (0, 0, 0, 0, 0, 1):      280        +24
+     (0, 0, 0, 1, 0, 0):      196        -60
+     (0, 0, 0, 1, 0, 1):      308        +52
+     (0, 1, 0, 0, 0, 0):      196        -60
+     (0, 1, 0, 0, 0, 1):      308        +52
+     (0, 1, 0, 1, 0, 0):      280        +24
+     (0, 1, 0, 1, 0, 1):      288        +32
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3, 5]:
+     support (1,):   1 chars, sum rho = -95/1989 = -0.0478, values [-0.04776269482151835]
+     support (1, 3):   1 chars, sum rho = 101/1989 = +0.0508, values [0.05077928607340372]
+     support (1, 3, 5):   1 chars, sum rho = 163/221 = +0.7376, values [0.7375565610859729]
+     support (1, 5):   1 chars, sum rho = 487/1989 = +0.2448, values [0.24484665661136248]
+     support (3,):   1 chars, sum rho = 193/1989 = +0.0970, values [0.09703368526897939]
+     support (3, 5):   1 chars, sum rho = -193/1989 = -0.0970, values [-0.09703368526897939]
+     support (5,):   1 chars, sum rho = 1/663 = +0.0015, values [0.0015082956259426848]
+
+=== q=2, d=8  (n=16, l=7, field GF(2^16))  [0.1s]
+  |G|=128  |H|=8  mean=q^(d+1)=512  Psi in [384, 640]
+  Var_G/q^(d+1) = 2499/512 = 4.880859   (KR limit 6)
+  Var_H/q^(d+1) = 51/32 = 1.593750   (about the global mean)
+  Var_H own-mean/q^(d+1) = 35/32 = 1.093750,  mean_H/q^(d+1) = 31/32
+  ratio Var_H/Var_G = 16/49 = 0.326531;   1 + sum rho = 16/49  [identity OK]
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0, 0, 0, 0, 0, 0):      472        -40
+     (0, 0, 0, 0, 0, 1, 0):      544        +32
+     (0, 0, 0, 1, 0, 0, 0):      472        -40
+     (0, 0, 0, 1, 0, 1, 0):      496        -16
+     (0, 1, 0, 0, 0, 0, 0):      480        -32
+     (0, 1, 0, 0, 0, 1, 0):      512         +0
+     (0, 1, 0, 1, 0, 0, 0):      512         +0
+     (0, 1, 0, 1, 0, 1, 0):      480        -32
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3, 5, 7]:
+     support (1,):   1 chars, sum rho = -701/2499 = -0.2805, values [-0.2805122048819528]
+     support (1, 3):   1 chars, sum rho = 37/357 = +0.1036, values [0.10364145658263306]
+     support (1, 3, 5):   1 chars, sum rho = -13/51 = -0.2549, values [-0.2549019607843137]
+     support (1, 3, 5, 7):   1 chars, sum rho = -29/2499 = -0.0116, values [-0.011604641856742696]
+     support (1, 3, 7):   1 chars, sum rho = -157/2499 = -0.0628, values [-0.06282513005202081]
+     support (1, 5):   1 chars, sum rho = 101/357 = +0.2829, values [0.28291316526610644]
+     support (1, 5, 7):   1 chars, sum rho = -13/147 = -0.0884, values [-0.08843537414965986]
+     support (1, 7):   1 chars, sum rho = -31/833 = -0.0372, values [-0.03721488595438175]
+     support (3,):   1 chars, sum rho = -127/833 = -0.1525, values [-0.1524609843937575]
+     support (3, 5):   1 chars, sum rho = 257/833 = +0.3085, values [0.3085234093637455]
+     support (3, 5, 7):   1 chars, sum rho = -157/2499 = -0.0628, values [-0.06282513005202081]
+     support (3, 7):   1 chars, sum rho = -29/2499 = -0.0116, values [-0.011604641856742696]
+     support (5,):   1 chars, sum rho = -701/2499 = -0.2805, values [-0.2805122048819528]
+     support (5, 7):   1 chars, sum rho = -31/833 = -0.0372, values [-0.03721488595438175]
+     support (7,):   1 chars, sum rho = -13/147 = -0.0884, values [-0.08843537414965986]
+
+=== q=2, d=9  (n=18, l=8, field GF(2^18))  [0.6s]
+  |G|=256  |H|=16  mean=q^(d+1)=1024  Psi in [738, 1314]
+  Var_G/q^(d+1) = 116321/16384 = 7.099670   (KR limit 7)
+  Var_H/q^(d+1) = 5909/1024 = 5.770508   (about the global mean)
+  Var_H own-mean/q^(d+1) = 5509/1024 = 5.379883,  mean_H/q^(d+1) = 251/256
+  ratio Var_H/Var_G = 94544/116321 = 0.812785;   1 + sum rho = 94544/116321  [identity OK]
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0, 0, 0, 0, 0, 0, 0):     1099        +75
+     (0, 0, 0, 0, 0, 0, 0, 1):      981        -43
+     (0, 0, 0, 0, 0, 1, 0, 0):     1053        +29
+     (0, 0, 0, 0, 0, 1, 0, 1):      891       -133
+     (0, 0, 0, 1, 0, 0, 0, 0):     1071        +47
+     (0, 0, 0, 1, 0, 0, 0, 1):      945        -79
+     (0, 0, 0, 1, 0, 1, 0, 0):     1071        +47
+     (0, 0, 0, 1, 0, 1, 0, 1):      921       -103
+     (0, 1, 0, 0, 0, 0, 0, 0):     1099        +75
+     (0, 1, 0, 0, 0, 0, 0, 1):      981        -43
+     (0, 1, 0, 0, 0, 1, 0, 0):     1053        +29
+     (0, 1, 0, 0, 0, 1, 0, 1):      891       -133
+     (0, 1, 0, 1, 0, 0, 0, 0):      921       -103
+     (0, 1, 0, 1, 0, 0, 0, 1):     1071        +47
+     (0, 1, 0, 1, 0, 1, 0, 0):      945        -79
+     (0, 1, 0, 1, 0, 1, 0, 1):     1071        +47
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3, 5, 7]:
+     support (1,):   1 chars, sum rho = -13283/116321 = -0.1142, values [-0.11419262214045615]
+     support (1, 3):   1 chars, sum rho = 2917/116321 = +0.0251, values [0.02507715717712193]
+     support (1, 3, 5):   1 chars, sum rho = 36997/116321 = +0.3181, values [0.31805950774150843]
+     support (1, 3, 5, 7):   1 chars, sum rho = 18997/116321 = +0.1633, values [0.16331530849975498]
+     support (1, 3, 7):   1 chars, sum rho = -25391/116321 = -0.2183, values [-0.21828388683040895]
+     support (1, 5):   1 chars, sum rho = 4357/116321 = +0.0375, values [0.03745669311646221]
+     support (1, 5, 7):   1 chars, sum rho = 4645/116321 = +0.0399, values [0.03993260030433026]
+     support (1, 7):   1 chars, sum rho = -25463/116321 = -0.2189, values [-0.21890286362737596]
+     support (3,):   1 chars, sum rho = 12673/116321 = +0.1089, values [0.10894851316615228]
+     support (3, 5):   1 chars, sum rho = -15551/116321 = -0.1337, values [-0.13369039124491708]
+     support (3, 5, 7):   1 chars, sum rho = -25391/116321 = -0.2183, values [-0.21828388683040895]
+     support (3, 7):   1 chars, sum rho = 18997/116321 = +0.1633, values [0.16331530849975498]
+     support (5,):   1 chars, sum rho = 4537/116321 = +0.0390, values [0.03900413510887974]
+     support (5, 7):   1 chars, sum rho = -25463/116321 = -0.2189, values [-0.21890286362737596]
+     support (7,):   1 chars, sum rho = 4645/116321 = +0.0399, values [0.03993260030433026]
+
+=== q=2, d=10  (n=20, l=9, field GF(2^20))  [3.4s]
+  |G|=512  |H|=16  mean=q^(d+1)=2048  Psi in [1720, 2460]
+  Var_G/q^(d+1) = 471311/65536 = 7.191635   (KR limit 8)
+  Var_H/q^(d+1) = 16191/2048 = 7.905762   (about the global mean)
+  Var_H own-mean/q^(d+1) = 13055/2048 = 6.374512,  mean_H/q^(d+1) = 263/256
+  ratio Var_H/Var_G = 518112/471311 = 1.099300;   1 + sum rho = 518112/471311  [identity OK]
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0, 0, 0, 0, 0, 0, 0, 0):     2096        +48
+     (0, 0, 0, 0, 0, 0, 0, 1, 0):     2280       +232
+     (0, 0, 0, 0, 0, 1, 0, 0, 0):     2070        +22
+     (0, 0, 0, 0, 0, 1, 0, 1, 0):     1970        -78
+     (0, 0, 0, 1, 0, 0, 0, 0, 0):     2096        +48
+     (0, 0, 0, 1, 0, 0, 0, 1, 0):     2280       +232
+     (0, 0, 0, 1, 0, 1, 0, 0, 0):     1970        -78
+     (0, 0, 0, 1, 0, 1, 0, 1, 0):     2070        +22
+     (0, 1, 0, 0, 0, 0, 0, 0, 0):     1980        -68
+     (0, 1, 0, 0, 0, 0, 0, 1, 0):     1900       -148
+     (0, 1, 0, 0, 0, 1, 0, 0, 0):     2060        +12
+     (0, 1, 0, 0, 0, 1, 0, 1, 0):     2060        +12
+     (0, 1, 0, 1, 0, 0, 0, 0, 0):     2240       +192
+     (0, 1, 0, 1, 0, 0, 0, 1, 0):     2152       +104
+     (0, 1, 0, 1, 0, 1, 0, 0, 0):     2220       +172
+     (0, 1, 0, 1, 0, 1, 0, 1, 0):     2220       +172
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3, 5, 7, 9]:
+     support (1,):   1 chars, sum rho = 13615/471311 = +0.0289, values [0.02888750739957268]
+     support (1, 3):   1 chars, sum rho = -72961/471311 = -0.1548, values [-0.15480436484614193]
+     support (1, 3, 5):   1 chars, sum rho = -15361/471311 = -0.0326, values [-0.03259206765808564]
+     support (1, 3, 5, 7):   1 chars, sum rho = -18881/471311 = -0.0401, values [-0.04006059693068908]
+     support (1, 3, 5, 7, 9):   1 chars, sum rho = 3535/471311 = +0.0075, values [0.00750035539166283]
+     support (1, 3, 5, 9):   1 chars, sum rho = -22385/471311 = -0.0475, values [-0.047495178342962505]
+     support (1, 3, 7):   1 chars, sum rho = -17921/471311 = -0.0380, values [-0.03802372531088814]
+     support (1, 3, 7, 9):   1 chars, sum rho = 34895/471311 = +0.0740, values [0.07403816163849349]
+     support (1, 3, 9):   1 chars, sum rho = -11185/471311 = -0.0237, values [-0.023731676111951556]
+     support (1, 5):   1 chars, sum rho = -40785/471311 = -0.0865, values [-0.08653521772248049]
+     support (1, 5, 7):   1 chars, sum rho = 16815/471311 = +0.0357, values [0.03567707946557581]
+     support (1, 5, 7, 9):   1 chars, sum rho = -48161/471311 = -0.1022, values [-0.1021851813346177]
+     support (1, 5, 9):   1 chars, sum rho = 34079/471311 = +0.0723, values [0.07230682076166269]
+     support (1, 7):   1 chars, sum rho = 47855/471311 = +0.1015, values [0.10153592850580614]
+     support (1, 7, 9):   1 chars, sum rho = 19679/471311 = +0.0418, values [0.041753746464648606]
+     support (1, 9):   1 chars, sum rho = -16161/471311 = -0.0343, values [-0.03428946067458642]
+     support (3,):   1 chars, sum rho = 26591/471311 = +0.0564, values [0.05641922212721536]
+     support (3, 5):   1 chars, sum rho = 16991/471311 = +0.0361, values [0.03605050592920598]
+     support (3, 5, 7):   1 chars, sum rho = -17921/471311 = -0.0380, values [-0.03802372531088814]
+     support (3, 5, 7, 9):   1 chars, sum rho = 34895/471311 = +0.0740, values [0.07403816163849349]
+     support (3, 5, 9):   1 chars, sum rho = 68463/471311 = +0.1453, values [0.14526077261086628]
+     support (3, 7):   1 chars, sum rho = -18881/471311 = -0.0401, values [-0.04006059693068908]
+     support (3, 7, 9):   1 chars, sum rho = 3535/471311 = +0.0075, values [0.00750035539166283]
+     support (3, 9):   1 chars, sum rho = 12463/471311 = +0.0264, values [0.026443261455811554]
+     support (5,):   1 chars, sum rho = -17137/471311 = -0.0364, values [-0.03636028015471737]
+     support (5, 7):   1 chars, sum rho = 47855/471311 = +0.1015, values [0.10153592850580614]
+     support (5, 7, 9):   1 chars, sum rho = 19679/471311 = +0.0418, values [0.041753746464648606]
+     support (5, 9):   1 chars, sum rho = -8449/471311 = -0.0179, values [-0.01792659199551888]
+     support (7,):   1 chars, sum rho = 16815/471311 = +0.0357, values [0.03567707946557581]
+     support (7, 9):   1 chars, sum rho = -48161/471311 = -0.1022, values [-0.1021851813346177]
+     support (9,):   1 chars, sum rho = 3391/471311 = +0.0072, values [0.007194824648692689]
+
+=== q=2, d=11  (n=22, l=10, field GF(2^22))  [22.9s]
+  |G|=1024  |H|=32  mean=q^(d+1)=4096  Psi in [3520, 4818]
+  Var_G/q^(d+1) = 561841/65536 = 8.573013   (KR limit 9)
+  Var_H/q^(d+1) = 31431/2048 = 15.347168   (about the global mean)
+  Var_H own-mean/q^(d+1) = 31413/2048 = 15.338379,  mean_H/q^(d+1) = 2045/2048
+  ratio Var_H/Var_G = 1005792/561841 = 1.790172;   1 + sum rho = 1005792/561841  [identity OK]
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3, 5, 7, 9]:
+     support (1,):   1 chars, sum rho = 5303/561841 = +0.0094, values [0.009438613415539272]
+     support (1, 3):   1 chars, sum rho = 1915/561841 = +0.0034, values [0.00340843761847213]
+     support (1, 3, 5):   1 chars, sum rho = 48061/561841 = +0.0855, values [0.08554199497722666]
+     support (1, 3, 5, 7):   1 chars, sum rho = -11912/561841 = -0.0212, values [-0.02120172789098695]
+     support (1, 3, 5, 7, 9):   1 chars, sum rho = 51514/561841 = +0.0917, values [0.09168786186839337]
+     support (1, 3, 5, 9):   1 chars, sum rho = 3063/80263 = +0.0382, values [0.038162042285984826]
+     support (1, 3, 7):   1 chars, sum rho = 11024/561841 = +0.0196, values [0.019621209559288127]
+     support (1, 3, 7, 9):   1 chars, sum rho = 9938/80263 = +0.1238, values [0.12381794849432491]
+     support (1, 3, 9):   1 chars, sum rho = -12605/561841 = -0.0224, values [-0.02243517294038705]
+     support (1, 5):   1 chars, sum rho = 2095/80263 = +0.0261, values [0.026101690691850542]
+     support (1, 5, 7):   1 chars, sum rho = -608/80263 = -0.0076, values [-0.0075750968690430215]
+     support (1, 5, 7, 9):   1 chars, sum rho = 13894/561841 = +0.0247, values [0.02472941632953095]
+     support (1, 5, 9):   1 chars, sum rho = 3049/561841 = +0.0054, values [0.005426802244763198]
+     support (1, 7):   1 chars, sum rho = 6052/561841 = +0.0108, values [0.01077173079216362]
+     support (1, 7, 9):   1 chars, sum rho = 41142/561841 = +0.0732, values [0.0732271229760733]
+     support (1, 9):   1 chars, sum rho = 15467/561841 = +0.0275, values [0.027529140806740696]
+     support (3,):   1 chars, sum rho = -34219/561841 = -0.0609, values [-0.06090513152297536]
+     support (3, 5):   1 chars, sum rho = 14499/561841 = +0.0258, values [0.025806233436150086]
+     support (3, 5, 7):   1 chars, sum rho = 11024/561841 = +0.0196, values [0.019621209559288127]
+     support (3, 5, 7, 9):   1 chars, sum rho = 9938/80263 = +0.1238, values [0.12381794849432491]
+     support (3, 5, 9):   1 chars, sum rho = -56165/561841 = -0.1000, values [-0.09996600461696459]
+     support (3, 7):   1 chars, sum rho = -11912/561841 = -0.0212, values [-0.02120172789098695]
+     support (3, 7, 9):   1 chars, sum rho = 51514/561841 = +0.0917, values [0.09168786186839337]
+     support (3, 9):   1 chars, sum rho = 40801/561841 = +0.0726, values [0.07262018969779706]
+     support (5,):   1 chars, sum rho = -4377/561841 = -0.0078, values [-0.007790460290366848]
+     support (5, 7):   1 chars, sum rho = 6052/561841 = +0.0108, values [0.01077173079216362]
+     support (5, 7, 9):   1 chars, sum rho = 41142/561841 = +0.0732, values [0.0732271229760733]
+     support (5, 9):   1 chars, sum rho = 38699/561841 = +0.0689, values [0.06887891770091538]
+     support (7,):   1 chars, sum rho = -608/80263 = -0.0076, values [-0.0075750968690430215]
+     support (7, 9):   1 chars, sum rho = 13894/561841 = +0.0247, values [0.02472941632953095]
+     support (9,):   1 chars, sum rho = -6631/561841 = -0.0118, values [-0.011802271461142922]
+
+=== q=2, d=12  (n=24, l=11, field GF(2^24))  [123.1s]
+  |G|=2048  |H|=32  mean=q^(d+1)=8192  Psi in [6984, 9192]
+  Var_G/q^(d+1) = 5113313/524288 = 9.752871   (KR limit 10)
+  Var_H/q^(d+1) = 169889/8192 = 20.738403   (about the global mean)
+  Var_H own-mean/q^(d+1) = 152465/8192 = 18.611450,  mean_H/q^(d+1) = 2015/2048
+  ratio Var_H/Var_G = 10872896/5113313 = 2.126390;   1 + sum rho = 10872896/5113313  [identity OK]
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3, 5, 7, 9, 11]:
+     support (1,):   1 chars, sum rho = 270881/5113313 = +0.0530, values [0.05297563438811589]
+     support (1, 3):   1 chars, sum rho = 71713/5113313 = +0.0140, values [0.014024762419198668]
+     support (1, 3, 5):   1 chars, sum rho = -4575/5113313 = -0.0009, values [-0.0008947232449881319]
+     support (1, 3, 5, 7):   1 chars, sum rho = -4479/5113313 = -0.0009, values [-0.0008759487244375614]
+     support (1, 3, 5, 7, 9):   1 chars, sum rho = -2303/5113313 = -0.0005, values [-0.00045039292529129354]
+     support (1, 3, 5, 7, 9, 11):   1 chars, sum rho = 36257/5113313 = +0.0071, values [0.007090706162521246]
+     support (1, 3, 5, 7, 11):   1 chars, sum rho = 201633/5113313 = +0.0394, values [0.0394329468976376]
+     support (1, 3, 5, 9):   1 chars, sum rho = 348001/5113313 = +0.0681, values [0.06805783256374097]
+     support (1, 3, 5, 9, 11):   1 chars, sum rho = -45727/5113313 = -0.0089, values [-0.008942734387666079]
+     support (1, 3, 5, 11):   1 chars, sum rho = 98017/5113313 = +0.0192, values [0.019168981050055024]
+     support (1, 3, 7):   1 chars, sum rho = 219649/5113313 = +0.0430, values [0.04295629858762802]
+     support (1, 3, 7, 9):   1 chars, sum rho = 183425/5113313 = +0.0359, values [0.03587204616654603]
+     support (1, 3, 7, 9, 11):   1 chars, sum rho = -46879/5113313 = -0.0092, values [-0.009168028634272926]
+     support (1, 3, 7, 11):   1 chars, sum rho = 194913/5113313 = +0.0381, values [0.03811873045909765]
+     support (1, 3, 9):   1 chars, sum rho = 109281/5113313 = +0.0214, values [0.021371858127988645]
+     support (1, 3, 9, 11):   1 chars, sum rho = 79969/5113313 = +0.0156, values [0.01563937118654774]
+     support (1, 3, 11):   1 chars, sum rho = 245601/5113313 = +0.0480, values [0.04803167730979895]
+     support (1, 5):   1 chars, sum rho = 337569/5113313 = +0.0660, values [0.06601766799724562]
+     support (1, 5, 7):   1 chars, sum rho = -281023/5113313 = -0.0550, values [-0.05495908425711471]
+     support (1, 5, 7, 9):   1 chars, sum rho = 70465/5113313 = +0.0138, values [0.01378069365204125]
+     support (1, 5, 7, 9, 11):   1 chars, sum rho = 201633/5113313 = +0.0394, values [0.0394329468976376]
+     support (1, 5, 7, 11):   1 chars, sum rho = 36257/5113313 = +0.0071, values [0.007090706162521246]
+     support (1, 5, 9):   1 chars, sum rho = 130785/5113313 = +0.0256, values [0.025577350731316468]
+     support (1, 5, 9, 11):   1 chars, sum rho = -60511/5113313 = -0.0118, values [-0.011834010552453957]
+     support (1, 5, 11):   1 chars, sum rho = -72031/5113313 = -0.0141, values [-0.014086953018522433]
+     support (1, 7):   1 chars, sum rho = 120385/5113313 = +0.0235, values [0.023543444338337983]
+     support (1, 7, 9):   1 chars, sum rho = 488769/5113313 = +0.0956, values [0.09558753786439438]
+     support (1, 7, 9, 11):   1 chars, sum rho = 194913/5113313 = +0.0381, values [0.03811873045909765]
+     support (1, 7, 11):   1 chars, sum rho = -46879/5113313 = -0.0092, values [-0.009168028634272926]
+     support (1, 9):   1 chars, sum rho = -261407/5113313 = -0.0511, values [-0.05112282389128144]
+     support (1, 9, 11):   1 chars, sum rho = 1287/33863 = +0.0380, values [0.03800608333579423]
+     support (1, 11):   1 chars, sum rho = 94113/5113313 = +0.0184, values [0.018405483880998483]
+     support (3,):   1 chars, sum rho = 661729/5113313 = +0.1294, values [0.1294129657230058]
+     support (3, 5):   1 chars, sum rho = 138465/5113313 = +0.0271, values [0.027079312375362118]
+     support (3, 5, 7):   1 chars, sum rho = 219649/5113313 = +0.0430, values [0.04295629858762802]
+     support (3, 5, 7, 9):   1 chars, sum rho = 183425/5113313 = +0.0359, values [0.03587204616654603]
+     support (3, 5, 7, 9, 11):   1 chars, sum rho = -142879/5113313 = -0.0279, values [-0.027942549184843565]
+     support (3, 5, 7, 11):   1 chars, sum rho = 73185/5113313 = +0.0143, values [0.014312638400974085]
+     support (3, 5, 9):   1 chars, sum rho = 310177/5113313 = +0.0607, values [0.060660671466816134]
+     support (3, 5, 9, 11):   1 chars, sum rho = 94113/5113313 = +0.0184, values [0.018405483880998483]
+     support (3, 5, 11):   1 chars, sum rho = 1287/33863 = +0.0380, values [0.03800608333579423]
+     support (3, 7):   1 chars, sum rho = -4479/5113313 = -0.0009, values [-0.0008759487244375614]
+     support (3, 7, 9):   1 chars, sum rho = -2303/5113313 = -0.0005, values [-0.00045039292529129354]
+     support (3, 7, 9, 11):   1 chars, sum rho = 20897/5113313 = +0.0041, values [0.004086782874429944]
+     support (3, 7, 11):   1 chars, sum rho = -15327/5113313 = -0.0030, values [-0.0029974695466520435]
+     support (3, 9):   1 chars, sum rho = 131617/5113313 = +0.0257, values [0.025740063242754747]
+     support (3, 9, 11):   1 chars, sum rho = -72031/5113313 = -0.0141, values [-0.014086953018522433]
+     support (3, 11):   1 chars, sum rho = -60511/5113313 = -0.0118, values [-0.011834010552453957]
+     support (5,):   1 chars, sum rho = 207201/5113313 = +0.0405, values [0.04052186908957069]
+     support (5, 7):   1 chars, sum rho = 120385/5113313 = +0.0235, values [0.023543444338337983]
+     support (5, 7, 9):   1 chars, sum rho = 488769/5113313 = +0.0956, values [0.09558753786439438]
+     support (5, 7, 9, 11):   1 chars, sum rho = 73185/5113313 = +0.0143, values [0.014312638400974085]
+     support (5, 7, 11):   1 chars, sum rho = -142879/5113313 = -0.0279, values [-0.027942549184843565]
+     support (5, 9):   1 chars, sum rho = -300255/5113313 = -0.0587, values [-0.058720246540745695]
+     support (5, 9, 11):   1 chars, sum rho = 245601/5113313 = +0.0480, values [0.04803167730979895]
+     support (5, 11):   1 chars, sum rho = 79969/5113313 = +0.0156, values [0.01563937118654774]
+     support (7,):   1 chars, sum rho = -281023/5113313 = -0.0550, values [-0.05495908425711471]
+     support (7, 9):   1 chars, sum rho = 70465/5113313 = +0.0138, values [0.01378069365204125]
+     support (7, 9, 11):   1 chars, sum rho = -15327/5113313 = -0.0030, values [-0.0029974695466520435]
+     support (7, 11):   1 chars, sum rho = 20897/5113313 = +0.0041, values [0.004086782874429944]
+     support (9,):   1 chars, sum rho = 307489/5113313 = +0.0601, values [0.06013498489140016]
+     support (9, 11):   1 chars, sum rho = 98017/5113313 = +0.0192, values [0.019168981050055024]
+     support (11,):   1 chars, sum rho = -45727/5113313 = -0.0089, values [-0.008942734387666079]
+
+=== q=4, d=5  (n=10, l=4, field GF(2^20))  [0.8s]
+  |G|=256  |H|=16  mean=q^(d+1)=4096  Psi in [3736, 4280]
+  Var_G/q^(d+1) = 10647/4096 = 2.599365   (KR limit 3)
+  Var_H/q^(d+1) = 903/64 = 14.109375   (about the global mean)
+  Var_H own-mean/q^(d+1) = 867/64 = 13.546875,  mean_H/q^(d+1) = 259/256
+  ratio Var_H/Var_G = 2752/507 = 5.428008;   1 + sum rho = 2752/507  [identity OK]
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0, 0, 0):     3736       -360
+     (0, 0, 0, 1):     4280       +184
+     (0, 0, 0, 2):     4280       +184
+     (0, 0, 0, 3):     4280       +184
+     (0, 1, 0, 0):     3736       -360
+     (0, 1, 0, 1):     4280       +184
+     (0, 1, 0, 2):     4280       +184
+     (0, 1, 0, 3):     4280       +184
+     (0, 2, 0, 0):     3736       -360
+     (0, 2, 0, 1):     4280       +184
+     (0, 2, 0, 2):     4280       +184
+     (0, 2, 0, 3):     4280       +184
+     (0, 3, 0, 0):     3736       -360
+     (0, 3, 0, 1):     4280       +184
+     (0, 3, 0, 2):     4280       +184
+     (0, 3, 0, 3):     4280       +184
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3]:
+     support (1,):   3 chars, sum rho = 4031/3549 = +1.1358, values [0.3786043016812248]
+     support (1, 3):   9 chars, sum rho = 8753/3549 = +2.4663, values [0.27341035033342725, 0.27434958204188975]
+     support (3,):   3 chars, sum rho = 977/1183 = +0.8259, values [0.27434958204188975, 0.2771672771672772]
+
+=== q=4, d=6  (n=12, l=5, field GF(2^24))  [29.0s]
+  |G|=1024  |H|=16  mean=q^(d+1)=16384  Psi in [15360, 16912]
+  Var_G/q^(d+1) = 60627/16384 = 3.700378   (KR limit 4)
+  Var_H/q^(d+1) = 2307/256 = 9.011719   (about the global mean)
+  Var_H own-mean/q^(d+1) = 1731/256 = 6.761719,  mean_H/q^(d+1) = 253/256
+  ratio Var_H/Var_G = 49216/20209 = 2.435351;   1 + sum rho = 49216/20209  [identity OK]
+  Psi on H (class c1..cl as F_q indices -> Psi, Psi - mean):
+     (0, 0, 0, 0, 0):    15616       -768
+     (0, 0, 0, 1, 0):    15616       -768
+     (0, 0, 0, 2, 0):    15616       -768
+     (0, 0, 0, 3, 0):    15616       -768
+     (0, 1, 0, 0, 0):    16368        -16
+     (0, 1, 0, 1, 0):    16368        -16
+     (0, 1, 0, 2, 0):    16400        +16
+     (0, 1, 0, 3, 0):    16400        +16
+     (0, 2, 0, 0, 0):    16368        -16
+     (0, 2, 0, 1, 0):    16400        +16
+     (0, 2, 0, 2, 0):    16400        +16
+     (0, 2, 0, 3, 0):    16368        -16
+     (0, 3, 0, 0, 0):    16368        -16
+     (0, 3, 0, 1, 0):    16400        +16
+     (0, 3, 0, 2, 0):    16368        -16
+     (0, 3, 0, 3, 0):    16400        +16
+  quadratic characters eps_lambda, lambda indexed by odd power sums p_j, j in [1, 3, 5]:
+     support (1,):   3 chars, sum rho = 7059/20209 = +0.3493, values [0.11643327230441883]
+     support (1, 3):   9 chars, sum rho = -12087/20209 = -0.5981, values [-0.13005756511125408, -0.03465452686096954]
+     support (1, 3, 5):  27 chars, sum rho = 11547/20209 = +0.5714, values [-0.05194055453840698, -0.007735827271677635, 0.34075576888185133]
+     support (1, 5):   9 chars, sum rho = 18425/20209 = +0.9117, values [0.07579131410097811, 0.15232487175680803]
+     support (3,):   3 chars, sum rho = -1853/20209 = -0.0917, values [-0.03465452686096954, -0.022382766754086462]
+     support (3, 5):   9 chars, sum rho = 8201/20209 = +0.4058, values [-0.007735827271677635, 0.15074141883979086]
+     support (5,):   3 chars, sum rho = -2285/20209 = -0.1131, values [-0.037689478285252445]
+
+wrote legendre_var_results.csv and legendre_rho_quadratic.csv

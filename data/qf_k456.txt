@@ -1,0 +1,68 @@
+﻿
+=== k=4, q=16, N=48 bits  [2.3s]
+  A6 = 68703748096;  q^9 + (-1)^(k+1)(q-1)q^5 = 68703748096: True
+  X  = -15728640;  (-1)^(k+1) q^6 + q^5 = -15728640: True
+  W(l3,l5)/q^6 (dim radical) -> multiplicity:
+     l3=0      W/q^6 =    -64  r = 12   x3
+     l3=0      W/q^6 =     16  r =  8   x12
+     l3=l5=0   W/q^6 = 16777216  r = 48   x1
+     l5=0      W/q^6 =    -32  r = 10   x15
+     mixed     W/q^6 =    -64  r = 12   x75
+     mixed     W/q^6 =     16  r =  8   x90
+     mixed     W/q^6 =      0  r = 12   x60
+  W'(l3,l5)/q^6 (dim radical) -> multiplicity:
+     l3=0      W'/q^6 =    -64  r = 12   x5
+     l3=0      W'/q^6 =     16  r =  8   x6
+     l3=0      W'/q^6 =      0  r = 12   x4
+     l3=l5=0   W'/q^6 =    -16  r =  8   x1
+     l5=0      W'/q^6 =    -32  r = 10   x7
+     l5=0      W'/q^6 =      0  r = 10   x8
+     mixed     W'/q^6 =    -64  r = 12   x64
+     mixed     W'/q^6 =     32  r = 10   x32
+     mixed     W'/q^6 =    -32  r = 10   x32
+     mixed     W'/q^6 =     16  r =  8   x45
+     mixed     W'/q^6 =      0  r = 12   x52
+
+=== k=5, q=32, N=60 bits  [9.4s]
+  A6 = 35185412276224;  q^9 + (-1)^(k+1)(q-1)q^5 = 35185412276224: True
+  X  = 1107296256;  (-1)^(k+1) q^6 + q^5 = 1107296256: True
+  W(l3,l5)/q^6 (dim radical) -> multiplicity:
+     l3=0      W/q^6 =     64  r = 12   x31
+     l3=l5=0   W/q^6 = 1073741824  r = 60   x1
+     l5=0      W/q^6 =      0  r = 12   x31
+     mixed     W/q^6 =     64  r = 12   x465
+     mixed     W/q^6 =      0  r = 14   x496
+  W'(l3,l5)/q^6 (dim radical) -> multiplicity:
+     l3=0      W'/q^6 =    128  r = 14   x16
+     l3=0      W'/q^6 =     64  r = 12   x15
+     l3=l5=0   W'/q^6 =     32  r = 10   x1
+     l5=0      W'/q^6 =     64  r = 12   x16
+     l5=0      W'/q^6 =      0  r = 12   x15
+     mixed     W'/q^6 =    128  r = 14   x291
+     mixed     W'/q^6 =    -64  r = 12   x120
+     mixed     W'/q^6 =     64  r = 12   x105
+     mixed     W'/q^6 =    -32  r = 10   x205
+     mixed     W'/q^6 =      0  r = 14   x240
+
+=== k=6, q=64, N=72 bits  [48.1s]
+  A6 = 18014330863747072;  q^9 + (-1)^(k+1)(q-1)q^5 = 18014330863747072: True
+  X  = -67645734912;  (-1)^(k+1) q^6 + q^5 = -67645734912: True
+  W(l3,l5)/q^6 (dim radical) -> multiplicity:
+     l3=0      W/q^6 =      0  r = 16   x63
+     l3=l5=0   W/q^6 = 68719476736  r = 72   x1
+     l5=0      W/q^6 =   -128  r = 14   x63
+     mixed     W/q^6 =   -256  r = 16   x1386
+     mixed     W/q^6 =     64  r = 12   x1638
+     mixed     W/q^6 =      0  r = 16   x945
+  W'(l3,l5)/q^6 (dim radical) -> multiplicity:
+     l3=0      W'/q^6 =   -256  r = 16   x22
+     l3=0      W'/q^6 =     64  r = 12   x26
+     l3=0      W'/q^6 =      0  r = 16   x15
+     l3=l5=0   W'/q^6 =    -64  r = 12   x1
+     l5=0      W'/q^6 =   -128  r = 14   x31
+     l5=0      W'/q^6 =      0  r = 14   x32
+     mixed     W'/q^6 =   -256  r = 16   x1175
+     mixed     W'/q^6 =   -128  r = 14   x512
+     mixed     W'/q^6 =    128  r = 14   x512
+     mixed     W'/q^6 =     64  r = 12   x793
+     mixed     W'/q^6 =      0  r = 16   x977
