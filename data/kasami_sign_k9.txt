@@ -1,0 +1,7 @@
+
+k=9, q=512:  (type, kappa, W/q^7, #S12=+4q^6, #S12=-4q^6, #S12=0) -> #j
+   ('(1,1,1,2)', None, Fraction(0, 1), 256, 256, 0)  x85
+   ('(1,4)', 0, Fraction(2, 1), 256, 0, 256)  x129
+   ('(1,4)', 1, Fraction(2, 1), 256, 0, 256)  x126
+   ('(2,3)', None, Fraction(0, 1), 256, 256, 0)  x171
+   4-cycle predicate 'S12 != 0 iff Tr(l1 u1) = kappa, with s1 = s2 = 0': OK

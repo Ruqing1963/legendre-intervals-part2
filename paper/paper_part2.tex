@@ -45,7 +45,7 @@
 \begin{document}
 
 \begin{abstract}
-Let $q=2^k$ and let $\mathcal I_f=\{f^2+s:\deg s\le d\}$ be the Legendre interval of a monic $f\in\F_q[t]$ of degree $d$. Chen's Open Problem~8.2 asks why the variance of the prime-power count $\Psi(f)=\sum_{P\in\mathcal I_f}\Lambda(P)$ deviates by a factor as large as $q^2/3$ from the Keating--Rudnick prediction. We resolve the case $d=4$ completely and unconditionally: using the quadratic tower $\F_q\subset\F_{q^2}\subset\F_{q^4}\subset\F_{q^8}$ we obtain a closed formula for $\Psi$ on every class of the Hayes group $\G_3$, from which $\Var_{\G^2}(\Psi)/q^5=q(q-1)$, $\Var_{\G}(\Psi)/q^5=3-3/q$, the full structure of the quadratic-twist correlations, and an elementary proof of Carlitz's cubic evaluation over $\F_{2^{8k}}$ follow. For $d=6$ we prove that the Legendre profile takes exactly three values governed by $[c_2=0]$ and $\Tr(c_4/c_2^2)$, reducing the variance to three exponential sums $A_6,X,Y$ on $U=\{\alpha\in\F_{q^{12}}:\Tr\alpha=\Tr\alpha^3=\Tr\alpha^5=0\}$. We show that $A_6-q^9$ and $X$ are sums of Frobenius traces of supersingular Artin--Schreier curves $y^2+y=\lambda_5x^5+\lambda_3x^3+\lambda_1x$ and reduce them to $\F_2$-quadratic forms whose radicals are kernels of explicit linearised polynomials; their conjectured closed forms $A_6=q^9+(-1)^{k+1}(q-1)q^5$, $X=(-1)^{k+1}q^6+q^5$ are verified exactly for $q\le128$ by an algorithm independent of the explicit formula, and the pure cubic part is proved for all $k$. The third constant $Y=q^3m_k$ is a twisted Frobenius trace on a fixed nine-dimensional complete intersection $X=V(e_1,e_3,e_5)\subset\A^{12}_{\F_2}$ (geometrically integral, normal, with explicit two-dimensional singular locus) and is not a character sum; we discuss its weight and rank. Consequently the Legendre variance at $d=6$ obeys $\Var_{\G^2}/q^{7}\asymp q^2$, not $q^4$.
+Let $q=2^k$ and let $\mathcal I_f=\{f^2+s:\deg s\le d\}$ be the Legendre interval of a monic $f\in\F_q[t]$ of degree $d$. Chen's Open Problem~8.2 asks why the variance of the prime-power count $\Psi(f)=\sum_{P\in\mathcal I_f}\Lambda(P)$ deviates by a factor as large as $q^2/3$ from the Keating--Rudnick prediction. We resolve the case $d=4$ completely and unconditionally: using the quadratic tower $\F_q\subset\F_{q^2}\subset\F_{q^4}\subset\F_{q^8}$ we obtain a closed formula for $\Psi$ on every class of the Hayes group $\G_3$, from which $\Var_{\G^2}(\Psi)/q^5=q(q-1)$, $\Var_{\G}(\Psi)/q^5=3-3/q$, the full structure of the quadratic-twist correlations, and an elementary proof of Carlitz's cubic evaluation over $\F_{2^{8k}}$ follow. For $d=6$ we prove that the Legendre profile takes exactly three values governed by $[c_2=0]$ and $\Tr(c_4/c_2^2)$, reducing the variance to three exponential sums $A_6,X,Y$ on $U=\{\alpha\in\F_{q^{12}}:\Tr\alpha=\Tr\alpha^3=\Tr\alpha^5=0\}$. We show that $A_6-q^9$ and $X$ are sums of Frobenius traces of supersingular Artin--Schreier curves $y^2+y=\lambda_5x^5+\lambda_3x^3+\lambda_1x$ and reduce them to $\F_2$-quadratic forms whose radicals are kernels of explicit linearised polynomials; the pure cubic and pure quintic parts are evaluated for all $k$, and for odd $k$ the mixed part is evaluated completely: it is governed by the factorisation type of the Gold-type quintic $v^5+v+c$ over $\F_q$, a $\Z/4$-condition on the Frobenius, and the signs are fixed through the $L$-polynomials of the curves. This proves $A_6=q^9+(q-1)q^5$ for all odd $k$. The conjectured closed forms $A_6=q^9+(-1)^{k+1}(q-1)q^5$, $X=(-1)^{k+1}q^6+q^5$ in the remaining cases are verified exactly for $q\le128$ by an algorithm independent of the explicit formula. The third constant $Y=q^3m_k$ is a twisted Frobenius trace on a fixed nine-dimensional complete intersection $X=V(e_1,e_3,e_5)\subset\A^{12}_{\F_2}$ (geometrically integral, normal, with explicit two-dimensional singular locus) and is not a character sum; we discuss its weight and rank. Consequently the Legendre variance at $d=6$ obeys $\Var_{\G^2}/q^{7}\asymp q^2$, not $q^4$.
 \end{abstract}
 
 \maketitle
@@ -75,7 +75,7 @@ the deviation $\Psi-q^5$ is supported on the subgroup $\{c_1=0\}$, the identity 
 \Psi(0,c_2,0,c_4,0)=q^7+\frac{A_6-q^9-X}{q^2}+\frac Xq[c_2=0]+\frac Yq[c_2\ne0]\,\chi\Big(\frac{c_4}{c_2^2}\Big),
 \]
 where $A_6=|U|$, $X=\sum_U\chi(e_2)$, $Y=\sum_U\chi(e_4)$ and $U=\{\alpha\in\F_{q^{12}}:\Tr\alpha=\Tr\alpha^3=\Tr\alpha^5=0\}$. The proof uses only the $\F_q$-translation and scaling symmetries of $U$.
-\item \textbf{$d=6$, the constants (Sections~\ref{sec:tower6}--\ref{sec:qf}).} Theorem~\ref{thm:towerred} reduces $A_6,X,Y$ to explicit finite sums over $\F_{q^6}$. Theorem~\ref{thm:supersing} expresses $A_6-q^9$ and $X$ through the Frobenius traces of the supersingular curves $y^2+y=\lambda_5x^5+\lambda_3x^3+\lambda_1x$, equivalently through $\F_2$-quadratic forms on $\F_{q^{12}}$ with explicit radicals. Lemma~\ref{lem:purecubic} evaluates the pure cubic part for all $k$. Conjecture~\ref{conj:A6X}, verified exactly for $q\le128$ (Table~\ref{tab:A6X}), states $A_6=q^9+(-1)^{k+1}(q-1)q^5$ and $X=(-1)^{k+1}q^6+q^5$.
+\item \textbf{$d=6$, the constants (Sections~\ref{sec:tower6}--\ref{sec:qf}).} Theorem~\ref{thm:towerred} reduces $A_6,X,Y$ to explicit finite sums over $\F_{q^6}$. Theorem~\ref{thm:supersing} expresses $A_6-q^9$ and $X$ through the Frobenius traces of the supersingular curves $y^2+y=\lambda_5x^5+\lambda_3x^3+\lambda_1x$, equivalently through $\F_2$-quadratic forms on $\F_{q^{12}}$ with explicit radicals. Lemmas~\ref{lem:purecubic} and \ref{lem:purequintic} evaluate the pure cubic and pure quintic parts for all $k$. For odd $k$, Theorem~\ref{thm:mixed} evaluates the mixed part: $W(\lambda_3,\lambda_5)=2q^7$ or $0$ according as the Frobenius permutes the roots of the Gold-type quintic $v^5+v+c$, $c=(\lambda_5^3/\lambda_3^5)^{1/2}$, as a $4$-cycle or not; with the exact count of $4$-cycles (Proposition~\ref{prop:HK}) this gives $A_6=q^9+(q-1)q^5$ for all odd $k$ (Corollary~\ref{cor:A6odd}). Conjecture~\ref{conj:A6X}, verified exactly for $q\le128$ (Table~\ref{tab:A6X}), states $A_6=q^9+(-1)^{k+1}(q-1)q^5$ and $X=(-1)^{k+1}q^6+q^5$ in general.
 \item \textbf{Scaling law and $Y$ (Section~\ref{sec:Y}).} Theorem~\ref{thm:varH6} gives $\Var_{\G^2}(\Psi)/q^7$ at $d=6$ in closed form in terms of $(q,k,m_k)$, $m_k=Y/q^3$; it implies $\Var_{\G^2}/q^7\asymp q^2$ (Table~\ref{tab:d6var}) and $\lim\Var_{\G^2}/q^9=1$ provided $m_k=o(q^{5/2})$. We identify $Y$ as the trace of a twisted Frobenius $\sigma F^k$ on the cohomology of a fixed nine-dimensional complete intersection $X\subset\A^{12}_{\F_2}$ with an Artin--Schreier sheaf (Propositions~\ref{prop:trace}--\ref{prop:Xgeom}, Theorem~\ref{thm:twisted}) and show that the data $m_k=13,-1,-35,47,733$ ($k\le5$) exclude a pure weight-$3$ object of rank $\le5$.
 \end{itemize}
 
@@ -84,7 +84,7 @@ Two ideas carry the paper. The first is the \emph{quadratic tower}: for $n=2d$ t
 
 \subsection*{Reproducibility}
 \begin{sloppypar}
-All statements labelled ``verified'' were checked with exact integer arithmetic; the scripts \texttt{legendre\_var\_check.py}, \texttt{legendre\_d4\_formula.py}, \texttt{legendre\_q16\_hayes.py}, \texttt{legendre\_d6\_tower.py} and \texttt{legendre\_d6\_qf.py} accompany the paper. The Hayes-group FFT of \cite{Chen} was used as an independent check for $q\le32$ at $d=6$ and $q\le128$ at $d=4$.
+All statements labelled ``verified'' were checked with exact integer arithmetic; the scripts \texttt{legendre\_var\_check.py}, \texttt{legendre\_d4\_formula.py}, \texttt{legendre\_q16\_hayes.py}, \texttt{legendre\_d6\_tower.py}, \texttt{legendre\_d6\_qf.py}, \texttt{legendre\_d6\_qf\_mixed.py}, \texttt{quintic\_check.py} and \texttt{kasami\_sign.py} accompany the paper (figures: \texttt{make\_figures.py}, \texttt{generate\_figures.py}). The Hayes-group FFT of \cite{Chen} was used as an independent check for $q\le32$ at $d=6$ and $q\le128$ at $d=4$.
 \end{sloppypar}
 
 \section{Preliminaries}\label{sec:prelim}
@@ -462,6 +462,7 @@ For all $q=2^k$: $A_6=q^9+\sgn(q-1)q^5$ and $X=\sgn\,q^6+q^5$, i.e.
 \sum_{\lambda_5\ne0}W(0,\lambda_5)+\sum_{\lambda_3\lambda_5\ne0}W(\lambda_3,\lambda_5)=(q-1)q^7(\sgn q+2),\qquad \sum_{\lambda_3,\lambda_5}W'(\lambda_3,\lambda_5)=q^3(\sgn q^6+q^5).
 \]
 \end{conjecture}
+The statement for $A_6$ with $k$ odd is proved below (Corollary~\ref{cor:A6odd}); the statement for $X$, and that for $A_6$ with $k$ even, remain conjectural.
 
 \begin{table}[ht]
 \centering
@@ -510,7 +511,7 @@ The set of $j$ in (a) is not of the form $\{\Tr_{q/2}(j^m)=c\}$ for any $m$ when
 \end{proposition}
 
 \subsection{The mixed part for odd $k$: a Gold-type quintic and a $\Z/4$ condition}
-For $k$ odd we can describe the mixed terms completely in terms of the factorisation of a single quintic over $\F_q$; what remains unproved is isolated in Conjecture~\ref{conj:mixed} below.
+For $k$ odd we describe the mixed terms completely in terms of the factorisation of a single quintic over $\F_q$; the evaluation is completed in Theorem~\ref{thm:mixed} below.
 
 \begin{proposition}\label{prop:mixed}
 Let $k$ be odd, $\lambda_3\lambda_5\ne0$, $j=\lambda_3^5/\lambda_5^3$, $t=j^{1/5}\in\F_q$ and $c=j^{-1/2}\in\F_q^\times$ (fifth and square roots are unique in $\F_q$).
@@ -529,23 +530,109 @@ The five roots $u_0,\dots,u_4$ of $u^5+t^2u+1$ have sum $0$, are $\F_2$-linearly
 \end{proof}
 
 \begin{proposition}[the quintic $v^5+v+c$, $k$ odd]\label{prop:HK}
-For $k\le11$ odd and $c\in\F_q^\times$, the factorisation type of $v^5+v+c$ over $\F_q$ is $(1,4)$ for exactly $(q-2)/2$ values of $c$, $(1,1,1,2)$ for $(q-2)/6$ values and $(2,3)$ for $(q+1)/3$ values; in particular the number of $\F_q$-roots is $1$, $3$ or $0$, with multiplicities $2^{k-1}-1$, $(2^{k-1}-1)/3$, $(2^k+1)/3$, in agreement with the theorem of Helleseth--Kholosha \cite{HK} on $x^{2^l+1}+x+a$ for $\gcd(l,k)=1$ (here $l=2$), and the quintic is never irreducible.
+Let $k$ be odd and $c\in\F_q^\times$. The factorisation type of $v^5+v+c$ over $\F_q$ is one of $(1,4)$, $(2,3)$, $(1,1,1,2)$, and these occur for exactly
+\[
+N_{(1,4)}=\frac{q-2}2,\qquad N_{(2,3)}=\frac{q+1}3,\qquad N_{(1,1,1,2)}=\frac{q-2}6
+\]
+values of $c$. In particular the number of $\F_q$-roots is $1$, $0$ or $3$ with these multiplicities, in agreement with the theorem of Helleseth--Kholosha \cite{HK} on $x^{2^l+1}+x+a$, $\gcd(l,k)=1$ (here $l=2$), and the quintic is never irreducible.
 \end{proposition}
+\begin{proof}
+Put $t=c^{-2/5}$ (a bijection of $\F_q^\times$) and $A(u)=u^5+t^2u+1$, so that $u=t^{1/2}v$ identifies the roots of $v^5+v+c$ with those of $A$ (Proposition~\ref{prop:mixed}(b)) and $K=\ker L_\lambda\subset\bar\F_q$, $\lambda=(\cdot,t,1)$, is the sum-zero $\F_2$-span of the five roots $u_0,\dots,u_4$ of $A$, on which the $q$-Frobenius $\sigma$ acts through its permutation $g\in S_5$ of the roots.
 
-\begin{conjecture}[reduced form of Conjecture~\ref{conj:A6X}, $k$ odd]\label{conj:mixed}
-For $k$ odd and $\lambda_3\lambda_5\ne0$: $W(\lambda_3,\lambda_5)=2q^7$ if $v^5+v+j^{-1/2}$ has type $(1,4)$ and $W(\lambda_3,\lambda_5)=0$ otherwise. Equivalently: in the $4$-cycle case $Q$ vanishes on the radical $\theta^{-1}(\ker L_\lambda\cap\F_{q^2})$ and the $q/2$ nonzero sums $S(\lambda_1,\lambda_3,\lambda_5)$ all equal $+4q^6$; in the other cases $Q$ does not vanish on the radical.
-\end{conjecture}
+\emph{Only three types occur.} The function $x\mapsto\Tr_{q/2}(x^5+tx^3)$ on $\F_q$ is an $\F_2$-quadratic form with polar form $\Tr_{q/2}(y\,T_\lambda(x))$, whose radical is $\{x\in\F_q:T_\lambda(x)=0\}=K^{\sigma}$, the $\sigma$-fixed subspace of $K$. Since the polar form is alternating and nondegenerate on $\F_q/K^\sigma$, $\dim K^\sigma\equiv k\equiv1\pmod2$. On the sum-zero module of $S_5$ the fixed space of $g$ has dimension $1,1,3$ for the cycle types $(1,4),(2,3),(1,1,1,2)$ and $0,2,2,4$ for $(5),(1,1,3),(1,2,2),(1,1,1,1,1)$ (count the $g$-stable subsets of $\{0,\dots,4\}$ modulo complementation). Hence only the first three types occur.
+
+\emph{Counting.} (i) The map $v\mapsto v^5+v$ sends $\F_q$ onto the values $c$, with $v^5+v=0$ iff $v\in\{0,1\}$ (as $v^4=1$ forces $v=1$); so $N_{(1,4)}+3N_{(1,1,1,2)}=q-2$. (ii) Let $v\in\F_{q^2}\setminus\F_q$, $\bar v=v^q$, $s=v+\bar v\ne0$, $n=v\bar v$. Then $\bar v^5+\bar v+v^5+v=(v+\bar v)(s^4+ns^2+n^2+1)$, so $v^5+v\in\F_q$ iff $s^4+ns^2+n^2=1$. Writing $n=s^2m$, irreducibility of $v^2+sv+n$ means $\Tr_{q/2}(m)=1$, and the condition becomes $m^2+m=1+s^{-4}$, which is solvable iff $\Tr_{q/2}(1+s^{-4})=0$ iff $\Tr_{q/2}(s^{-1})=1$ ($k$ odd), in which case exactly one of the two solutions $m,m+1$ has $\Tr m=1$. Hence exactly $2\cdot\#\{s\in\F_q^\times:\Tr(1/s)=1\}=q$ elements $v\in\F_{q^2}\setminus\F_q$ satisfy $v^5+v\in\F_q$, necessarily in $\F_q^\times$. A quintic of type $(1,4)$, $(2,3)$, $(1,1,1,2)$ has $0,2,2$ roots in $\F_{q^2}\setminus\F_q$, so $2N_{(2,3)}+2N_{(1,1,1,2)}=q$. (iii) $N_{(1,4)}+N_{(2,3)}+N_{(1,1,1,2)}=q-1$. Solving (i)--(iii) gives the three counts.
+\end{proof}
+
+\subsection{The mixed part for odd $k$: the theorem}\label{subsec:mixedproof}
+Throughout this subsection $k$ is odd, $(\lambda_3,\lambda_5)=(t,1)$ with $t\in\F_q^\times$ (every class $j=t^5$ has such a representative, Proposition~\ref{prop:mixed}(a)), $A(u)=u^5+t^2u+1$ with roots $u_0,\dots,u_4$, $K=\ker L_\lambda=\ker T_\lambda\subset\F_{q^{12}}$ (Proposition~\ref{prop:mixed}(b)), $T=T_\lambda$, $\sigma$ is the $q$-Frobenius and $\tau=\Tr_{q^{12}/q}$. For $b\in\F_q$ put
+\[
+S(b)=S(b,t,1)=\sum_{x\in\F_{q^{12}}}\psi_0(x^5+tx^3+bx),\qquad Q_b(x)=\Tr_{q^{12}/2}(x^5+tx^3+bx),
+\]
+so that $W(t,1)=\sum_{b\in\F_q}S(b)$ by \eqref{eq:W}, and $S(b)\in\{0,\pm4q^6\}$ since $\dim K=4$.
+
+\begin{lemma}[shifts]\label{lem:shift}
+Let $V=T^{-1}(\F_q)=\{c\in\F_{q^{12}}:T(c)\in\F_q\}$.
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2em]
+\item For $c\in V$ and $b\in\F_q$: $S(b)=(-1)^{Q_b(c)}\,S(b+T(c))$.
+\item $c\in V$ iff $(\sigma-1)c\in K$, and then $\tau(c)=(1+\sigma^2+\sigma^4+\dots+\sigma^{10})\,(\sigma-1)c$.
+\item If $c\in V$ and $\tau(c)=0$, then $W(t,1)=(-1)^{Q_0(c)}\,W(t,1)$; in particular $W(t,1)=0$ if $Q_0(c)=1$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) $Q_b(x+c)=Q_b(x)+Q_b(c)+\Tr(x\,T(c))$ and $\Tr_{q^{12}/2}(xT(c))=\Tr_{q^{12}/2}(T(c)x)$ with $T(c)\in\F_q$; substitute $x\mapsto x+c$ in $S(b)$. (b) $L_\lambda$ has coefficients in $\F_q$ and commutes with $\sigma$, so $L_\lambda(c)\in\F_q$ iff $L_\lambda((\sigma-1)c)=0$; and $T(c)\in\F_q$ iff $T(c)^4=L_\lambda(c)\in\F_q$. With $c_0=(\sigma-1)c$ one has $\sigma^ic=c+\sum_{m<i}\sigma^mc_0$, hence $\tau(c)=12c+\sum_{m\le10}(11-m)\sigma^mc_0=\sum_{m\text{ even}}\sigma^mc_0$. (c) Sum (a) over $b\in\F_q$: $Q_b(c)=Q_0(c)+\Tr_{q/2}(b\,\tau(c))=Q_0(c)$, and $b\mapsto b+T(c)$ permutes $\F_q$.
+\end{proof}
+
+\begin{lemma}[a quadratic factor forces $W=0$]\label{lem:quadfactor}
+Suppose $A(u)$ has an irreducible quadratic factor $u^2+\kappa u+N$ over $\F_q$ (types $(2,3)$ and $(1,1,1,2)$). Then $N=\kappa^{-3}$, $t=\kappa^2+\kappa^{-1/2}+\kappa^{-3}$ and $\Tr_{q/2}(\kappa^{-5})=1$. Let $u$ be a root of the quadratic factor and $c\in\F_{q^4}$ with $c^q+c=u$. Then $c\in V$, $\tau(c)=0$ and $Q_0(c)=\Tr_{q/2}(\kappa^{-5})=1$. Consequently $W(t,1)=0$. Moreover every $S(b)$, $b\in\F_q$, equals $\pm4q^6$, and $S(b)=-S(b+T(c))$: the $q$ sums cancel in pairs.
+\end{lemma}
+\begin{proof}
+Dividing, $A=(u^2+\kappa u+N)(u^3+\kappa u^2+(\kappa^2+N)u+\kappa^3)$ with $N\kappa^3=1$ and $t^2=\kappa^4+N\kappa^2+N^2=\kappa^4+\kappa^{-1}+\kappa^{-6}$; the quadratic is irreducible iff $\Tr_{q/2}(N/\kappa^2)=\Tr_{q/2}(\kappa^{-5})=1$. Since $u\in\F_{q^2}$, $\Tr_{q^4/q}(u)=2(u+u^q)=0$ and $c$ exists. By Lemma~\ref{lem:shift}(b), $(\sigma-1)c=u\in K$ gives $c\in V$, and $\tau(c)=(1+\sigma^2+\dots+\sigma^{10})u=6u=0$. The conjugates of $c$ over $\F_q$ are $c,\ c+u,\ c+\kappa,\ c+u'$ with $u'=u^q=u+\kappa$. As $[\F_{q^{12}}:\F_{q^4}]=3$ is odd, $Q_0(c)=\Tr_{q^4/2}(c^5+tc^3)=\Tr_{q/2}\sum_i\bigl(c_i^5+tc_i^3\bigr)$ over the four conjugates $c_i=c+a_i$, $a_i\in\{0,u,\kappa,u'\}$. In characteristic $2$, $(c+a)^3=c^3+c^2a+ca^2+a^3$ and $(c+a)^5=c^5+c^4a+ca^4+a^5$, and $\sum a_i=\sum a_i^2=\sum a_i^4=0$, so $\sum_ic_i^3=\sum a_i^3=u^3+u'^3+\kappa^3=\kappa N=\kappa^{-2}$ and $\sum_ic_i^5=u^5+u'^5+\kappa^5=\kappa^3N+\kappa N^2=1+\kappa^{-5}$ (Newton's identities for $u+u'=\kappa$, $uu'=N$). Hence
+\[
+Q_0(c)=\Tr_{q/2}\bigl(1+\kappa^{-5}+t\kappa^{-2}\bigr),\qquad t\kappa^{-2}=1+\kappa^{-5/2}+\kappa^{-5},
+\]
+and $\Tr(1)=1$, $\Tr(\kappa^{-5/2})=\Tr(\kappa^{-5})$ give $Q_0(c)=\Tr_{q/2}(\kappa^{-5})=1$. Lemma~\ref{lem:shift}(c) gives $W=0$. For the last assertion: by Proposition~\ref{prop:mixed}(c) the trace $\tau$ vanishes on $K$ in these types, so $\Tr_{q^{12}/2}(bx)=0$ for $x\in K$; and $Q_0$ vanishes on $K$ because it is additive there and each root $u_i$ lies in a subfield $\F_q,\F_{q^2}$ or $\F_{q^3}$ of even index in $\F_{q^{12}}$. By Theorem~\ref{thm:supersing}, $S(b)\ne0$ for all $b$, and Lemma~\ref{lem:shift}(a) with $Q_b(c)=1$ gives the pairing (note $T(c)\notin T(\F_q)$, since otherwise $c\in\F_q+K$ and $Q_0(c)$ would vanish).
+\end{proof}
+
+\begin{lemma}[the $4$-cycle: vanishing over $\F_q$ and $\F_{q^2}$ fixes the sign]\label{lem:fourcycle}
+Suppose $A$ has type $(1,4)$: $u_0\in\F_q$ and $\sigma$ cycles $u_1\to u_2\to u_3\to u_4\to u_1$. Put $\kappa=1+\Tr_{q/2}(u_0^5+tu_0^3)\in\F_2$ and, for $b\in\F_q$ and $m\ge1$, $s_m(b)=\sum_{x\in\F_{q^m}}\psi_0(x^5+tx^3+bx)$, so that $S(b)=s_{12}(b)$.
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2em]
+\item $S(b)\ne0$ iff $\Tr_{q/2}(bu_0)=\kappa$ iff $s_1(b)=0$; this holds for exactly $q/2$ values of $b$.
+\item If $s_1(b)=0$ then $s_2(b)=0$.
+\item For these $b$ the $L$-polynomial of $C_b:y^2+y=x^5+tx^3+bx$ over $\F_q$ is $1+q^2T^4$, hence $S(b)=+4q^6$. Therefore $W(t,1)=\frac q2\cdot4q^6=2q^7$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+(a) By Theorem~\ref{thm:supersing}, $S(b)\ne0$ iff $\Tr_{q^{12}/2}(bx)=Q_0(x)$ for all $x\in K$; both sides are additive on $K$. For $x=u_0\in\F_q$ both sides vanish ($\Tr_{q^{12}/q}$ is $12\cdot\mathrm{id}$ on $\F_q$). For $i\ge1$, $u_i\in\F_{q^4}$ and $\tau(u_i)=3\Tr_{q^4/q}(u_i)=u_1+u_2+u_3+u_4=u_0$, so $\Tr_{q^{12}/2}(bu_i)=\Tr_{q/2}(bu_0)$, while $Q_0(u_i)=\Tr_{q/2}\bigl(\sum_{i'\ge1}(u_{i'}^5+tu_{i'}^3)\bigr)=\Tr_{q/2}\bigl(p_5-u_0^5+t(p_3-u_0^3)\bigr)$ with $p_m$ the power sums of all five roots of $A$; Newton's identities for $A$ ($e_1=e_2=e_3=0$, $e_4=t^2$, $e_5=1$) give $p_3=0$, $p_5=5e_5=1$, so $Q_0(u_i)=\Tr_{q/2}(1+u_0^5+tu_0^3)=\kappa$. Thus $S(b)\ne0$ iff $\Tr_{q/2}(bu_0)=\kappa$ iff $\Tr_{q/2}(u_0^5+tu_0^3+bu_0)=1$. On the other hand $x\mapsto\Tr_{q/2}(x^5+tx^3+bx)$ is a quadratic form on $\F_q$ with polar form $\Tr_{q/2}(yT(x))$ and radical $K^\sigma=\{0,u_0\}$, so $s_1(b)\ne0$ iff $\Tr_{q/2}(u_0^5+tu_0^3+bu_0)=0$.
+
+(b) Over $\F_{q^2}$ the radical is $K^{\sigma^2}=\{0,u_0,w,w'\}$ with $w=u_1+u_3$, $w'=\sigma w=u_2+u_4=w+u_0$, and $s_2(b)\ne0$ iff $\Tr_{q^2/2}(x^5+tx^3+bx)$ vanishes at $x=u_0$ and $x=w$. At $u_0$ it does. Let $N_2=ww'\in\F_q$ and let $\rho\in\F_q$ be the cube root of $u_0$ ($3\nmid q-1$). We claim $N_2=\rho$. Dividing $A$ by $u+u_0$ and using $u_0^5+t^2u_0+1=0$, the quartic with roots $u_1,\dots,u_4$ is $B(u)=u^4+u_0u^3+u_0^2u^2+u_0^3u+u_0^{-1}$; its resolvent cubic, with roots $u_1u_2+u_3u_4$, $u_1u_3+u_2u_4$, $u_1u_4+u_2u_3$, is $\theta^3+u_0^2\theta^2+u_0^4\theta+u_0^6+u_0=(\theta+u_0^2)^3+u_0$, whose unique root in $\F_q$ is $u_0^2+\rho$; the $\sigma$-invariant root is $M=u_1u_3+u_2u_4$, so $M=u_0^2+\rho$ and $N_2=(u_1+u_3)(u_2+u_4)=e_2(B)+M=u_0^2+M=\rho$. Now with $w+w'=u_0$, $ww'=\rho$: $w^3+w'^3=u_0^3+u_0\rho$ and $w^5+w'^5=u_0^5+u_0^3\rho+u_0\rho^2$, so
+\begin{align*}
+\Tr_{q^2/2}(w^5+tw^3+bw)&=\Tr_{q/2}(u_0^5+tu_0^3+bu_0)+\Tr_{q/2}\bigl(u_0^3\rho+u_0\rho^2+tu_0\rho\bigr)\\
+&=1+\Tr_{q/2}\bigl(\rho^{10}+\rho^5+t\rho^4\bigr)=1+\Tr_{q/2}(t\rho^4).
+\end{align*}
+From $u_0^5+t^2u_0+1=0$, $t^2=u_0^4+u_0^{-1}=\rho^{12}+\rho^{-3}$, so $t=\rho^6+\rho^{-3/2}$ and $t\rho^4=\rho^{10}+\rho^{5/2}$, whose trace is $\Tr(\rho^5)+\Tr(\rho^5)=0$. Hence the form takes the value $1$ at $w$ and $s_2(b)=0$.
+
+(c) With $\omega_1,\dots,\omega_4$ the Frobenius eigenvalues of $C_b$ (genus $2$), $s_m(b)=-\sum_i\omega_i^m$ (Theorem~\ref{thm:supersing}), so $e_1=\sum\omega_i=-s_1=0$ and $e_2=\frac12\bigl(e_1^2-\sum\omega_i^2\bigr)=\frac12(s_1^2+s_2)=0$; the functional equation gives $e_3=qe_1=0$, $e_4=q^2$. So $\prod(1-\omega_iT)=1+q^2T^4$, $\omega_i^4=-q^2$, $\omega_i^{12}=-q^6$ and $S(b)=-\sum\omega_i^{12}=4q^6$. Summing over the $q/2$ values of $b$ in (a) gives $W(t,1)=2q^7$.
+\end{proof}
+
+\begin{theorem}[the mixed part, $k$ odd]\label{thm:mixed}
+Let $k$ be odd, $\lambda_3\lambda_5\ne0$, $j=\lambda_3^5/\lambda_5^3$ and $c=j^{-1/2}$. Then
+\[
+W(\lambda_3,\lambda_5)=\begin{cases}2q^7,&v^5+v+c\text{ has type }(1,4),\\ 0,&v^5+v+c\text{ has type }(2,3)\text{ or }(1,1,1,2),\end{cases}
+\]
+and no other type occurs. In the $4$-cycle case exactly $q/2$ of the sums $S(\lambda_1,\lambda_3,\lambda_5)$, $\lambda_1\in\F_q$, are nonzero and each equals $+4q^6$; in the other two cases all $q$ sums equal $\pm4q^6$ and cancel in pairs. Equivalently, in the $\beta$-form of \eqref{eq:W}: $Q$ vanishes on the radical $\theta^{-1}(\ker L_\lambda\cap\F_{q^2})$ (of dimension $2k+2$) with Arf sign $+$ in the $4$-cycle case, and $Q$ does not vanish on the radical (of dimension $2k+4$) otherwise.
+\end{theorem}
+\begin{proof}
+By Proposition~\ref{prop:mixed}(a),(b) we may take $(\lambda_3,\lambda_5)=(t,1)$, $t=j^{1/5}$, and the type of $v^5+v+c$ is the type of $A(u)=u^5+t^2u+1$. Proposition~\ref{prop:HK} restricts the types to the three listed (the scaling $(\lambda_1,\lambda_3,\lambda_5)\mapsto(s\lambda_1,s^3\lambda_3,s^5\lambda_5)$ preserves the number and signs of the nonzero $S$). Lemma~\ref{lem:quadfactor} covers types $(2,3)$ and $(1,1,1,2)$, Lemma~\ref{lem:fourcycle} the type $(1,4)$. For the $\beta$-form: by Proposition~\ref{prop:mixed}(c) the radical has dimension $2k+2$ or $2k+4$, so $|W|\in\{0,2q^7\}$ or $\{0,4q^7\}$ respectively, and $W=2q^7$ (resp.\ $W=0$) is equivalent to the stated behaviour of $Q$ on the radical.
+\end{proof}
+
+\begin{corollary}\label{cor:A6odd}
+For all odd $k$: $\sum_{\lambda_3\lambda_5\ne0}W(\lambda_3,\lambda_5)=(q-1)(q-2)q^7$ and
+\[
+A_6=|U|=q^9+(q-1)q^5 .
+\]
+That is, Conjecture~\ref{conj:A6X} holds for $A_6$ whenever $k$ is odd.
+\end{corollary}
+\begin{proof}
+Each class $j\in\F_q^\times$ consists of $q-1$ pairs $(\lambda_3,\lambda_5)$ (Proposition~\ref{prop:mixed}(a)), and the $4$-cycle classes number $(q-2)/2$ (Proposition~\ref{prop:HK}); Theorem~\ref{thm:mixed} gives $\sum_{\rm mixed}W=(q-1)\frac{q-2}2\,2q^7$, which is \eqref{eq:mixedsum} for odd $k$. Combine with Lemmas~\ref{lem:purecubic}, \ref{lem:purequintic} and \eqref{eq:W}.
+\end{proof}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\textwidth]{fig_gold_cycle.pdf}
+\caption{The mixed part for odd $k$ (Theorem~\ref{thm:mixed}). For each $c\in\F_q^\times$ the Gold-type quintic $v^5+v+c$ has one of three factorisation types over $\F_q$, with the exact frequencies of Proposition~\ref{prop:HK} (bars: $q=2^3,\dots,2^{11}$; dashed lines: the limits $\frac12,\frac13,\frac16$). Only the $4$-cycle type contributes to $A_6$: there $q/2$ of the $q$ curve sums $S(\lambda_1)$ equal $+4q^6$ and the rest vanish; for the other types all $q$ sums are $\pm4q^6$ and cancel in pairs (Lemmas~\ref{lem:quadfactor}, \ref{lem:fourcycle}). The ``half-measure'' of the $4$-cycle set, $(q-2)/2$, is what produces the term $(q-1)(q-2)q^7$ of \eqref{eq:mixedsum}.}\label{fig:goldcycle}
+\end{figure}
 
 \begin{sloppypar}
-Conjecture~\ref{conj:mixed} was verified for $k\le7$ (every $j$, both the radical test and the signs; scripts \texttt{legendre\_d6\_qf\_mixed.py} and \texttt{quintic\_check.py}).
+Theorem~\ref{thm:mixed} was checked in two independent ways: for $k\le7$ by the exact $\F_2$-quadratic-form algorithm (\texttt{legendre\_d6\_qf\_mixed.py}: every $j$, radical test and signs), and for $k\le9$ through the $L$-polynomials (\texttt{kasami\_sign.py}): for every $j\in\F_q^\times$ and every $b\in\F_q$ the sums $s_1(b),s_2(b)$ over $\F_q$ and $\F_{q^2}$ determine $\prod(1-\omega_iT)$ and hence $S(b)=-\sum\omega_i^{12}$; the resulting multisets $\{S(b)\}$ and the values of $W$ agree with the theorem in every case, and in the $4$-cycle case the predicate $\Tr_{q/2}(bu_0)=\kappa$ of Lemma~\ref{lem:fourcycle}(a) matches $S(b)\ne0$ exactly. The types of Proposition~\ref{prop:HK} were enumerated for $k\le11$ (\texttt{quintic\_check.py}).
 \end{sloppypar}
-Together with Proposition~\ref{prop:HK} it gives $\sum_{\rm mixed}W=(q-1)\cdot\frac{q-2}2\cdot2q^7$, which is \eqref{eq:mixedsum}; so for odd $k$, Conjecture~\ref{conj:A6X} (for $A_6$) follows from Conjecture~\ref{conj:mixed} and the Helleseth--Kholosha count. The condition ``$g$ is a $4$-cycle'' is a $\Z/4$-condition (the Frobenius must be a regular unipotent on the kernel), not an $\F_2$-trace condition; this is why no predicate $\Tr(f(j))=0$ describes the set of $j$ with $W\ne0$ (Proposition~\ref{prop:pattern}). What is missing for a proof is the evaluation of the Arf invariants in the $4$-cycle case (equivalently the sign of $S(0,\lambda_3,\lambda_5)$, a Kasami-type sum $\sum_x(-1)^{\Tr(\lambda_5x^5+\lambda_3x^3)}$) and the non-vanishing of $Q$ on the radical in the other cases; for even $k$ the orbit invariant $j$ is not complete and the analogous analysis has not been carried out.
+The condition ``$g$ is a $4$-cycle'' is a $\Z/4$-condition (the Frobenius must be a regular unipotent on the kernel), not an $\F_2$-trace condition; this is why no predicate $\Tr(f(j))=0$ describes the set of $j$ with $W\ne0$ (Proposition~\ref{prop:pattern}). Note also that the sign in the $4$-cycle case is \emph{not} obtained from an Arf-invariant computation on $\F_2^{12k}$ but from the two small sums $s_1,s_2$ over $\F_q$ and $\F_{q^2}$, which vanish for exactly the $b$ with $S(b)\ne0$ and force the Frobenius eigenvalues of $C_b$ to be $\sqrt q$ times primitive $8$th roots of unity. For even $k$ the orbit invariant $j$ is not complete (cube and fifth roots need not exist in $\F_q$) and the analogous analysis has not been carried out; the closed form of $X$ (the sums $W'$) is open for all $k$.
 
 \section{The scaling law at $d=6$ and the nature of $Y$}\label{sec:Y}
 
 \subsection{Variance formula}
 \begin{theorem}\label{thm:varH6}
-Assume Conjecture~\ref{conj:A6X} (true for $q\le128$) and write $Y=q^3m_k$. Then $B=-2q^3[k\text{ odd}]$,
+Assume Conjecture~\ref{conj:A6X} (true for $q\le128$; for odd $k$ only its statement for $X$ is needed, by Corollary~\ref{cor:A6odd}) and write $Y=q^3m_k$. Then $B=-2q^3[k\text{ odd}]$,
 \[
 \varphi_0=\begin{cases}q^5+q^4-2q^3,&k\text{ odd},\\-q^5+q^4,&k\text{ even},\end{cases}\qquad
 \varphi_{A,B}=\begin{cases}-2q^3\pm q^2m_k,&k\text{ odd},\\ \pm q^2m_k,&k\text{ even},\end{cases}
@@ -620,6 +707,12 @@ where $\mathcal L_{\psi_0}$ is the Artin--Schreier sheaf on $\A^1_{\F_2}$ attach
 (a) By Proposition~\ref{prop:trace}(c), $\F_2[z]/I$ is a free module over the ring $\F_2[e]/(e_1,e_3,e_5)$, which is the polynomial ring $\F_2[e_2,e_4,e_6,\dots,e_{12}]$; so $(e_1,e_3,e_5)$ is a regular sequence and $X$ is finite over $\A^9$. (b) By the Jacobian criterion for complete intersections, $X$ is smooth at $z$ iff $de_1,de_3,de_5$ are independent there. On $X$, $\partial_je_1=1$, $\partial_je_3=e_2(z\setminus z_j)=e_2+z_j^2$ and $\partial_je_5=e_4(z\setminus z_j)=e_4+e_2z_j^2+z_j^4$, so the row space is that of the Vandermonde rows $(1)_j,(z_j^2)_j,(z_j^4)_j$, of rank $3$ iff at least three of the $z_j$ are distinct. Conversely, if $z$ takes only the values $u,v$ with multiplicities $s,r$, $s+r=12$, then $e_m(z)=\sum_i\binom{s}{m-i}\binom ri u^{m-i}v^i$; for $r$ even every term with $m$ odd contains a factor $\binom{\mathrm{even}}{\mathrm{odd}}$, which is even by Lucas' theorem, so $e_1=e_3=e_5=0$ and $P_A\subset X$; for $r$ odd, $e_1=u+v$ forces $u=v$. (c) $X$ is generically reduced (generic fibre of $\pi$ \'etale) and Cohen--Macaulay, hence reduced; Cohen--Macaulay gives Serre's $S_2$ and (b) gives $R_1$, so $X$ is normal; a cone is connected, and a connected normal variety is irreducible. The same holds over $\bar\F_2$. The irreducible components of $X_{\bar\F_2}$ correspond to the cosets $S_{12}/G$ of the geometric monodromy group $G$ (the generic fibre of $\pi$ is the splitting algebra), so $G=S_{12}$.
 \end{proof}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.95\textwidth]{fig_singular_planes.pdf}
+\caption{The singular locus of $X=V(e_1,e_3,e_5)\subset\A^{12}$ (Proposition~\ref{prop:Xgeom}(b)), schematically. A point with only two distinct coordinate values $u,v$ lies on the plane $P_A$ determined by the index set $A$ of the coordinates equal to $u$; by Lucas' theorem $P_A\subset X$ exactly when $|A|$ is even, and the $1023$ such planes, stratified by $|A|\in\{2,4,6\}$ ($A$ and its complement give the same plane), all contain the diagonal line and form the two-dimensional singular locus, of codimension $7$ in $X$. Outside these planes at least three coordinates are distinct and the Vandermonde rows $(1),(z_j^2),(z_j^4)$ make $X$ smooth.}\label{fig:singplanes}
+\end{figure}
+
 \begin{proposition}[the Artin--Schreier sheaf]\label{prop:ASsheaf}
 The cover $Z=\{(z,y)\in X\times\A^1:y^2+y=e_4(z)\}\to X$ is \'etale of degree $2$ and $Z$ is smooth over $X_{\rm sm}$. The function $f=e_4$ has no poles on $X$; on the projective closure $\overline X\subset\mathbb P^{12}$ its polar divisor is $4X_\infty$ with $X_\infty\cong\mathbb P(X)\subset\mathbb P^{11}$ the base of the cone. Since the pole order $4$ is divisible by $p=2$, the Swan conductor of $\mathcal L$ along $X_\infty$ is $<4$. The sheaf $\mathcal L$ is geometrically nontrivial on $X$ (on the diagonal line $e_4=\binom{12}4u^4=u^4$, and $u^4\notin\{g^2+g+c\}$), so $Z$ is geometrically connected and
 \[
@@ -658,7 +751,7 @@ Theorem~\ref{thm:twisted} and Propositions~\ref{prop:trace}--\ref{prop:ASsheaf} 
 \centering
 \caption{Status of the main identities. ``exact'' means verified by exact integer computation; the method is indicated.}\label{tab:status}
 \small
-\begin{tabular}{@{}p{0.42\textwidth}p{0.24\textwidth}p{0.3\textwidth}@{}}
+\begin{tabular}{@{}p{0.41\textwidth}p{0.24\textwidth}p{0.29\textwidth}@{}}
 \toprule
 Statement & Status & Range checked\\
 \midrule
@@ -667,8 +760,11 @@ $d=4$: $\Var_{\G^2}/q^5=q(q-1)$, $\Var_\G/q^5=3-3/q$ & proved & Lemma~\ref{lem:s
 $d=4$: $\rho$ structure (Theorem~\ref{thm:rho4}) & proved & matches \cite[Table 4]{Chen}\\
 $d=6$: three-value profile (Theorem~\ref{thm:threevalue}) & proved & all $q^2$ classes, $q\le32$\\
 $d=6$: tower identities and reductions & proved & $\F_{2^{12}}$ exhaustive; $q=2,4,8$\\
-$d=6$: $A_6,X$ closed forms (Conjecture~\ref{conj:A6X}) & open; pure cubic part proved & exact, $q\le128$ (Table~\ref{tab:A6X})\\
-$d=6$: $\Var_{\G^2}/q^7$ formula (Theorem~\ref{thm:varH6}) & proved given Conj.~\ref{conj:A6X} & $q\le32$\\
+$d=6$: pure cubic and pure quintic parts (Lemmas~\ref{lem:purecubic}, \ref{lem:purequintic}) & proved, all $k$ & exact, $q\le128$\\
+$d=6$: mixed part, $k$ odd (Theorem~\ref{thm:mixed}); types of $v^5+v+c$ (Proposition~\ref{prop:HK}) & proved & quadratic forms $k\le7$; $L$-polynomials $k\le9$; types $k\le11$\\
+$d=6$: $A_6=q^9+(q-1)q^5$, $k$ odd (Corollary~\ref{cor:A6odd}) & proved & exact, $q\le128$ (Table~\ref{tab:A6X})\\
+$d=6$: $A_6$ for even $k$ and $X$ for all $k$ (Conjecture~\ref{conj:A6X}) & open & exact, $q\le128$ (Table~\ref{tab:A6X})\\
+$d=6$: $\Var_{\G^2}/q^7$ formula (Theorem~\ref{thm:varH6}) & proved given Conj.~\ref{conj:A6X} ($X$-part only for odd $k$) & $q\le32$\\
 $C_6=1$ & conditional on $m_k=o(q^{5/2})$ & $q\le32$\\
 \bottomrule
 \end{tabular}
