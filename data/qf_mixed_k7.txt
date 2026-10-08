@@ -1,0 +1,12 @@
+﻿
+### k=7, q=128, N=84   (setup 0.5s)
+  l5=0: (W/q^7, r_beta, r_x[, multiset of S(l1)/q^6 over l1]) -> #pairs
+     ('0', 16, 2)  x127
+  l3=0: (W/q^7, r_beta, r_x[, multiset of S(l1)/q^6 over l1]) -> #pairs
+     ('2', 16, 4)  x127
+  mixed: (W/q^7, r_beta, r_x[, multiset of S(l1)/q^6 over l1]) -> #pairs
+     ('0', 18, 4)  x8128
+     ('2', 16, 4)  x8001
+  odd k: W(mixed) is a function of j; |J+| = 63 = (q-2)/2 = 63
+  two-term / rational trace predicates matching J+: []
+  [2.3s]

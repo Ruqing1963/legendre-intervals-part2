@@ -425,6 +425,34 @@ $Q(\beta_y)=\Tr_{q^4/2}(\lambda_3y\beta_y^2)=\Tr_{q^2/2}(\lambda_3y\,(\Tr_{q^4/q
 For $k$ odd the analogue of Lemma~\ref{lem:lambda1} fails over $\F_{q^{12}}$: the cube roots lie in $\F_{q^2}$ and $[\F_{q^6}:\F_{q^2}]=3$ is odd, so $\F_q\not\subset T(\F_{q^6})$. The vanishing of $W(\lambda_3,0)$ is exactly this failure.
 \end{remark}
 
+\subsection{The pure quintic part}
+The quintic analogue uses a pure Gauss sum of order $5$. Since $2^2\equiv-1\pmod 5$, Stickelberger's theorem on pure Gauss sums (see \cite[Thm.~11.6.3]{BEW}) gives, for every character $\chi$ of order $5$ of $\F_{2^{4s}}^\times$, $G(\chi)=\sum_y\chi(y)(-1)^{\Tr y}=(-1)^{s-1}2^{2s}$. With $4s=12k$, i.e.\ $s=3k$, and $a\in\F_q^\times$,
+\begin{equation}\label{eq:quinticgauss}
+S(0,0,a)=\sum_{x\in\F_{q^{12}}}\psi_0(ax^5)=\sum_{j=1}^4\chi^{-j}(a)G(\chi^j)=\sgn\,q^6\bigl(5\,[a\in(\F_{q^{12}}^\times)^5]-1\bigr),
+\end{equation}
+and $a\in\F_q^\times$ is a fifth power in $\F_{q^{12}}$ iff $4\nmid k$ or $a\in(\F_q^\times)^5$ (because $(q^{12}-1)/(q-1)\equiv0\pmod5$ iff $q\not\equiv1\pmod5$ iff $4\nmid k$).
+
+\begin{lemma}[pure quintic part]\label{lem:purequintic}
+For all $k$ and all $\lambda_5\in\F_q^\times$:
+\[
+W(0,\lambda_5)=\begin{cases}2q^7,&k\text{ odd},\\ 0,&k\equiv2\pmod4,\\ -4q^7,&k\equiv0\pmod4\text{ and }\lambda_5\in(\F_q^\times)^5,\\ +q^7,&k\equiv0\pmod4\text{ and }\lambda_5\notin(\F_q^\times)^5.\end{cases}
+\]
+\end{lemma}
+\begin{proof}
+Here $M(y)=\lambda_5y^4+(\lambda_5y)^{1/4}$ and $\ker M=\{0\}\cup\{y:y^{15}=\lambda_5^{-3}\}$. The equation $y^{15}=\lambda_5^{-3}$ is solvable in $\F_{q^{12}}$ iff $\lambda_5$ is a fifth power there (if $y^{15}=w^3$ then $y^5=w\omega$ with $\omega^3=1$, and $\omega\in(\F_{q^{12}}^\times)^5$), and then, with $y_0^5=\lambda_5^{-1}$, $\ker M=y_0\F_{16}$ since $\mu_{15}\cup\{0\}=\F_{16}\subset\F_{q^{12}}$.
+
+\emph{Case $4\mid k$, $\lambda_5\notin(\F_q^\times)^5$.} $\ker M=0$, the radical of the $\beta$-form is $\ker\theta=\F_{q^2}$ of dimension $2k$, $Q$ vanishes on it, so $|W|=2^{(12k+2k)/2}=q^7$. Each $S(\lambda_1,0,\lambda_5)$ has trivial radical, hence $|S|=q^6$ for all $q$ values of $\lambda_1$; $|W|=q\cdot q^6$ forces all signs to agree with that of $S(0,0,\lambda_5)=-\sgn q^6=+q^6$ by \eqref{eq:quinticgauss}. So $W=q^7$.
+
+\emph{Case $\lambda_5\in(\F_{q^{12}}^\times)^5$, $k$ even.} If $4\mid k$ choose $y_0\in\F_q$; if $k\equiv2\pmod4$ then $5\mid q+1$, so every element of $\F_q$ is a fifth power in $\F_{q^2}$ and we choose $y_0\in\F_{q^2}$. Also $\F_{16}\subset\F_{q^2}$. Hence $\ker M=y_0\F_{16}\subset\F_{q^2}\subset\im\theta$ and the radical $R=\theta^{-1}(y_0\F_{16})$ has dimension $2k+4$. For $y\in y_0\F_{16}$ pick $\beta_y\in\F_{q^4}$ with $\Tr_{q^4/q^2}\beta_y=y^q$ (as in Lemma~\ref{lem:purecubic}); then $Q(\beta_y)=\Tr_{q^2/2}(\lambda_5y^{4q+1})$. Write $y=y_0c$, $c\in\F_{16}$, and $\rho=y_0^{q-1}\in\mu_5$ ($\rho=1$ if $4\mid k$). Then $\lambda_5y^{4q+1}=\rho^4c^{4q+1}$, and $c^{4q+1}=c^5$ if $q\equiv1\pmod{15}$ ($4\mid k$), $=c^2$ if $q\equiv4\pmod{15}$ ($k\equiv2\pmod 4$). Since $c\in\F_{16}\subset\F_{q^2}$, $\Tr_{q^2/2}(x)=\frac k2\Tr_{16/2}(x)$ for $x\in\F_{16}$. If $4\mid k$ this is $0$: $Q|_R=0$, $|W|=2^{(14k+4)/2}=4q^7$; on the $x$-side the radical $y_0\F_{16}\subset\F_q$ carries $Q_x(y_0c)=\Tr_{q^{12}/2}(c^5)=3k\Tr_{16/2}(c^5)=0$ ($c^5\in\F_4$) and the linear forms $\Tr(\lambda_1y_0c)=\Tr_{q/2}(12\lambda_1y_0c)=0$, so all $q$ sums $S(\lambda_1,0,\lambda_5)$ have modulus $2^{(12k+4)/2}=4q^6$ and $|W|=q\cdot4q^6$ forces equal signs, that of $S(0,0,\lambda_5)=4\sgn q^6=-4q^6$: $W=-4q^7$. If $k\equiv2\pmod4$ then $Q(\beta_{y_0c})=\Tr_{16/2}(\rho^4c^2)=\Tr_{16/2}(\rho^2c)$, which is nonzero for suitable $c$; so $Q|_R\ne0$ and $W=0$.
+
+\emph{Case $k$ odd.} Fifth powers are bijective on $\F_q^\times$, so $y_0\in\F_q$. Now $\F_{16}\not\subset\F_{q^2}$ and $q^2\equiv4\pmod{15}$, so for $c\in\F_{16}$, $\Tr_{q^{12}/q^2}(y_0c)=y_0\sum_{i<6}c^{4^i}=y_0(c+c^4)$, which vanishes iff $c\in\F_4$. Thus $\ker M\cap\im\theta=y_0\F_4$ and $\dim R=2k+2$. For $y=y_0c$, $c\in\F_4^\times$: $Q(\beta_y)=\Tr_{q^2/2}(\lambda_5y_0^5c^{4q+1})=\Tr_{q^2/2}(1)=0$ because $4q+1\equiv q+1\equiv0\pmod3$. Hence $|W|=2^{(14k+2)/2}=2q^7$. On the $x$-side, $Q_x(y_0c)=\Tr_{q^{12}/2}(c^5)=0$ as before, while $\Tr_{q^{12}/2}(\lambda_1y_0c)=\Tr_{q/2}(\lambda_1y_0)\Tr_{16/2}(c)$ (the twelve conjugates of $c$ under $q$-Frobenius run three times through $c,c^2,c^4,c^8$); so exactly the $q/2$ values of $\lambda_1$ with $\Tr_{q/2}(\lambda_1y_0)=0$ give $|S|=4q^6$, the others give $0$, and $|W|=\frac q2\cdot4q^6$ forces equal signs, that of $S(0,0,\lambda_5)=4\sgn q^6=+4q^6$. So $W=2q^7$.
+\end{proof}
+
+Lemmas~\ref{lem:purecubic} and \ref{lem:purequintic} give, for the pure terms, $\sum_{\lambda_3\ne0}W(\lambda_3,0)+\sum_{\lambda_5\ne0}W(0,\lambda_5)=2(q-1)q^7$ for $k$ odd and $=-2(q-1)q^7$ for $k$ even (for $4\mid k$ the quintic terms contribute $\frac{q-1}5(-4q^7)+\frac{4(q-1)}5q^7=0$). Hence Conjecture~\ref{conj:A6X} for $A_6$ is equivalent to
+\begin{equation}\label{eq:mixedsum}
+\sum_{\lambda_3\lambda_5\ne0}W(\lambda_3,\lambda_5)=\begin{cases}(q-1)(q-2)\,q^7,&k\text{ odd},\\ -(q-1)(q-2)\,q^7,&k\text{ even}.\end{cases}
+\end{equation}
+
 \subsection{Exact evaluation and the conjecture}
 Every $W,W'$ is the exponential sum of an $\F_2$-quadratic form (plus a linear form) on $\F_2^{12k}$, hence computable exactly by linear algebra: radical, test of $Q+L$ on it, a symplectic basis of a complement and its Arf invariant. We implemented this (\texttt{legendre\_d6\_qf.py}) with $\F_{q^{12}}=\F_q[z]/(m)$ and the maps $\beta\mapsto\beta^2,\beta^{1/2},\sigma,\theta$ as $12k\times12k$ matrices over $\F_2$.
 
@@ -481,7 +509,37 @@ For $k\le7$ the following hold.
 The set of $j$ in (a) is not of the form $\{\Tr_{q/2}(j^m)=c\}$ for any $m$ when $k=5,7$ (it is $\{\Tr j=0\}$ when $k=3$).
 \end{proposition}
 
-Conjecture~\ref{conj:A6X} is thus equivalent to a precise statement about which radicals $\theta^{-1}(\ker M\cap\im\theta)$ carry a vanishing $Q$ and about the Arf invariants, for the $15$-th degree linearised polynomials $\lambda_5^4y^{15}+\lambda_3^4y^7+\lambda_3^2y+\lambda_5$. The supersingular point counts of Theorem~\ref{thm:supersing} determine the possible absolute values; they do not by themselves decide which pairs $(\lambda_3,\lambda_5)$ vanish. We leave the pure quintic and mixed cases open.
+\subsection{The mixed part for odd $k$: a Gold-type quintic and a $\Z/4$ condition}
+For $k$ odd we can describe the mixed terms completely in terms of the factorisation of a single quintic over $\F_q$; what remains unproved is isolated in Conjecture~\ref{conj:mixed} below.
+
+\begin{proposition}\label{prop:mixed}
+Let $k$ be odd, $\lambda_3\lambda_5\ne0$, $j=\lambda_3^5/\lambda_5^3$, $t=j^{1/5}\in\F_q$ and $c=j^{-1/2}\in\F_q^\times$ (fifth and square roots are unique in $\F_q$).
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2em]
+\item $W(\lambda_3,\lambda_5)$ depends only on $j$ (the orbits of $(\lambda_3,\lambda_5)\mapsto(s^3\lambda_3,s^5\lambda_5)$, $s\in\F_q^\times$, are the fibres of $j$).
+\item With $y=\lambda_5^{-1/5}u$, the kernel equation $\lambda_5^4y^{15}+\lambda_3^4y^7+\lambda_3^2y+\lambda_5=0$ becomes $P_j(u):=u^{15}+t^4u^7+t^2u+1=0$, and
+\[
+P_j(u)=(u^5+t^2u+1)(u^{10}+t^2u^6+u^5+1),\qquad u=t^{1/2}v\ \Longrightarrow\ u^5+t^2u+1=t^{5/2}(v^5+v+c).
+\]
+The five roots $u_0,\dots,u_4$ of $u^5+t^2u+1$ have sum $0$, are $\F_2$-linearly independent apart from this relation, and $\ker L_\lambda=\{0\}\cup\{u_i\}\cup\{u_i+u_{i'}\}$ (the ten roots of the second factor are the pairwise sums). The $q$-Frobenius acts on $\ker L_\lambda$ through its permutation action on the roots $v_i$ of $v^5+v+c$, i.e.\ through the standard embedding $S_5\to GL_4(\F_2)$ on the sum-zero module.
+\item Let $g\in S_5$ be the Frobenius permutation of the roots of $v^5+v+c$ (its cycle type is the factorisation type of $v^5+v+c$ over $\F_q$). Then $\ker L_\lambda\subset\F_{q^{12}}$ iff $g$ has no $5$-cycle, $\dim_{\F_2}(\ker L_\lambda\cap\im\theta)=2$ if $g$ is a $4$-cycle (type $(1,4)$) and $=4$ for types $(1,1,1,2)$, $(2,3)$, $(1,1,1,1,1)$, $(1,2,2)$, $(1,1,3)$, and the image of $\Tr_{q^{12}/q}$ on $\ker L_\lambda$ is one-dimensional over $\F_2$ if $g$ is a $4$-cycle and zero otherwise. Consequently, for a $4$-cycle, $|W|\in\{0,2q^7\}$ and exactly $q/2$ of the sums $S(\lambda_1,\lambda_3,\lambda_5)$ are nonzero (with modulus $4q^6$); for the other types $|W|\in\{0,4q^7\}$ and either all or none of the $S(\lambda_1,\cdot)$ vanish.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(a) For $s\in\F_q^\times$, $\beta\mapsto s\beta$ sends $\Tr(\lambda_3\beta^2\theta\beta+\lambda_5\beta^4\theta\beta)$ to the form with $(s^3\lambda_3,s^5\lambda_5)$; since $3,5\nmid q-1$ the map $s\mapsto(s^3,s^5)$ is injective, so the orbits have size $q-1$ and are the fibres of $j$. (b) Substitute $y=\lambda_5^{-1/5}u$ and divide by $\lambda_5$. The factorisation is checked by expanding: $u^5P_j(u)=(u^{10}+t^2u^6+u^5)^2+(u^{10}+t^2u^6+u^5)$. The second factor equals $u^5A(u)+1$ with $A=u^5+t^2u+1$, so its roots are not roots of $A$; $A$ is separable ($A'=(u+\sqrt t)^4$, $A(\sqrt t)=1$) with $e_1=0$; $\ker L_\lambda$ is a $4$-dimensional $\F_2$-space containing the $u_i$, and a relation $u_i+u_{i'}+u_{i''}=0$ would force two of the remaining roots to coincide, while $u_i+u_{i'}+u_{i''}+u_{i'''}=0$ would force the fifth root to be $0$; hence the pairwise sums are $10$ distinct nonzero kernel elements outside $\{u_i\}$, which exhausts the kernel. Frobenius commutes with the identification. (c) Rationality over $\F_{q^{12}}$ means $g^{12}=1$. On the sum-zero module $V\cong\F_2[\Z/4]$ of a $4$-cycle, $\sum_{i<12}g^i=3(1+g+g^2+g^3)=(1+g)^3$ has rank $1$ and $\sum_{i<6}g^{2i}=1+g^2=(1+g)^2$ has kernel of dimension $2$; for $g$ of order $1,2,3,6$ both operators vanish on $V$ (the sums have an even number of equal terms), giving trace image $0$ and $\ker\cap\im\theta=\ker$. The last sentence follows from the radical dimensions $2k+\dim(\ker\cap\im\theta)$ for $W$ and $\dim(\ker L_\lambda)=4$ for the $S(\lambda_1,\cdot)$, together with the criterion $S\ne0$ iff $\Tr(\lambda_1\,\cdot)=Q_x$ on $\ker L_\lambda$: for a $4$-cycle the functionals $\Tr(\lambda_1\cdot)|_{\ker}$ form a one-dimensional space and $Q_x|_{\ker}$ lies in it (both are determined by whether $\Tr_{q^{12}/q}(x)$ vanishes, as $Q_x$ is additive on the radical and takes the same value on the four roots of degree $4$), so exactly half of the $\lambda_1$ qualify.
+\end{proof}
+
+\begin{proposition}[the quintic $v^5+v+c$, $k$ odd]\label{prop:HK}
+For $k\le11$ odd and $c\in\F_q^\times$, the factorisation type of $v^5+v+c$ over $\F_q$ is $(1,4)$ for exactly $(q-2)/2$ values of $c$, $(1,1,1,2)$ for $(q-2)/6$ values and $(2,3)$ for $(q+1)/3$ values; in particular the number of $\F_q$-roots is $1$, $3$ or $0$, with multiplicities $2^{k-1}-1$, $(2^{k-1}-1)/3$, $(2^k+1)/3$, in agreement with the theorem of Helleseth--Kholosha \cite{HK} on $x^{2^l+1}+x+a$ for $\gcd(l,k)=1$ (here $l=2$), and the quintic is never irreducible.
+\end{proposition}
+
+\begin{conjecture}[reduced form of Conjecture~\ref{conj:A6X}, $k$ odd]\label{conj:mixed}
+For $k$ odd and $\lambda_3\lambda_5\ne0$: $W(\lambda_3,\lambda_5)=2q^7$ if $v^5+v+j^{-1/2}$ has type $(1,4)$ and $W(\lambda_3,\lambda_5)=0$ otherwise. Equivalently: in the $4$-cycle case $Q$ vanishes on the radical $\theta^{-1}(\ker L_\lambda\cap\F_{q^2})$ and the $q/2$ nonzero sums $S(\lambda_1,\lambda_3,\lambda_5)$ all equal $+4q^6$; in the other cases $Q$ does not vanish on the radical.
+\end{conjecture}
+
+\begin{sloppypar}
+Conjecture~\ref{conj:mixed} was verified for $k\le7$ (every $j$, both the radical test and the signs; scripts \texttt{legendre\_d6\_qf\_mixed.py} and \texttt{quintic\_check.py}).
+\end{sloppypar}
+Together with Proposition~\ref{prop:HK} it gives $\sum_{\rm mixed}W=(q-1)\cdot\frac{q-2}2\cdot2q^7$, which is \eqref{eq:mixedsum}; so for odd $k$, Conjecture~\ref{conj:A6X} (for $A_6$) follows from Conjecture~\ref{conj:mixed} and the Helleseth--Kholosha count. The condition ``$g$ is a $4$-cycle'' is a $\Z/4$-condition (the Frobenius must be a regular unipotent on the kernel), not an $\F_2$-trace condition; this is why no predicate $\Tr(f(j))=0$ describes the set of $j$ with $W\ne0$ (Proposition~\ref{prop:pattern}). What is missing for a proof is the evaluation of the Arf invariants in the $4$-cycle case (equivalently the sign of $S(0,\lambda_3,\lambda_5)$, a Kasami-type sum $\sum_x(-1)^{\Tr(\lambda_5x^5+\lambda_3x^3)}$) and the non-vanishing of $Q$ on the radical in the other cases; for even $k$ the orbit invariant $j$ is not complete and the analogous analysis has not been carried out.
 
 \section{The scaling law at $d=6$ and the nature of $Y$}\label{sec:Y}
 
@@ -617,12 +675,15 @@ $C_6=1$ & conditional on $m_k=o(q^{5/2})$ & $q\le32$\\
 \end{table}
 
 \begin{thebibliography}{99}
+\bibitem{BEW} B.~C.~Berndt, R.~J.~Evans and K.~S.~Williams, \emph{Gauss and Jacobi Sums}, Wiley, New York, 1998.
+\bibitem{Bluher} A.~W.~Bluher, \emph{On $x^{q+1}+ax+b$}, Finite Fields Appl.\ \textbf{10} (2004), 285--305.
 \bibitem{Carlitz} L.~Carlitz, \emph{Explicit evaluation of certain exponential sums}, Math.\ Scand.\ \textbf{44} (1979), 5--16.
 \bibitem{Chen} R.~Chen, \emph{Primes in Legendre intervals over $\F_q[t]$: an exact explicit-formula algorithm, verification for $d\le10$, and an anomaly in characteristic~2}, preprint (2026), DOI 10.5281/zenodo.23219609.
 \bibitem{Coulter} R.~S.~Coulter, \emph{On the evaluation of a class of Weil sums in characteristic $2$}, New Zealand J.\ Math.\ \textbf{28} (1999), 171--184.
 \bibitem{Deligne} P.~Deligne, \emph{La conjecture de Weil. II}, Publ.\ Math.\ IHES \textbf{52} (1980), 137--252.
 \bibitem{DL} P.~Deligne and G.~Lusztig, \emph{Representations of reductive groups over finite fields}, Ann.\ of Math.\ (2) \textbf{103} (1976), 103--161.
 \bibitem{GV} G.~van der Geer and M.~van der Vlugt, \emph{Reed--Muller codes and supersingular curves. I}, Compositio Math.\ \textbf{84} (1992), 333--367.
+\bibitem{HK} T.~Helleseth and A.~Kholosha, \emph{On the equation $x^{2^l+1}+x+a=0$ over $GF(2^k)$}, Finite Fields Appl.\ \textbf{14} (2008), 159--176.
 \bibitem{HD} H.~Hasse and H.~Davenport, \emph{Die Nullstellen der Kongruenzzetafunktionen in gewissen zyklischen F\"allen}, J.\ reine angew.\ Math.\ \textbf{172} (1935), 151--182.
 \bibitem{Katz} N.~M.~Katz, \emph{Witt vectors and a question of Keating and Rudnick}, Int.\ Math.\ Res.\ Not.\ IMRN (2013), 3613--3638.
 \bibitem{KR} J.~P.~Keating and Z.~Rudnick, \emph{The variance of the number of prime polynomials in short intervals and in residue classes}, Int.\ Math.\ Res.\ Not.\ IMRN (2014), 259--288.
