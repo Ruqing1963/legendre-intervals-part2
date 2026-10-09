@@ -69,6 +69,16 @@ python generate_figures.py                        # six vector figures: gold cyc
 cd ../paper && python make_figures.py && pdflatex paper_part2.tex
 ```
 
+### Figures only
+
+All eight vector figures of the paper are produced by two scripts, which can be run from the repository root
+(they write into `paper/` regardless of the current directory):
+
+```bash
+python code/generate_figures.py      # Figures 2, 3, 5, 6, 7, 8
+python paper/make_figures.py         # Figures 1, 4 (exact values from the paper, hard-coded in the script)
+```
+
 `legendre_d6_qf.py` for k = 7 takes about four minutes and `kasami_sign.py 9` about a quarter of an hour; everything else runs in seconds to a minute.
 
 ## Citation

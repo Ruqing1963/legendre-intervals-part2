@@ -1,10 +1,13 @@
 """Figures for paper_part2.tex (vector PDF + PNG preview). All numbers are the exact values computed in the paper.
    fig_profile.pdf : Legendre deviations phi = Psi - q^{d+1} on G^2 for q = 16, d = 4 and d = 6 (Theorem 4.2).
    fig_scaling.pdf : Var_{G^2}/q^{d+1} and Var_G/q^{d+1} against q (log-log), d = 4 and d = 6, with q^2 and q^4 references."""
+import os
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
+OUT = os.path.dirname(os.path.abspath(__file__))     # figures are written next to this script (paper/)
 
 plt.rcParams.update({"font.size": 10, "font.family": "serif", "mathtext.fontset": "cm",
                      "axes.spines.top": False, "axes.spines.right": False})
@@ -40,7 +43,7 @@ axes[1].set_yticks([-983040, -100000, -12032, 0, 12032]); axes[1].set_yticklabel
 axes[0].set_ylabel(r"$\varphi=\Psi-q^{5}$  (symlog),  $q=16$")
 axes[1].set_ylabel(r"$\varphi=\Psi-q^{7}$  (symlog),  $q=16$")
 fig.tight_layout()
-fig.savefig("fig_profile.pdf"); fig.savefig("fig_profile.png", dpi=160)
+fig.savefig(os.path.join(OUT, "fig_profile.pdf")); fig.savefig(os.path.join(OUT, "fig_profile.png"), dpi=160)
 plt.close(fig)
 
 # ------------------------------------------------------------------ Figure 2: scaling
@@ -70,6 +73,6 @@ ax.set_ylabel(r"normalised variance $\mathrm{Var}/q^{d+1}$")
 ax.grid(True, which="major", color="#e5e7eb", lw=0.6)
 ax.legend(fontsize=7.8, frameon=False, loc="upper left")
 fig.tight_layout()
-fig.savefig("fig_scaling.pdf"); fig.savefig("fig_scaling.png", dpi=160)
+fig.savefig(os.path.join(OUT, "fig_scaling.pdf")); fig.savefig(os.path.join(OUT, "fig_scaling.png"), dpi=160)
 plt.close(fig)
 print("wrote fig_profile.pdf/png, fig_scaling.pdf/png")
