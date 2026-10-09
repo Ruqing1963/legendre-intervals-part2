@@ -181,4 +181,87 @@ ax.set_title(r"(b) identity class against the threshold", fontsize=9, loc="left"
 fig.tight_layout()
 fig.savefig(os.path.join(OUT, "fig_even_d_bifurcation.pdf")); fig.savefig(os.path.join(OUT, "fig_even_d_bifurcation.png"), dpi=160)
 plt.close(fig)
-print("wrote fig_gold_cycle, fig_singular_planes, fig_spectral_folding, fig_even_d_bifurcation (pdf/png)")
+
+# ------------------------------------------------------------- figure 5: S_6 classes and the signs of W' (Section 6.7, Table 3)
+# asymptotic density of each class = leading coefficient of the exact count / q^2 (Table 3); W'/q^7 by class.
+classes = [("$1^6$", 1 / 720, 4), ("$2\\,1^4$", 1 / 48, 0), ("$2^2 1^2$", 1 / 16, 0), ("$2^3$", 1 / 48, 4),
+           ("$3\\,1^3$", 1 / 18, 4), ("$3^2$", 1 / 18, 4), ("$3\\,2\\,1$", 1 / 6, 0), ("$4\\,1^2$", 1 / 8, 2),
+           ("$4\\,2$", 1 / 8, -2), ("$5\\,1$", 1 / 5, -1), ("$6$", 1 / 6, 4)]
+assert abs(sum(c[1] for c in classes) - 1) < 1e-12 and abs(sum(c[1] * c[2] for c in classes) - 1) < 1e-12
+valcol = {4: C1, 2: C3, 0: GRAY, -2: C2, -1: "#c0392b"}
+fig, (axA, axB) = plt.subplots(1, 2, figsize=(7.0, 3.4), gridspec_kw={"width_ratios": [1.05, 1]})
+ax = axA
+x = np.arange(len(classes))
+dens = [c[1] for c in classes]
+bars = ax.bar(x, dens, 0.7, color=[valcol[c[2]] for c in classes], edgecolor="white", lw=0.5)
+for b, c in zip(bars, classes):
+    ax.annotate(f"1/{round(1/c[1])}", xy=(b.get_x() + b.get_width() / 2, b.get_height()), xytext=(0, 2),
+                textcoords="offset points", ha="center", fontsize=6.3, color=INK)
+ax.set_xticks(x); ax.set_xticklabels([c[0] for c in classes], fontsize=7.5, rotation=0)
+ax.set_ylabel(r"density of the class ($\times q^2$ pairs)", fontsize=8)
+ax.set_ylim(0, 0.25)
+from matplotlib.patches import Patch
+ax.legend(handles=[Patch(color=valcol[v], label=rf"$W'/q^7={v}$") for v in (4, 2, 0, -2, -1)], fontsize=6.8, frameon=False,
+          loc="upper left", ncol=2, title=r"value of $W'$", title_fontsize=7)
+ax.grid(axis="y", color="#e5e7eb", lw=0.6)
+ax.set_title(r"(a) Frobenius classes in $S_6\cong Sp_4(\mathbb{F}_2)$", fontsize=9, loc="left")
+ax = axB
+contrib = [c[1] * c[2] for c in classes]
+cum = np.cumsum(contrib)
+ax.bar(x, contrib, 0.7, color=[valcol[c[2]] for c in classes], edgecolor="white", lw=0.5)
+ax.plot(x, cum, color=INK, lw=1.2, marker="o", ms=3, label="running total")
+ax.axhline(1.0, color=INK, lw=0.8, ls="--")
+ax.axhline(0, color=GRAY, lw=0.6)
+ax.text(0.1, 1.03, r"$\sum=1$: leading term $q^9$ of $\sum_{\rm mixed}W'=q^9-3q^8+q^7$", fontsize=7.2, color=INK)
+ax.annotate(r"$5$-cycles: $-\frac{1}{5}$", xy=(9, -0.2), xytext=(5.6, -0.42), fontsize=7.5, color="#c0392b",
+            arrowprops=dict(arrowstyle="->", color="#c0392b", lw=0.8))
+ax.annotate(r"$6$-cycles: $+\frac{2}{3}$", xy=(10, 0.667), xytext=(6.4, 0.78), fontsize=7.5, color=C1,
+            arrowprops=dict(arrowstyle="->", color=C1, lw=0.8))
+ax.set_xticks(x); ax.set_xticklabels([c[0] for c in classes], fontsize=7.5)
+ax.set_ylabel(r"density $\times\ W'/q^7$", fontsize=8)
+ax.set_ylim(-0.5, 1.15)
+ax.legend(fontsize=7, frameon=False, loc="center left")
+ax.grid(axis="y", color="#e5e7eb", lw=0.6)
+ax.set_title(r"(b) contributions to $\sum_{\rm mixed} W'/q^9$", fontsize=9, loc="left")
+fig.tight_layout()
+fig.savefig(os.path.join(OUT, "fig_S6_classes.pdf")); fig.savefig(os.path.join(OUT, "fig_S6_classes.png"), dpi=160)
+plt.close(fig)
+
+# ------------------------------------------------------------- figure 6: spectral bounds on m_k (Section 7.2, Props 7.8 and 7.10)
+mk = {1: 13, 2: -1, 3: -35, 4: 47, 5: 733}
+ks = np.array(sorted(mk)); q = 2.0 ** ks
+norm = np.array([abs(mk[k]) for k in ks]) / q ** 1.5
+fig, (axA, axB) = plt.subplots(1, 2, figsize=(7.0, 3.3))
+ax = axA
+ax.plot(ks, norm, marker="o", ms=5, lw=1.2, color=C1, label=r"$|m_k|/q^{3/2}$")
+for k, v in zip(ks, norm):
+    ax.annotate(f"{v:.2f}", xy=(k, v), xytext=(0, 5), textcoords="offset points", ha="center", fontsize=7, color=INK)
+for b, ls in ((4, ":"), (5, "--")):
+    ax.axhline(b, color=C2, lw=0.9, ls=ls)
+    ax.text(1.05, b + 0.1, rf"pure weight $9$, rank $b_9={b}$: $|m_k|\leq {b}\,q^{{3/2}}$", fontsize=7, color=C2)
+ax.axhspan(4.05, 5, color=C2, alpha=0.08)
+ax.text(2.55, 2.5, "rank $5$ excluded by Newton:\n" + r"$e_5=2281\neq 2^{15/2}=181.0$", fontsize=7.2, color="#c0392b", ha="center")
+ax.set_xticks(ks); ax.set_xlabel(r"$k$  ($q=2^k$)", fontsize=8.5); ax.set_ylabel(r"$|m_k|/q^{3/2}$", fontsize=8.5)
+ax.set_ylim(0, 6)
+ax.legend(fontsize=7.5, frameon=False, loc="upper center")
+ax.grid(color="#e5e7eb", lw=0.6)
+ax.set_title(r"(a) the five values against the pure weight-$9$ bound", fontsize=9, loc="left")
+ax = axB
+v2 = [3 * k for k in ks]
+ax.plot(ks, v2, marker="s", ms=5, lw=0, color=C1, label=r"$v_2(Y_k)=3k$ (exact, $m_k$ odd)")
+ax.plot(ks, 3 * ks, color=C1, lw=0.9, ls="-")
+kk = np.linspace(1, 5, 50)
+ax.plot(kk, 3.5 * kk, color="#c0392b", lw=1.0, ls="--", label=r"$v_2\geq 7k/2$: any part of weight $\geq 7$")
+ax.fill_between(kk, 3.5 * kk, 3.5 * kk + 6, color="#c0392b", alpha=0.08)
+ax.fill_between(kk, 3 * kk - 3, 3 * kk, color=C3, alpha=0.08)
+ax.text(1.1, 15.3, "weight $\\geq 7$ alone: impossible\n($Y_2=-64$ is not $2^7\\times$ algebraic integer)", fontsize=7, color="#c0392b")
+ax.text(3.05, 5.2, "a part of weight $\\leq 6$\nis forced", fontsize=7, color=C3)
+ax.set_xticks(ks); ax.set_xlabel(r"$k$", fontsize=8.5); ax.set_ylabel(r"$2$-adic valuation", fontsize=8.5)
+ax.set_ylim(0, 22)
+ax.legend(fontsize=6.8, frameon=False, loc="upper left")
+ax.grid(color="#e5e7eb", lw=0.6)
+ax.set_title(r"(b) $2$-adic constraints (supersingular shape)", fontsize=9, loc="left")
+fig.tight_layout()
+fig.savefig(os.path.join(OUT, "fig_spectral_bounds.pdf")); fig.savefig(os.path.join(OUT, "fig_spectral_bounds.png"), dpi=160)
+plt.close(fig)
+print("wrote fig_gold_cycle, fig_singular_planes, fig_spectral_folding, fig_even_d_bifurcation, fig_S6_classes, fig_spectral_bounds (pdf/png)")
