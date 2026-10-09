@@ -39,8 +39,8 @@ See `paper/paper_part2.pdf` (and the status table in its last section) for exact
 ## Layout
 
 ```
-paper/     paper_part2.tex / .pdf and figures (fig_profile, fig_scaling from make_figures.py;
-           fig_gold_cycle, fig_singular_planes from code/generate_figures.py)
+paper/     paper_part2.tex / .pdf and figures (fig_profile, fig_scaling from make_figures.py; fig_gold_cycle,
+           fig_singular_planes, fig_spectral_folding, fig_even_d_bifurcation from code/generate_figures.py)
 code/      verification scripts (numpy; the Hayes-FFT driver also needs numba + scipy via the submodule)
 data/      exact outputs quoted in the paper (text and CSV)
 reports/   working notes (Chinese) that accompany the paper, parts 1–7
@@ -64,7 +64,7 @@ python legendre_d6_Wp_pattern.py 3 5 7            # W' (the sums behind X) by Fr
 python L_function_spectral.py                     # m_k = 13,-1,-35,47,733: recurrences, Weil moduli, 2-adic constraints, N_0, N_1
 python fourier_spectrum_folding.py                # spectral folding G^ -> (G^2)^: fibre sums, energies, coherence (Section 8)
 python general_d_scan.py 2,8 4,8 8,8 2,10 4,10    # Legendre variance, identity class and its orbit K_d for d = 8, 10 (Section 9)
-python generate_figures.py                        # fig_gold_cycle.pdf, fig_singular_planes.pdf
+python generate_figures.py                        # fig_gold_cycle, fig_singular_planes, fig_spectral_folding, fig_even_d_bifurcation
 cd ../paper && python make_figures.py && pdflatex paper_part2.tex
 ```
 

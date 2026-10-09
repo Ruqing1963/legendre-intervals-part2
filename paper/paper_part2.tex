@@ -10,7 +10,9 @@
 \usepackage{xcolor}
 \usepackage{float}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black}
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black,
+  pdftitle={Prime polynomials in Legendre intervals over F(2k)[t], II: exact variances via quadratic towers and supersingular Artin-Schreier curves},
+  pdfauthor={Ruqing Chen}}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
@@ -35,7 +37,7 @@
 \newcommand{\eps}{\varepsilon}
 \newcommand{\sgn}{\varepsilon_0}
 
-\title[Legendre intervals in even characteristic, II]{Prime polynomials in Legendre intervals over $\F_{2^k}[t]$, II:\\ exact variances via quadratic towers and supersingular Artin--Schreier curves}
+\title[Legendre intervals in even characteristic, II]{Prime polynomials in Legendre intervals over \texorpdfstring{$\F_{2^k}[t]$}{F(2k)[t]}, II:\texorpdfstring{\\}{ }exact variances via quadratic towers and supersingular Artin--Schreier curves}
 
 \author{Ruqing Chen}
 \address{GUT Geoservice Inc., Montreal, Canada}
@@ -102,7 +104,7 @@ The Legendre interval $\mathcal I_f$ is the fibre over the class of $f^2$, and t
 $f^2+s$ has vanishing coefficients in all odd degrees $>d$, and $(1+\sum c_ju^j)^2=1+\sum c_j^2u^{2j}$. The fibre of $[f^2]$ is $\{f^2+s:\deg s\le d\}$ since the top $\ell=d-1$ coefficients of $f^2+s$ are those of $f^2$.
 \end{proof}
 
-\subsection{$\Psi$ as a root count}
+\subsection{\texorpdfstring{$\Psi$}{Psi} as a root count}
 For $\alpha\in\F_{q^n}$ write $\charpoly(\alpha)=\prod_{i<n}(t-\alpha^{q^i})$. If $F=P^j$ with $\deg P=n/j$, exactly $n/j=\Lambda(F)$ elements $\alpha$ have $\charpoly(\alpha)=F$. Hence
 \begin{equation}\label{eq:rootcount}
 \Psi(g)=\sum_{F\in\mathrm{fibre}(g)}\Lambda(F)=\#\{\alpha\in\F_{q^n}:\ (e_1,\dots,e_\ell)(\alpha)=g\},
@@ -135,7 +137,7 @@ Power sums are additive on products because roots are concatenated; $p_j(g^2)=2p
 
 We write $\chi(x)=(-1)^{\Tr_{q/2}(x)}$ for $x\in\F_q$ and $W=\{w\in\F_q:\Tr_{q/2}w=1\}$. Throughout, $\sgn:=(-1)^{k+1}$.
 
-\section{The case $d=4$: unconditional theorems}\label{sec:d4}
+\section{The case \texorpdfstring{$d=4$}{d=4}: unconditional theorems}\label{sec:d4}
 
 Here $n=8$, $\ell=3$, $g=(c_1,c_2,c_3)=(a_7,a_6,a_5)$, $\G^2=\{(0,c,0)\}$ has order $q$, and $\G_0:=\{c_1=0\}\cong(\F_q^2,+)$ is a subgroup of order $q^2$ containing $\G^2$.
 
@@ -207,7 +209,7 @@ By Corollary~\ref{cor:d4}(b),(c), $\sum_{g\in\G^2}\varphi(g)^2=(q^4-q^3)^2+(q-1)
 The factor $q(q-1)=(q-1)^2+(q-1)$ splits as the contribution of the identity class (the interval around $t^8$, whose prime deficit is $q^4-q^3$, relative size $1/q$) plus that of the other $q-1$ Legendre classes ($\pm q^3$ each). The sign in (c) depends on the parity of $k$ but the variance does not.
 \end{remark}
 
-\subsection{Cubic Artin--Schreier sums over $\F_{q^8}$}
+\subsection{Cubic Artin--Schreier sums over \texorpdfstring{$\F_{q^8}$}{F(q8)}}
 Let $S(b,a)=\sum_{x\in\F_{q^8}}\psi_0(ax^3+bx)$.
 
 \begin{lemma}\label{lem:lambda1}
@@ -293,7 +295,7 @@ Let $\eps_{\lambda_1,\lambda_3}$ be the quadratic characters of $\G_3$ (Proposit
 For $q=8$ this gives seven characters with $\rho=1$ and $56$ with $\rho=5/21=0.2381$, matching \cite[Table~4]{Chen} exactly; the ``order-two coordinates'' there contribute $7\cdot5/21=5/3$. The excess over Keating--Rudnick comes from the primitive quadratic characters, whose $\rho$ does not decay in $q$; $\sum_{\chi\ne1}\psi_8(\chi)=-q^7+q^6$ shows that $\mathbb E_\chi\Tr\Theta_\chi^8\to-1$, so the Frobenius classes are not Haar-distributed in $U(2)$ when $p=2$, $\ell=3$.
 \end{remark}
 
-\section{The case $d=6$: the three-value structure theorem}\label{sec:d6}
+\section{The case \texorpdfstring{$d=6$}{d=6}: the three-value structure theorem}\label{sec:d6}
 
 Now $n=12$, $\ell=5$, $\G^2=\{(0,c_2,0,c_4,0)\}$ has order $q^2$ and
 \[
@@ -342,7 +344,7 @@ Put $B=(A_6-q^9-X)/q^2$. Then $\varphi=\Psi-q^7$ equals $\varphi_0=B+X/q$ on the
 The same argument applies to every $d$: $U_d=\{p_j=0,\ j\text{ odd}\le\ell\}$ is stable under $\F_q$-translations and scalings, and the transformation law of $e_{2j}$ is governed by $\binom{2d-i}{2j-i}\bmod2$ (Lucas' theorem). For $d=4$ one recovers Corollary~\ref{cor:d4}(c).
 \end{remark}
 
-\section{The quadratic tower $\F_{q^{12}}\supset\F_{q^6}$}\label{sec:tower6}
+\section{The quadratic tower \texorpdfstring{$\F_{q^{12}}\supset\F_{q^6}$}{F(q12) over F(q6)}}\label{sec:tower6}
 
 \begin{lemma}\label{lem:towerC}
 For $\alpha\in\F_{q^{12}}$ let $a=\alpha+\alpha^{q^6}$, $n=\alpha^{1+q^6}\in\F_{q^6}$, $\Tr=\Tr_{q^6/q}$, and $e_j(a)$ the elementary symmetric functions of the six conjugates of $a$. Then
@@ -391,7 +393,7 @@ The reductions were verified numerically for $q=2,4,8$; they give $G=\sgn q^3$ f
 
 \section{Quadratic forms and supersingular Artin--Schreier curves}\label{sec:qf}
 
-\subsection{$A_6$ and $X$ as sums of Frobenius traces}
+\subsection{\texorpdfstring{$A_6$ and $X$}{A6 and X} as sums of Frobenius traces}
 \begin{theorem}\label{thm:supersing}
 Write $\lambda=(\lambda_1,\lambda_3,\lambda_5)\in\F_q^3$ and $S(\lambda)=\sum_{x\in\F_{q^{12}}}\psi_0(\lambda_5x^5+\lambda_3x^3+\lambda_1x)$. Then
 \begin{equation}\label{eq:A6S}
@@ -513,7 +515,7 @@ For $k\le7$ the following hold.
 The set of $j$ in (a) is not of the form $\{\Tr_{q/2}(j^m)=c\}$ for any $m$ when $k=5,7$ (it is $\{\Tr j=0\}$ when $k=3$).
 \end{proposition}
 
-\subsection{The mixed part for odd $k$: a Gold-type quintic and a $\Z/4$ condition}
+\subsection{The mixed part for odd \texorpdfstring{$k$}{k}: a Gold-type quintic and a \texorpdfstring{$\Z/4$}{Z/4} condition}
 For $k$ odd we describe the mixed terms completely in terms of the factorisation of a single quintic over $\F_q$; the evaluation is completed in Theorem~\ref{thm:mixed} below.
 
 \begin{proposition}\label{prop:mixed}
@@ -547,7 +549,7 @@ Put $t=c^{-2/5}$ (a bijection of $\F_q^\times$) and $A(u)=u^5+t^2u+1$, so that $
 \emph{Counting.} (i) The map $v\mapsto v^5+v$ sends $\F_q$ onto the values $c$, with $v^5+v=0$ iff $v\in\{0,1\}$ (as $v^4=1$ forces $v=1$); so $N_{(1,4)}+3N_{(1,1,1,2)}=q-2$. (ii) Let $v\in\F_{q^2}\setminus\F_q$, $\bar v=v^q$, $s=v+\bar v\ne0$, $n=v\bar v$. Then $\bar v^5+\bar v+v^5+v=(v+\bar v)(s^4+ns^2+n^2+1)$, so $v^5+v\in\F_q$ iff $s^4+ns^2+n^2=1$. Writing $n=s^2m$, irreducibility of $v^2+sv+n$ means $\Tr_{q/2}(m)=1$, and the condition becomes $m^2+m=1+s^{-4}$, which is solvable iff $\Tr_{q/2}(1+s^{-4})=0$ iff $\Tr_{q/2}(s^{-1})=1$ ($k$ odd), in which case exactly one of the two solutions $m,m+1$ has $\Tr m=1$. Hence exactly $2\cdot\#\{s\in\F_q^\times:\Tr(1/s)=1\}=q$ elements $v\in\F_{q^2}\setminus\F_q$ satisfy $v^5+v\in\F_q$, necessarily in $\F_q^\times$. A quintic of type $(1,4)$, $(2,3)$, $(1,1,1,2)$ has $0,2,2$ roots in $\F_{q^2}\setminus\F_q$, so $2N_{(2,3)}+2N_{(1,1,1,2)}=q$. (iii) $N_{(1,4)}+N_{(2,3)}+N_{(1,1,1,2)}=q-1$. Solving (i)--(iii) gives the three counts.
 \end{proof}
 
-\subsection{The mixed part for odd $k$: the theorem}\label{subsec:mixedproof}
+\subsection{The mixed part for odd \texorpdfstring{$k$}{k}: the theorem}\label{subsec:mixedproof}
 Throughout this subsection $k$ is odd, $(\lambda_3,\lambda_5)=(t,1)$ with $t\in\F_q^\times$ (every class $j=t^5$ has such a representative, Proposition~\ref{prop:mixed}(a)), $A(u)=u^5+t^2u+1$ with roots $u_0,\dots,u_4$, $K=\ker L_\lambda=\ker T_\lambda\subset\F_{q^{12}}$ (Proposition~\ref{prop:mixed}(b)), $T=T_\lambda$, $\sigma$ is the $q$-Frobenius and $\tau=\Tr_{q^{12}/q}$. For $b\in\F_q$ put
 \[
 S(b)=S(b,t,1)=\sum_{x\in\F_{q^{12}}}\psi_0(x^5+tx^3+bx),\qquad Q_b(x)=\Tr_{q^{12}/2}(x^5+tx^3+bx),
@@ -631,7 +633,7 @@ Theorem~\ref{thm:mixed} was checked in two independent ways: for $k\le7$ by the 
 \end{sloppypar}
 The condition ``$g$ is a $4$-cycle'' is a $\Z/4$-condition (the Frobenius must be a regular unipotent on the kernel), not an $\F_2$-trace condition; this is why no predicate $\Tr(f(j))=0$ describes the set of $j$ with $W\ne0$ (Proposition~\ref{prop:pattern}). Note also that the sign in the $4$-cycle case is \emph{not} obtained from an Arf-invariant computation on $\F_2^{12k}$ but from the two small sums $s_1,s_2$ over $\F_q$ and $\F_{q^2}$, which vanish for exactly the $b$ with $S(b)\ne0$ and force the Frobenius eigenvalues of $C_b$ to be $\sqrt q$ times primitive $8$th roots of unity. For even $k$ the orbit invariant $j$ is not complete (cube and fifth roots need not exist in $\F_q$) and the analogous analysis has not been carried out; the closed form of $X$ (the sums $W'$) is open for all $k$.
 
-\subsection{The sums $W'$ and the constant $X$}\label{subsec:Wp}
+\subsection{The sums \texorpdfstring{$W'$}{W'} and the constant \texorpdfstring{$X$}{X}}\label{subsec:Wp}
 We now turn to $X=q^{-3}\sum_{\lambda_3,\lambda_5}W'(\lambda_3,\lambda_5)$. Throughout, $k$ is odd unless said otherwise, and we write
 \begin{gather*}
 S'(\lambda_1,\lambda_3,\lambda_5)=\sum_{x\in\F_{q^{12}}}(-1)^{\Tr(\lambda_5x^5+\lambda_3x^3+\lambda_1x)+\Tr_{q/2}e_2(x)},\\
@@ -712,7 +714,7 @@ For all odd $k$: Proposition~\ref{prop:Wpdata}(b) holds, in particular $W'(\lamb
 Several features of Table~\ref{tab:Wp} are forced by Proposition~\ref{prop:Wp}: the value of $d$ in every row, the modulus $|W'|\le 2^{d/2}q^7$, and $W'=\pm q^7$ in the class $5\,1$ (where the fifteen roots lie in $\F_{q^5}\setminus\F_{q^{12}}$). The densities of the classes are those of $S_6$ ($1/5$ for the $5$-cycles, $1/6$ for the $6$-cycles and for $3\,2\,1$, $1/4$ for the two classes of order $4$ together, $\ldots$), so the geometric monodromy group of the family $\{\ker L'_\lambda\}$ over the $(\lambda_3,\lambda_5)$-plane is $Sp_4(\F_2)\cong S_6$ rather than $GL_4(\F_2)\cong A_8$; the exactness of the polynomial counts indicates that, as in Proposition~\ref{prop:mixed}(b) where $\ker L_\lambda$ is spanned by the five roots of a quintic, $\ker L'_\lambda$ should be the set of pairwise sums of the six roots of a sextic over $\F_q$ with vanishing $e_1$ (for $\lambda_5\to0$ or $\lambda_3\to0$ this degenerates to $u\,A_\lambda(u)$ and to the cube-root structure of Lemma~\ref{lem:Wpquintic}). Exhibiting this sextic, and evaluating the form on the radical and the Arf invariant class by class as in Lemmas~\ref{lem:quadfactor}--\ref{lem:fourcycle}, is what a proof of Conjecture~\ref{conj:Wp} requires; the sign in the class $5\,1$, which carries the leading term $-q^9/5$, and the signs of the two order-$4$ classes are the essential points. We have not carried this out.
 \end{sloppypar}
 
-\section{The scaling law at $d=6$ and the nature of $Y$}\label{sec:Y}
+\section{The scaling law at \texorpdfstring{$d=6$}{d=6} and the nature of \texorpdfstring{$Y$}{Y}}\label{sec:Y}
 
 \subsection{Variance formula}
 \begin{theorem}\label{thm:varH6}
@@ -750,14 +752,14 @@ $q$ & $\Var_\G/q^7$ & $\Var_{\G^2}/q^7$ & ratio & $\varphi_0$ & $\varphi_A$ & $\
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.95\textwidth]{fig_scaling.pdf}
-\caption{Normalised variances against $q$ (log--log). Filled markers: $\Var_{\G^2}(\Psi)/q^{d+1}$, exact values ($d=4$: $q(q-1)$ for $q\le128$, Theorem~\ref{thm:varH4}; $d=6$: Table~\ref{tab:d6var}). Open markers: the full-group variances $\Var_\G/q^{d+1}$, which approach $3$ ($d=4$, Theorem~\ref{thm:varG4}) and the Keating--Rudnick value $4$ ($d=6$). The dashed line is $q^2$; the dotted line is a $q^4$ law normalised through the $d=6$, $q=8$ point, which the data exclude. Whether $\lim\Var_{\G^2}/q^{9}=1$ at $d=6$ depends on $m_k=o(q^{5/2})$ (Theorem~\ref{thm:varH6}).}\label{fig:scaling}
+\caption{Normalised variances against $q$, both axes logarithmic. Filled markers are $\Var_{\G^2}(\Psi)/q^{d+1}$, exact values ($d=4$: $q(q-1)$ for $q\le128$, Theorem~\ref{thm:varH4}; $d=6$: Table~\ref{tab:d6var}). Open markers: the full-group variances $\Var_\G/q^{d+1}$, which approach $3$ ($d=4$, Theorem~\ref{thm:varG4}) and the Keating--Rudnick value $4$ ($d=6$). The dashed line is $q^2$; the dotted line is a $q^4$ law normalised through the $d=6$, $q=8$ point, which the data exclude. Whether $\lim\Var_{\G^2}/q^{9}=1$ at $d=6$ depends on $m_k=o(q^{5/2})$ (Theorem~\ref{thm:varH6}).}\label{fig:scaling}
 \end{figure}
 
 \begin{remark}
 At $d=4$ the Legendre anomaly is a single class with relative deficit $1/q$; at $d=6$ it is the $q$ classes with $c_2=0$ (the intervals around $f^2$ with $f_5=0$), each with relative deviation $\pm q^{-2}$ and sign $\sgn$. Both mechanisms give $\Var_{\G^2}/q^{d+1}\asymp q^2$. The full-group variance $\Var_\G/q^7$ tends to the Keating--Rudnick value $4$ ($4.35,4.21$ at $q=16,32$), unlike $d=4$ where it tends to $3\ne2$. The value $q^{2(d/2-1)}=q^4$ suggested in \cite{Chen} is excluded.
 \end{remark}
 
-\subsection{The geometry behind $Y$: a fixed nine-dimensional variety and a twisted Frobenius}\label{subsec:Ygeom}
+\subsection{The geometry behind \texorpdfstring{$Y$}{Y}: a fixed nine-dimensional variety and a twisted Frobenius}\label{subsec:Ygeom}
 
 We now give $Y$ an unambiguous algebro-geometric meaning. The point is that $Y_k$ is a Frobenius trace on a \emph{fixed} variety over $\F_2$, but for a \emph{twisted} Frobenius; in particular $(Y_k)_k$ is not the sequence of $\F_{2^k}$-point counts of any single variety.
 
@@ -897,7 +899,7 @@ For the Hayes group $G=\G_\ell$ and $H=\G^2$ one has $[G:H]=|\G[2]|=q^{\lfloor d
 so $|\varphi_\psi(g)|=|F_{gH}(\psi)|$ and $E_\psi=|G|^{-1}\sum_g|\varphi_\psi(g)|^2$. (c) Orthogonality of characters on $H$; $c^*Mc=\sum_\psi|\sum_{\mathrm{fibre}}c_\chi|^2$. (d) Cauchy--Schwarz on each fibre; equality iff $c_{\chi\eps}=c_\chi$ for all $\eps\in H^\perp$ iff $\varphi(g)\eps(g)=\varphi(g)$ for all $g$ and $\eps\in H^\perp$ iff $\varphi$ vanishes off $H$.
 \end{proof}
 
-\subsection{The case $d=4$: a single class folded $q^2$ times}
+\subsection{The case \texorpdfstring{$d=4$}{d=4}: a single class folded \texorpdfstring{$q^2$}{q2} times}
 \begin{theorem}\label{thm:folding4}
 Let $d=4$, $\varphi=\Psi-q^5$ on $\G_3$, $H=\G^2=\{(0,c,0)\}\cong\F_q$ with characters $\psi_\mu(c)=\chi(\mu c)$. Then the fibre sums are
 \[
@@ -915,7 +917,7 @@ By Theorem~\ref{thm:d4formula}, $\varphi(0,0,0)=-q^4+q^3$ and $\varphi(0,c,0)=(-
 
 Thus at $d=4$ the whole anomaly is the identity class: its deficit $-(q^4-q^3)$ (the missing $\alpha\in\F_{q^8}$ with $e_1=e_2=e_3=0$) has a flat Fourier transform on $\widehat{\G^2}$, $f_{\psi_\mu}\approx-q^3$ for every $\mu$, so every fibre is coherent (Table~\ref{tab:folding}: $\kappa\approx1/3$); on the full group the same class is diluted by the factor $[\G:\G^2]=q^2$ and contributes only the ``$1$'' in $\Var_\G/q^5\to3=2+1$. Theorem~\ref{thm:rho4} is the same statement in the language of $\rho$: $\rho(\eps)=1$ exactly for the $\eps$ trivial on $\{c_1=0\}\supset\mathrm{supp}\,\varphi$ (translation by such $\eps$ fixes the coefficient vector), and the remaining $\rho(\eps)=(q-3)/(3(q-1))\to1/3$ is the coherence along the $\lambda_3$-direction.
 
-\subsection{The case $d=6$: $q$ coherent fibres out of $q^2$}
+\subsection{The case \texorpdfstring{$d=6$}{d=6}: \texorpdfstring{$q$}{q} coherent fibres out of \texorpdfstring{$q^2$}{q2}}
 \begin{proposition}\label{prop:folding6}
 Let $d=6$, $H=\G^2=\{(c_2,c_4)\}\cong W_2(\F_q)$ with the Witt law $(c_2,c_4)(c_2',c_4')=(c_2+c_2',c_4+c_4'+c_2c_2')$, whose $q^2$ characters are $\psi_{(a,b)}(x)=i^{\Tr_{W_2(\F_q)/\Z/4}((a,b)\cdot x)}$: $\psi_{(0,b)}=\chi(\sqrt b\,c_2)$ has order $\le2$ ($q$ characters) and $\psi_{(a,b)}$, $a\ne0$, has order $4$ ($q^2-q$ characters). Then, for all $k$,
 \[
@@ -931,7 +933,7 @@ The fibre over $\psi_{(0,0)}$ consists of the $q^3$ quadratic characters $\eps_\
 $f_\psi=q^{-2}\sum_{g\in\G^2}\varphi(g)\bar\psi(g)$. For $\psi=\psi_{(0,b)}$ this is $q^{-2}\bigl(\sum_{\G^2}\Psi(g)\chi(\sqrt b\,c_2)-q^7\cdot q^2[b=0]\bigr)$, i.e.\ $(A_6-q^9)/q^2$ or $X_{\sqrt b}/q^2=X/q^2$ (scaling $\alpha\mapsto s\alpha$, $e_2\mapsto s^2e_2$). By Theorem~\ref{thm:threevalue}, $\varphi|_{\G^2}=\varphi_0[c_2=0]+(B+q^2m_k\,\chi(c_4/c_2^2))[c_2\ne0]$; the first two terms are functions of $c_2$ alone, hence combinations of the $\psi_{(0,b)}$, while $\sum_{c_4}\chi(c_4/c_2^2)\bar\psi_{(0,b)}(c_2,c_4)=0$ for $c_2\ne0$, so the last term is supported on the order-$4$ characters, where Parseval gives $q^{-2}\sum_{c_2\ne0,c_4}(q^2m_k)^2=q^3(q-1)m_k^2$. The description of the fibres follows from $\chi(g^2)=\chi(g)^2$ and $c_2(g^2)=c_1(g)^2$ as at $d=4$ (characters with $\chi^2=\eps$ of order $2$ have order $4$; those restricting to an order-$4$ character of $\G^2$ have order $8$).
 \end{proof}
 
-Formula \eqref{eq:varfold} separates the variance into a \emph{coherent} part carried by the $q$ fibres over the characters of order $\le2$, which is determined by the two constants $A_6$ and $X$, and an \emph{incoherent} part $q^3(q-1)m_k^2$ carried by the $q^2-q$ fibres over the order-$4$ characters, which is $Y$. With $A_6=q^9+(q-1)q^5$ (Corollary~\ref{cor:A6odd}) and $X=q^6+q^5$ (Conjecture~\ref{conj:Wp}) the coherent part is $(q-1)(q+3)q^7$, and the three-value variance of Theorem~\ref{thm:varH6} is recovered. The coherent fibres have sums $\approx q^4$, which is $q^3$ coefficients of typical size $q$ added with the same sign: the order-$4$ sums $S'(\lambda)$ of \S\ref{subsec:Wp} take the values $0,\pm q^6,\pm2q^6,\pm4q^6$ with the strong positive bias displayed in Table~\ref{tab:Wp}, and the quadratic sums $S(\lambda)$ are $+4q^6$ on the $4$-cycle classes of Theorem~\ref{thm:mixed}. This Arf-invariant bias of the supersingular quadratic forms is the arithmetic source of the coherence; the incoherent part, by contrast, involves no quadratic form and stays of the size $q^3(q-1)m_k^2$, negligible against $q^9$ as long as $m_k=o(q^{5/2})$. Since $\Var_\G/q^7\to4$ (Table~\ref{tab:d6var}), the amplification is $\Var_{\G^2}/\Var_\G\approx q^2/4$: $q$ coherent fibres with coherence $\kappa\approx1/10$ out of $|\G[2]|=q^3$ possible, carrying about $1/7$ of the total energy at $q=16$ (Table~\ref{tab:folding}).
+Formula \eqref{eq:varfold} separates the variance into a \emph{coherent} part carried by the $q$ fibres over the characters of order $\le2$, which is determined by the two constants $A_6$ and $X$, and an \emph{incoherent} part $q^3(q-1)m_k^2$ carried by the $q^2-q$ fibres over the order-$4$ characters, which is $Y$. With $A_6=q^9+(q-1)q^5$ (Corollary~\ref{cor:A6odd}) and $X=q^6+q^5$ (Conjecture~\ref{conj:Wp}) the coherent part is $(q-1)(q+3)q^7$, and the three-value variance of Theorem~\ref{thm:varH6} is recovered. The coherent fibres have sums $\approx q^4$, which is $q^3$ coefficients of typical size $q$ added with the same sign: the order-$4$ sums $S'(\lambda)$ of \S\ref{subsec:Wp} take the values $0,\pm q^6,\pm2q^6,\pm4q^6$ with the strong positive bias displayed in Table~\ref{tab:Wp}, and the quadratic sums $S(\lambda)$ are $+4q^6$ on the $4$-cycle classes of Theorem~\ref{thm:mixed}. This Arf-invariant bias of the supersingular quadratic forms is the arithmetic source of the coherence; the incoherent part, by contrast, involves no quadratic form and stays of the size $q^3(q-1)m_k^2$, negligible against $q^9$ as long as $m_k=o(q^{5/2})$. Since $\Var_\G/q^7\to4$ (Table~\ref{tab:d6var}), the amplification is $\Var_{\G^2}/\Var_\G\approx q^2/4$: $q$ coherent fibres with coherence $\kappa\approx1/10$ out of $|\G[2]|=q^3$ possible, carrying about $1/7$ of the total energy at $q=16$ (Table~\ref{tab:folding} and Figure~\ref{fig:folding}).
 
 \begin{table}[ht]
 \centering
@@ -955,14 +957,20 @@ $d$ & $q$ & $\Var_{\G^2}/\Var_\G$ & $[\G:\G^2]$ & order of $\psi$ & \#fibres & s
 \end{tabular}
 \end{table}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.98\textwidth]{fig_spectral_folding.pdf}
+\caption{Spectral folding at $d=6$. (a) The restriction map $\widehat\G\to\widehat{\G^2}$: each fibre is a coset of $H^\perp=\widehat{\G/\G^2}$ of size $|\G[2]|=q^3$, and the fibre sum $f_\psi$ is the $\psi$-coefficient of $\varphi$ on $\G^2$. Over the $q$ characters of $\G^2$ of order $\le2$ the coefficients add in phase (they are the biased supersingular sums $S$, $S'$ of Sections~\ref{subsec:mixedproof}--\ref{subsec:Wp}); over the $q^2-q$ characters of order $4$ they cancel. (b) Shares of $\Var_{\G^2}$ and of $\Var_\G$ carried by the two kinds of fibres for $q=8,16$ (Table~\ref{tab:folding}): the coherent fibres hold $97$--$100\%$ of the Legendre variance but only $15$--$26\%$ of the full-group energy.}\label{fig:folding}
+\end{figure}
+
 \begin{remark}
 The two cases are instances of one pattern. In both, the deviation $\varphi$ is large on a small subgroup $K\subset\G^2$ ($K=\{1\}$ at $d=4$ with $\varphi\approx-q^4$; $K=\{c_2=0\}$ of order $q$ at $d=6$ with $\varphi\approx\sgn q^5$), and the Fourier transform of a function supported on $K$ is constant along the fibres of $\widehat{\G^2}\to\widehat K$. Folding to $\G^2$ therefore adds these coefficients in phase, whereas on $\G$ they are spread over $[\G:\G^2]$ times more classes. The size of $\varphi$ on $K$ is in turn a statement about the number of $\alpha\in\F_{q^n}$ with prescribed vanishing of symmetric functions ($e_1=e_2=e_3=0$ at $d=4$; $e_1=e_2=e_3=e_5=0$ at $d=6$, Proposition~\ref{prop:Ydiff}), i.e.\ about the point counts of the varieties $X$, $X_0$, $X_1$: the ``$q^2$'' is $|K|\varphi_K^2/|\G^2|$ divided by $q^{d+1}$, which equals $q^2$ in both cases ($1\cdot q^8/q$ and $q\cdot q^{10}/q^2$ against $q^5$ and $q^7$). What is specific to characteristic $2$ is not the folding identity but the existence of the subgroup $\G^2$ of index $q^{d/2}$ and the Arf-invariant bias that makes $\varphi_K$ as large as $q^{d}$, resp.\ $q^{d-1}$.
 \end{remark}
 
 \newpage
-\section{Discussion, open problems, and general even $d$}\label{sec:discussion}
+\section{Discussion, open problems, and general even \texorpdfstring{$d$}{d}}\label{sec:discussion}
 
-\subsection{Translation orbits for general even $d$}
+\subsection{Translation orbits for general even \texorpdfstring{$d$}{d}}
 The symmetry that produced the three-value profile at $d=6$ exists for every even $d$, and Lucas' theorem decides how it acts on the identity class.
 
 \begin{proposition}\label{prop:Kd}
@@ -977,8 +985,8 @@ Let $d$ be even, $n=2d$, $\ell=d-1$, and $U_d=\{\alpha\in\F_{q^n}:\Tr\alpha^j=0\
 (a) $\Tr(\alpha+c)^j=\sum_i\binom ji c^{j-i}\Tr\alpha^i$ and on $U_d$ all $\Tr\alpha^i$ with $i<j$ vanish (odd $i$ by definition, even $i$ because $\Tr\alpha^{2i}=(\Tr\alpha^i)^2$), while $\binom j0c^j\Tr1=nc^j=0$; the formula for $e_j(\alpha+c)$ is the expansion of $\prod_i(t-c-\alpha_i)$, and it shows that $(e_i(\alpha))_{i\le j}$ determines $(e_i(\alpha+c))_{i\le j}$, so $\tau_c$ is well defined on classes; it is bijective with inverse $\tau_{-c}=\tau_c$, and $\Psi\circ\tau_c=\Psi$ because $\alpha\mapsto\alpha+c$ is a bijection of $\F_{q^n}$ compatible with the classes. (b) For $\alpha$ in the identity class only the term $i=0$ survives, giving $e_j(\alpha+c)=\binom nj c^j$, i.e.\ the class of $(1+cu)^n$. Lucas' theorem gives the parity of $\binom{2d}{j}$; the least $j\ge1$ with $\binom{2d}j$ odd is the lowest set bit $2^{v+1}$ of $2d$, which is $\le d-1$ iff $d$ is not a power of $2$; if it is $\le d-1$, then $c\mapsto c^{2^{v+1}}$ is injective and $|K_d|=q$. (c) is the contribution of $K_d$ to the second moment.
 \end{proof}
 
-\subsection{The variance for $d=8$ and $d=10$, and what is and is not universal}
-Table~\ref{tab:generald} collects the exact Legendre variances for $d\le10$ (Hayes FFT, \texttt{general\_d\_scan.py}; the $d\le7$ values agree with \cite[Table~4]{Chen}). Three facts stand out.
+\subsection{The variance for \texorpdfstring{$d=8$ and $d=10$}{d=8 and d=10}, and what is and is not universal}
+Table~\ref{tab:generald} collects the exact Legendre variances for $d\le10$ (Hayes FFT, \texttt{general\_d\_scan.py}; the $d\le7$ values agree with \cite[Table~4]{Chen}). Three facts stand out (Figure~\ref{fig:bifurcation}).
 
 \begin{table}[H]
 \centering
@@ -1005,6 +1013,12 @@ $d$ & $q$ & $\Var_\G/q^{d+1}$ & $\Var_{\G^2}/q^{d+1}$ & ratio & ratio$/q^2$ & $\
 
 First, the full-group variance follows Keating--Rudnick at every $d$ ($\Var_\G/q^{d+1}\to d-2$, with the exact deviation $1-3/q$ at $d=4$ coming from the identity class, Theorem~\ref{thm:folding4}). Second, the $q^2$-amplification of the Legendre variance is a feature of $d=4$ and $d=6$: there the identity orbit $K_d$ carries essentially all of $\sum_{\G^2}\varphi^2$, because $\varphi(1)$ is of order $q^d$ (exactly $-q^4+q^3$) resp.\ $q^{d-1}$ (exactly $\sgn q^5+q^4-2q^3$ for odd $k$), far above the threshold $q^{3d/4}$ of Proposition~\ref{prop:Kd}(c). Third, at $d=8$ the amplification \emph{disappears}: $\Var_{\G^2}/q^9$ is $13.25$ and $13.49$ at $q=4,8$ and the ratio to the full-group variance is $2.25$, $2.28$, with the identity class ($|K_8|=1$) carrying only a quarter of the Legendre second moment and $\varphi(1)\approx-1.9\,q^6=O(q^{3d/4})$ exactly at the threshold; at $d=10$ the ratio is $1.10,\,1.36$ for $q=2,4$. This refutes the law $\Var_{\G^2}/q^{d+1}\asymp q^{2(d/2-1)}$ suggested in \cite{Chen} (it would give $q^6$ at $d=8$), and it equally refutes the natural guess that the $q^2$ of $d=4,6$ is universal. In the language of Section~\ref{sec:folding}: at $d=8$ the index $[\G:\G^2]=q^4$ is as large as ever, but the deviation is no longer concentrated on a small subgroup, so the fibres of $\widehat\G\to\widehat{\G^2}$ are incoherent and the Rayleigh quotient stays bounded.
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.98\textwidth]{fig_even_d_bifurcation.pdf}
+\caption{The Legendre amplification for even $d$ (data of Table~\ref{tab:generald}). (a) $\Var_{\G^2}/\Var_\G$ against $q$ on logarithmic scales: $q^2/3$ exactly at $d=4$, about $q^2/4$ at $d=6$, and no growth at $d=8$ ($2.25$, $2.28$ at $q=4,8$) or $d=10$. (b) The identity-class deviation $|\varphi(1)|$ relative to the threshold $q^{3d/4}$ of Proposition~\ref{prop:Kd}(c): far above it for $d=4$ (where it equals $q-1$) and $d=6$, at it for $d=8$ ($1.5$, $1.9$ at $q=4,8$), below it for $d=10$.}\label{fig:bifurcation}
+\end{figure}
+
 \begin{conjecture}[general even $d$]\label{conj:generald}
 Let $d\ge4$ be even and $q=2^k\to\infty$. Then $\Var_\G(\Psi)/q^{d+1}\to d-2$, and the ratio $\Var_{\G^2}(\Psi)/\Var_\G(\Psi)$ is $\asymp q^2$ for $d=4$ and $d=6$ and bounded for $d=8$ and $d=10$. More precisely, the ratio is unbounded iff the identity-class deviation satisfies $|\varphi(1)|/q^{3d/4}\to\infty$, i.e.\ iff the twisted point count of $V_d=V(e_1,\dots,e_{d-1})$ has a subleading term of weight $>3d/2$ with nonzero $\sigma$-twisted trace; this holds for $d=4,6$ (weights $8=2d$ and $10=2(d-1)$) and fails for $d=8$.
 \end{conjecture}
@@ -1016,10 +1030,11 @@ The first assertion is the Keating--Rudnick asymptotic, which in characteristic 
 \begin{enumerate}[label=\textbf{Open Problem 9.\arabic*.},wide,labelindent=0pt,itemsep=0.8ex]
 \item (\emph{the constant $X$}) Prove Conjecture~\ref{conj:Wp}: exhibit the sextic over $\F_q$ with $e_1=0$ whose pairwise root sums form $\ker L'_\lambda$, so that the Frobenius acts on $\ker L'_\lambda$ through $Sp_4(\F_2)\cong S_6$ with the class frequencies of Table~\ref{tab:Wp}, and evaluate the Arf invariants class by class, in particular the sign $-q^7$ on the class of $5$-cycles, which carries the leading term. This would make $X=q^6+q^5$ a theorem for odd $k$ and Theorem~\ref{thm:varH6} unconditional for odd $k$. The even-$k$ case, where the orbit invariant $j$ is not complete, is open for both $A_6$ and $X$.
 \item (\emph{the constant $Y$}) Prove $m_k=O(q^{3/2})$, or at least $m_k=o(q^{5/2})$, which gives $C_6=\lim\Var_{\G^2}/q^9=1$. By Proposition~\ref{prop:Ydiff} this is a weight bound for $H^j_c$, $9\le j\le15$, of the eight-dimensional complete intersections $X_0=\{e_1=e_3=e_4=e_5=0\}$ and $X_1=\{e_1=e_3=e_5=0,\ e_4=1\}$ in $\A^{12}$, i.e.\ a Lefschetz-type statement for singular affine complete intersections whose closures meet the hyperplane at infinity in the base $\mathbb P(X_0)$ of the cone $X_0$; the local ingredients are the Swan conductors of the Artin--Schreier sheaf $\mathcal L_{\psi}(e_4)$ along $\mathbb P(X_0)$ and the vanishing cycles at the singular loci (coordinates with fewer than five distinct values).
-\item (\emph{general $d$}) Determine the subleading $\sigma$-twisted Tate terms of $\#V_d^{(\sigma)}(\F_q)=\Psi(1)$ for $V_d=V(e_1,\dots,e_{d-1})\subset\A^{2d}$: for $d=4$ they are $-q^4+q^3$, for $d=6$ and odd $k$ they are $q^5+q^4-2q^3$ (Theorem~\ref{thm:varH6}), and for $d=8$ the exact values $\varphi(1)=-40,-6336,-491008$ at $q=2,4,8$ are of size $-1.5\,q^6$ and $-1.9\,q^6$ for $q=4,8$, i.e.\ at the threshold $q^{3d/4}$. Decide Conjecture~\ref{conj:generald}; in particular whether the amplification can reappear for larger $d$ when $d$ is not a power of $2$ and $|K_d|=q$.
+\item (\emph{general $d$}) Determine the subleading $\sigma$-twisted Tate terms of the point count $\Psi(1)=\#V_d^{(\sigma)}(\F_q)$, where $V_d=V(e_1,\dots,e_{d-1})\subset\A^{2d}$: for $d=4$ they are $-q^4+q^3$, for $d=6$ and odd $k$ they are $q^5+q^4-2q^3$ (Theorem~\ref{thm:varH6}), and for $d=8$ the exact values $\varphi(1)=-40,-6336,-491008$ at $q=2,4,8$ are of size $-1.5\,q^6$ and $-1.9\,q^6$ for $q=4,8$, i.e.\ at the threshold $q^{3d/4}$. Decide Conjecture~\ref{conj:generald}; in particular whether the amplification can reappear for larger $d$ when $d$ is not a power of $2$ and $|K_d|=q$.
 \end{enumerate}
 \end{sloppypar}
 
+\newpage
 \subsection{Final checklist}\label{sec:numerics}
 Table~\ref{tab:status} lists every statement of the paper with its status (proved, conditional, or open) and the range in which it was checked by exact computation.
 \begin{table}[H]
@@ -1043,7 +1058,7 @@ $d=6$: $X=q^6+q^5$, $k$ odd (Conjecture~\ref{conj:Wp}; $S_6$-structure of Table~
 $d=6$: $A_6$ and $X$ for even $k$ (Conjecture~\ref{conj:A6X}) & open & exact, $q\le128$ (Table~\ref{tab:A6X})\\
 $d=6$: $\Var_{\G^2}/q^7$ formula (Theorem~\ref{thm:varH6}) & proved given Conj.~\ref{conj:A6X} ($X$-part only for odd $k$) & $q\le32$\\
 $Y=N_0-N_1$, lower vanishing $H^j_c(X,\mathcal L)=0$ ($j<9$), spectral constraints (Props.~\ref{prop:Ydiff}, \ref{prop:spectral}) & proved & $k\le5$\\
-$C_6=1$ & conditional on $m_k=o(q^{5/2})$ (Prop.~\ref{prop:Ydiff}(a)) & $q\le32$\\
+$C_6=1$ & \raggedright\arraybackslash needs $m_k=o(q^{5/2})$, Prop.~\ref{prop:Ydiff}(a) & $q\le32$\\
 spectral folding: $\Var_{\G^2}=\sum_\psi|f_\psi|^2$, fibre sums at $d=4$ (Theorem~\ref{thm:folding4}) and $d=6$, \eqref{eq:varfold} & proved & $d=4$: $q\le32$; $d=6$: $q\le16$\\
 general even $d$: translation orbits, $K_d$ by Lucas, lower bound (Proposition~\ref{prop:Kd}) & proved & $d\le10$ (Table~\ref{tab:generald})\\
 general even $d$: $q^2$-amplification only for $d=4,6$; bounded ratio at $d=8$ (Conjecture~\ref{conj:generald}) & open & $d=8$: $q\le8$; $d=10$: $q\le4$\\

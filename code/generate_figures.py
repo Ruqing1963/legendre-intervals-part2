@@ -81,4 +81,104 @@ ax.text(1.1, 1.08, r"thick line: the diagonal $L=\{(u,\dots,u)\}$, contained in 
 fig.tight_layout()
 fig.savefig(os.path.join(OUT, "fig_singular_planes.pdf")); fig.savefig(os.path.join(OUT, "fig_singular_planes.png"), dpi=160)
 plt.close(fig)
-print("wrote fig_gold_cycle.pdf/png and fig_singular_planes.pdf/png")
+
+# ------------------------------------------------------------- figure 3: spectral folding (Section 8.3)
+# (a) schematic of the restriction map G^ -> (G^2)^: fibres = cosets of H^perp; the fibres over the characters of G^2 of
+#     order <= 2 add their coefficients in phase, the fibres over the order-4 characters cancel.
+# (b) d = 6, q = 8 and 16 (fourier_spectrum_folding.py, Table 5): share of Var_{G^2} and of Var_G carried by the
+#     fibres over characters of order <= 2 and of order 4.
+fig, (axA, axB) = plt.subplots(1, 2, figsize=(7.0, 3.3), gridspec_kw={"width_ratios": [1.25, 1]})
+ax = axA
+ax.set_xlim(0, 10); ax.set_ylim(0, 6.2); ax.axis("off")
+ax.text(0.2, 5.85, r"$\hat{\mathcal{G}}$ (coefficients $c_\chi$)", fontsize=8.5, color=INK)
+ax.text(7.0, 5.85, r"$\hat{\mathcal{G}}{}^2$ (fibre sums $f_\psi$)", fontsize=8.5, color=INK)
+rng = np.random.RandomState(3)
+rows = [("coherent", C1, 4.9, [1, 1, 1, 1, 1, 1], r"$\psi$ of order $\leq 2$:  $f_\psi\approx q^4$"),
+        ("coherent", C1, 3.7, [1, 1, 1, 1, 1, 1], r"$f_\psi\approx q^4$"),
+        ("incoherent", GRAY, 2.3, [1, -1, 1, -1, -1, 1], r"$\psi$ of order $4$:  $f_\psi\approx 0$"),
+        ("incoherent", GRAY, 1.1, [-1, 1, -1, 1, 1, -1], r"$f_\psi\approx 0$")]
+for kind, col, y, signs, lab in rows:
+    for i, s in enumerate(signs):
+        x = 0.5 + 0.55 * i
+        h = 0.42 * s
+        ax.add_patch(plt.Rectangle((x, y), 0.4, h, fc=col, ec="white", lw=0.6, alpha=0.9 if kind == "coherent" else 0.75))
+    ax.plot([0.45, 3.85], [y, y], color=GRAY, lw=0.6)
+    ax.annotate("", xy=(6.6, y + 0.1), xytext=(4.2, y + 0.1), arrowprops=dict(arrowstyle="->", color=INK, lw=0.9))
+    ax.text(5.4, y + 0.22, r"$\sum_{\chi\in\mathrm{fibre}}$", fontsize=7.5, ha="center", color=MUTED)
+    tot = sum(signs)
+    ax.add_patch(plt.Rectangle((6.8, y), 0.5, 0.42 * tot / 6 * 1.6 if tot else 0.02, fc=col, ec="white", lw=0.6))
+    ax.text(7.45, y + 0.08, lab, fontsize=7.2, color=INK)
+ax.text(0.5, 0.25, r"fibre $=$ coset $\chi H^\perp$, $|H^\perp|=|\mathcal{G}[2]|=q^{3}$", fontsize=7.6, color=MUTED)
+ax.text(0.2, 0.2 + 5.3 - 5.3, "", fontsize=1)
+ax.set_title(r"(a) folding $\hat{\mathcal{G}}\to\hat{\mathcal{G}}{}^2$", fontsize=9, loc="left")
+
+ax = axB
+q8 = {"le2_H": 0.077 + 0.896, "le2_G": 0.036 + 0.228, "o4_H": 0.027, "o4_G": 0.736}
+q16 = {"le2_H": 0.062 + 0.935, "le2_G": 0.008 + 0.138, "o4_H": 0.002, "o4_G": 0.854}
+labels = [r"order $\leq 2$" + "\n" + r"$q=8$", r"order $\leq 2$" + "\n" + r"$q=16$", r"order $4$" + "\n" + r"$q=8$", r"order $4$" + "\n" + r"$q=16$"]
+shareH = [q8["le2_H"], q16["le2_H"], q8["o4_H"], q16["o4_H"]]
+shareG = [q8["le2_G"], q16["le2_G"], q8["o4_G"], q16["o4_G"]]
+x = np.arange(4); w = 0.36
+bH = ax.bar(x - w / 2, shareH, w, color=C1, label=r"share of $\mathrm{Var}_{\mathcal{G}^2}$")
+bG = ax.bar(x + w / 2, shareG, w, color=C2, label=r"share of $\mathrm{Var}_{\mathcal{G}}$")
+for bars in (bH, bG):
+    for b in bars:
+        ax.annotate(f"{b.get_height():.3f}", xy=(b.get_x() + b.get_width() / 2, b.get_height()), xytext=(0, 2),
+                    textcoords="offset points", ha="center", fontsize=6.3, color=INK)
+ax.set_xticks(x); ax.set_xticklabels(labels, fontsize=7.2)
+ax.set_ylim(0, 1.15); ax.set_ylabel("share", fontsize=8)
+ax.legend(fontsize=7, frameon=False, loc="upper right")
+ax.grid(axis="y", color="#e5e7eb", lw=0.6)
+ax.set_title(r"(b) $d=6$: energy by fibre type", fontsize=9, loc="left")
+fig.tight_layout()
+fig.savefig(os.path.join(OUT, "fig_spectral_folding.pdf")); fig.savefig(os.path.join(OUT, "fig_spectral_folding.png"), dpi=160)
+plt.close(fig)
+
+# ------------------------------------------------------------- figure 4: general even d (Section 9.2)
+# exact data: Table 6 / general_d_scan.py, legendre_q16_hayes.py, Theorem 3.x (d = 4) and Table 4 (d = 6).
+ratio = {4: [(2, 4 / 3), (4, 16 / 3), (8, 64 / 3), (16, 256 / 3), (32, 1024 / 3)],
+         6: [(2, 2.7028), (4, 2.4354), (8, 16.6571), (16, 51.8240), (32, 261.5810)],
+         8: [(2, 0.3265), (4, 2.2544), (8, 2.2755)],
+         10: [(2, 1.0993), (4, 1.3608)]}
+# |phi(1)| / q^{3d/4}: d=4: (q^4-q^3)/q^3 = q-1; d=6: |phi_0|/q^{4.5} with phi_0 = 32, -768, 35840, -983040, 34537472;
+# d=8: 40, 6336, 491008 / q^6; d=10: 48, 19848 / q^7.5
+thr = {4: [(q, q - 1) for q in (2, 4, 8, 16, 32)],
+       6: [(2, 32 / 2 ** 4.5), (4, 768 / 4 ** 4.5), (8, 35840 / 8 ** 4.5), (16, 983040 / 16 ** 4.5), (32, 34537472 / 32 ** 4.5)],
+       8: [(2, 40 / 2 ** 6), (4, 6336 / 4 ** 6), (8, 491008 / 8 ** 6)],
+       10: [(2, 48 / 2 ** 7.5), (4, 19848 / 4 ** 7.5)]}
+cols = {4: C2, 6: C1, 8: C3, 10: "#b26dd6"}
+fig, (axA, axB) = plt.subplots(1, 2, figsize=(7.0, 3.3))
+ax = axA
+qq = np.array([2, 4, 8, 16, 32, 64])
+ax.plot(qq, qq ** 2 / 3, ls="--", color=C2, lw=0.8, alpha=0.6)
+ax.plot(qq, qq ** 2 / 4, ls="--", color=C1, lw=0.8, alpha=0.6)
+for d, pts in ratio.items():
+    xs, ys = zip(*pts)
+    ax.plot(xs, ys, marker="o", ms=4, lw=1.4, color=cols[d], label=rf"$d={d}$")
+ax.set_xscale("log", base=2); ax.set_yscale("log", base=2)
+ax.set_xlabel(r"$q=2^k$", fontsize=8.5); ax.set_ylabel(r"$\mathrm{Var}_{\mathcal{G}^2}/\mathrm{Var}_{\mathcal{G}}$", fontsize=8.5)
+ax.text(36, 36 ** 2 / 3 * 1.15, r"$q^2/3$", fontsize=7.5, color=C2)
+ax.text(36, 36 ** 2 / 4 / 1.9, r"$q^2/4$", fontsize=7.5, color=C1)
+ax.text(9, 2.28 * 1.35, r"$\approx 2.28$", fontsize=7.5, color=C3)
+ax.legend(fontsize=7.5, frameon=False, loc="upper left")
+ax.grid(color="#e5e7eb", lw=0.6, which="major")
+ax.set_title(r"(a) amplification against $q$", fontsize=9, loc="left")
+
+ax = axB
+w = 0.19
+for i, d in enumerate((4, 6, 8, 10)):
+    for q, v in thr[d]:
+        pos = np.log2(q) + (i - 1.5) * w
+        ax.bar(pos, v, w, color=cols[d], label=rf"$d={d}$" if q == thr[d][0][0] else None)
+ax.axhline(1.0, color=INK, lw=0.9, ls="--")
+ax.text(1.05, 1.08, "threshold $1$", fontsize=7.5, color=INK)
+ax.set_yscale("log", base=2)
+ax.set_xticks([1, 2, 3, 4, 5]); ax.set_xticklabels([r"$2$", r"$4$", r"$8$", r"$16$", r"$32$"])
+ax.set_xlabel(r"$q$", fontsize=8.5); ax.set_ylabel(r"$|\varphi(1)|/q^{3d/4}$", fontsize=8.5)
+ax.legend(fontsize=7.5, frameon=False, loc="upper left", ncol=2)
+ax.grid(axis="y", color="#e5e7eb", lw=0.6)
+ax.set_title(r"(b) identity class against the threshold", fontsize=9, loc="left")
+fig.tight_layout()
+fig.savefig(os.path.join(OUT, "fig_even_d_bifurcation.pdf")); fig.savefig(os.path.join(OUT, "fig_even_d_bifurcation.png"), dpi=160)
+plt.close(fig)
+print("wrote fig_gold_cycle, fig_singular_planes, fig_spectral_folding, fig_even_d_bifurcation (pdf/png)")
