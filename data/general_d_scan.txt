@@ -1,0 +1,130 @@
+
+=== q=4, d=4: |G|=64, |G^2|=4, [G:G^2]=q^2=16  (0.5s)
+  Var_G/q^(d+1) = 2.250000 (KR 2),  Var_G2/q^(d+1) = 12.000000,  ratio = 5.3333
+  Var_G2/q^(d+1) / q^2 = 0.7500,   / q^(d/2) = 0.750000,   / q^(d/2-1) = 3.000000
+  phi(1) = Psi(1) - q^(d+1) = -192 = -0.7500 q^d = -3.0000 q^(d-1);  Psi(1) = 832
+  Lucas: C(2d,j) odd for j in [] (j <= d-1)  ->  |K_d| = 1;  phi on K_d all equal to phi(1): True
+  share of sum_{G^2} phi^2 carried by K_d: 0.7500;   |K_d| phi(1)^2 / |G^2| / q^(d+1) = 9.0000
+  distinct Legendre deviations: 2; largest |phi| (value, count, phi/q^(d-1), share of sum_H phi^2):
+                 -192  x1         -3.0000   0.7500
+                   64  x3         +1.0000   0.2500
+
+=== q=8, d=4: |G|=512, |G^2|=8, [G:G^2]=q^2=64  (0.0s)
+  Var_G/q^(d+1) = 2.625000 (KR 2),  Var_G2/q^(d+1) = 56.000000,  ratio = 21.3333
+  Var_G2/q^(d+1) / q^2 = 0.8750,   / q^(d/2) = 0.875000,   / q^(d/2-1) = 7.000000
+  phi(1) = Psi(1) - q^(d+1) = -3584 = -0.8750 q^d = -7.0000 q^(d-1);  Psi(1) = 29184
+  Lucas: C(2d,j) odd for j in [] (j <= d-1)  ->  |K_d| = 1;  phi on K_d all equal to phi(1): True
+  share of sum_{G^2} phi^2 carried by K_d: 0.8750;   |K_d| phi(1)^2 / |G^2| / q^(d+1) = 49.0000
+  distinct Legendre deviations: 2; largest |phi| (value, count, phi/q^(d-1), share of sum_H phi^2):
+                -3584  x1         -7.0000   0.8750
+                 -512  x7         -1.0000   0.1250
+
+=== q=4, d=6: |G|=1024, |G^2|=16, [G:G^2]=q^3=64  (0.0s)
+  Var_G/q^(d+1) = 3.700378 (KR 4),  Var_G2/q^(d+1) = 9.011719,  ratio = 2.4354
+  Var_G2/q^(d+1) / q^2 = 0.5632,   / q^(d/2) = 0.140808,   / q^(d/2-1) = 0.563232
+  phi(1) = Psi(1) - q^(d+1) = -768 = -0.1875 q^d = -0.7500 q^(d-1);  Psi(1) = 15616
+  Lucas: C(2d,j) odd for j in [4] (j <= d-1)  ->  |K_d| = 4;  phi on K_d all equal to phi(1): True
+  share of sum_{G^2} phi^2 carried by K_d: 0.9987;   |K_d| phi(1)^2 / |G^2| / q^(d+1) = 9.0000
+  distinct Legendre deviations: 3; largest |phi| (value, count, phi/q^(d-1), share of sum_H phi^2):
+                 -768  x4         -0.7500   0.9987
+                  -16  x6         -0.0156   0.0007
+                   16  x6         +0.0156   0.0007
+
+=== q=8, d=6: |G|=32768, |G^2|=64, [G:G^2]=q^3=512  (0.0s)
+  Var_G/q^(d+1) = 4.748336 (KR 4),  Var_G2/q^(d+1) = 79.093506,  ratio = 16.6571
+  Var_G2/q^(d+1) / q^2 = 1.2358,   / q^(d/2) = 0.154480,   / q^(d/2-1) = 1.235836
+  phi(1) = Psi(1) - q^(d+1) = 35840 = +0.1367 q^d = +1.0938 q^(d-1);  Psi(1) = 2132992
+  Lucas: C(2d,j) odd for j in [4] (j <= d-1)  ->  |K_d| = 8;  phi on K_d all equal to phi(1): True
+  share of sum_{G^2} phi^2 carried by K_d: 0.9680;   |K_d| phi(1)^2 / |G^2| / q^(d+1) = 76.5625
+  distinct Legendre deviations: 3; largest |phi| (value, count, phi/q^(d-1), share of sum_H phi^2):
+                35840  x8         +1.0938   0.9680
+                -3264  x28        -0.0996   0.0281
+                 1216  x28        +0.0371   0.0039
+
+=== q=2, d=8: |G|=128, |G^2|=8, [G:G^2]=q^4=16  (0.0s)
+  Var_G/q^(d+1) = 4.880859 (KR 6),  Var_G2/q^(d+1) = 1.593750,  ratio = 0.3265
+  Var_G2/q^(d+1) / q^2 = 0.3984,   / q^(d/2) = 0.099609,   / q^(d/2-1) = 0.199219
+  phi(1) = Psi(1) - q^(d+1) = -40 = -0.1562 q^d = -0.3125 q^(d-1);  Psi(1) = 472
+  Lucas: C(2d,j) odd for j in [] (j <= d-1)  ->  |K_d| = 1;  phi on K_d all equal to phi(1): True
+  share of sum_{G^2} phi^2 carried by K_d: 0.2451;   |K_d| phi(1)^2 / |G^2| / q^(d+1) = 0.3906
+  distinct Legendre deviations: 5; largest |phi| (value, count, phi/q^(d-1), share of sum_H phi^2):
+                  -40  x2         -0.3125   0.4902
+                  -32  x2         -0.2500   0.3137
+                   32  x1         +0.2500   0.1569
+                  -16  x1         -0.1250   0.0392
+                    0  x2         +0.0000   0.0000
+
+=== q=4, d=8: |G|=16384, |G^2|=64, [G:G^2]=q^4=256  (0.0s)
+  Var_G/q^(d+1) = 5.877720 (KR 6),  Var_G2/q^(d+1) = 13.250977,  ratio = 2.2544
+  Var_G2/q^(d+1) / q^2 = 0.8282,   / q^(d/2) = 0.051762,   / q^(d/2-1) = 0.207047
+  phi(1) = Psi(1) - q^(d+1) = -6336 = -0.0967 q^d = -0.3867 q^(d-1);  Psi(1) = 255808
+  Lucas: C(2d,j) odd for j in [] (j <= d-1)  ->  |K_d| = 1;  phi on K_d all equal to phi(1): True
+  share of sum_{G^2} phi^2 carried by K_d: 0.1806;   |K_d| phi(1)^2 / |G^2| / q^(d+1) = 2.3928
+  distinct Legendre deviations: 9; largest |phi| (value, count, phi/q^(d-1), share of sum_H phi^2):
+                -6336  x1         -0.3867   0.1806
+                 6016  x3         +0.3672   0.4884
+                -1984  x3         -0.1211   0.0531
+                 1536  x12        +0.0938   0.1273
+                 1088  x6         +0.0664   0.0319
+                 -896  x24        -0.0547   0.0867
+                 -768  x12        -0.0469   0.0318
+                  128  x1         +0.0078   0.0001
+
+=== q=8, d=8: |G|=2097152, |G^2|=512, [G:G^2]=q^4=4096  (2.9s)
+  Var_G/q^(d+1) = 5.927205 (KR 6),  Var_G2/q^(d+1) = 13.487091,  ratio = 2.2755
+  Var_G2/q^(d+1) / q^2 = 0.2107,   / q^(d/2) = 0.003293,   / q^(d/2-1) = 0.026342
+  phi(1) = Psi(1) - q^(d+1) = -491008 = -0.0293 q^d = -0.2341 q^(d-1);  Psi(1) = 133726720
+  Lucas: C(2d,j) odd for j in [] (j <= d-1)  ->  |K_d| = 1;  phi on K_d all equal to phi(1): True
+  share of sum_{G^2} phi^2 carried by K_d: 0.2601;   |K_d| phi(1)^2 / |G^2| / q^(d+1) = 3.5083
+  distinct Legendre deviations: 10; largest |phi| (value, count, phi/q^(d-1), share of sum_H phi^2):
+              -491008  x1         -0.2341   0.2601
+              -168448  x7         -0.0803   0.2143
+               155648  x7         +0.0742   0.1830
+                91136  x21        +0.0435   0.1882
+                36352  x21        +0.0173   0.0299
+                22528  x168       +0.0107   0.0920
+               -20992  x7         -0.0100   0.0033
+                14848  x56        +0.0071   0.0133
+
+=== q=2, d=10: |G|=512, |G^2|=16, [G:G^2]=q^5=32  (0.0s)
+  Var_G/q^(d+1) = 7.191635 (KR 8),  Var_G2/q^(d+1) = 7.905762,  ratio = 1.0993
+  Var_G2/q^(d+1) / q^2 = 1.9764,   / q^(d/2) = 0.247055,   / q^(d/2-1) = 0.494110
+  phi(1) = Psi(1) - q^(d+1) = 48 = +0.0469 q^d = +0.0938 q^(d-1);  Psi(1) = 2096
+  Lucas: C(2d,j) odd for j in [4] (j <= d-1)  ->  |K_d| = 2;  phi on K_d all equal to phi(1): True
+  share of sum_{G^2} phi^2 carried by K_d: 0.0178;   |K_d| phi(1)^2 / |G^2| / q^(d+1) = 0.1406
+  distinct Legendre deviations: 10; largest |phi| (value, count, phi/q^(d-1), share of sum_H phi^2):
+                  232  x2         +0.4531   0.4155
+                  192  x1         +0.3750   0.1423
+                  172  x2         +0.3359   0.2284
+                 -148  x1         -0.2891   0.0846
+                  104  x1         +0.2031   0.0418
+                  -78  x2         -0.1523   0.0470
+                  -68  x1         -0.1328   0.0178
+                   48  x2         +0.0938   0.0178
+
+=== q=4, d=10: |G|=262144, |G^2|=256, [G:G^2]=q^5=1024  (0.4s)
+  Var_G/q^(d+1) = 7.692975 (KR 8),  Var_G2/q^(d+1) = 10.468710,  ratio = 1.3608
+  Var_G2/q^(d+1) / q^2 = 0.6543,   / q^(d/2) = 0.010223,   / q^(d/2-1) = 0.040893
+  phi(1) = Psi(1) - q^(d+1) = -19848 = -0.0189 q^d = -0.0757 q^(d-1);  Psi(1) = 4174456
+  Lucas: C(2d,j) odd for j in [4] (j <= d-1)  ->  |K_d| = 4;  phi on K_d all equal to phi(1): True
+  share of sum_{G^2} phi^2 carried by K_d: 0.1402;   |K_d| phi(1)^2 / |G^2| / q^(d+1) = 1.4676
+  distinct Legendre deviations: 19; largest |phi| (value, count, phi/q^(d-1), share of sum_H phi^2):
+                23036  x4         +0.0879   0.1888
+               -19848  x4         -0.0757   0.1402
+                12716  x8         +0.0485   0.1151
+               -10152  x6         -0.0387   0.0550
+                -9704  x12        -0.0370   0.1005
+                -7584  x6         -0.0289   0.0307
+                -6624  x24        -0.0253   0.0937
+                -6544  x24        -0.0250   0.0914
+
+summary:  q  d  Var_G/q^(d+1)  Var_G2/q^(d+1)  ratio  ratio/q^2  phi(1)/q^(d-1)  |K_d|
+    4   4      2.2500       12.0000     5.3333    0.3333     -3.0000  1
+    8   4      2.6250       56.0000    21.3333    0.3333     -7.0000  1
+    4   6      3.7004        9.0117     2.4354    0.1522     -0.7500  4
+    8   6      4.7483       79.0935    16.6571    0.2603     +1.0938  8
+    2   8      4.8809        1.5938     0.3265    0.0816     -0.3125  1
+    4   8      5.8777       13.2510     2.2544    0.1409     -0.3867  1
+    8   8      5.9272       13.4871     2.2755    0.0356     -0.2341  1
+    2  10      7.1916        7.9058     1.0993    0.2748     +0.0938  2
+    4  10      7.6930       10.4687     1.3608    0.0851     -0.0757  4

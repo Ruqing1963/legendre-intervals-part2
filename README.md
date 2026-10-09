@@ -29,6 +29,10 @@ Preprint DOI: 10.5281/zenodo.23224897.
   the twisted point counts of the 8-folds X ∩ {e_4 = 0}, X ∩ {e_4 = 1}, and C_6 = 1 is equivalent to
   #X_1^(σ)(F_q) = q^8 + q^5 − q^4 + o(q^{9/2}) (Proposition 7.9).
 * **Scaling.** Var_{G^2}/q^{d+1} ≍ q^2 at d = 6 (not q^4); C_6 = lim Var_{G^2}/q^9 = 1 holds if m_k = o(q^{5/2}).
+* **Spectral folding and general d.** The amplification is the coherence of the Fourier coefficients along the fibres
+  of G^ → (G^2)^ (cosets of the 2-torsion G[2], of order q^{d/2}); at d = 6, Var_{G^2} = [(A_6−q^9)^2+(q−1)X^2]/q^4 + q^3(q−1)m_k^2
+  exactly. The translation orbit K_d of the identity class has order 1 or q by Lucas' theorem. Exact variances for
+  d ≤ 10 show the q^2 amplification is special to d = 4, 6: at d = 8 the Legendre/full-group ratio is ≈ 2.3 for q = 4, 8.
 
 See `paper/paper_part2.pdf` (and the status table in its last section) for exactly what is proved, verified, or conjectural.
 
@@ -59,6 +63,7 @@ python kasami_sign.py 3 5 7 9                     # Theorem 6.12 via L-polynomia
 python legendre_d6_Wp_pattern.py 3 5 7            # W' (the sums behind X) by Frobenius class on ker L' (Table 3)
 python L_function_spectral.py                     # m_k = 13,-1,-35,47,733: recurrences, Weil moduli, 2-adic constraints, N_0, N_1
 python fourier_spectrum_folding.py                # spectral folding G^ -> (G^2)^: fibre sums, energies, coherence (Section 8)
+python general_d_scan.py 2,8 4,8 8,8 2,10 4,10    # Legendre variance, identity class and its orbit K_d for d = 8, 10 (Section 9)
 python generate_figures.py                        # fig_gold_cycle.pdf, fig_singular_planes.pdf
 cd ../paper && python make_figures.py && pdflatex paper_part2.tex
 ```
