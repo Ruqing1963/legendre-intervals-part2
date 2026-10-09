@@ -1,0 +1,49 @@
+
+=== d=4, q=2: |G[2]| = q^2 = 4;  Var_G/q^5 = 1.500000 (direct 1.500000),  Var_H/q^5 = 2.000000 (direct 2.000000),  ratio = 1.3333 = q^2 x 0.3333
+   fibres over characters of H of order 1:     1 fibres;  share of Var_H 1.0000;  share of Var_G 0.6667;  coherence kappa: min 0.5000, mean 0.5000, max 0.5000
+   fibres over characters of H of order 2:     1 fibres;  share of Var_H 0.0000;  share of Var_G 0.3333;  coherence kappa: min 0.0000, mean 0.0000, max 0.0000
+   fibre sums: f_0 = -8, f_mu = 0 (mu != 0);  Theorem 8.2 prediction: OK;  identity-class share of Var_G: 0.1667
+
+=== d=4, q=4: |G[2]| = q^2 = 16;  Var_G/q^5 = 2.250000 (direct 2.250000),  Var_H/q^5 = 12.000000 (direct 12.000000),  ratio = 5.3333 = q^2 x 0.3333
+   fibres over characters of H of order 1:     1 fibres;  share of Var_H 0.0000;  share of Var_G 0.1667;  coherence kappa: min 0.0000, mean 0.0000, max 0.0000
+   fibres over characters of H of order 2:     3 fibres;  share of Var_H 1.0000;  share of Var_G 0.8333;  coherence kappa: min 0.4000, mean 0.4000, max 0.4000
+   fibre sums: f_0 = 0, f_mu = -64 (mu != 0);  Theorem 8.2 prediction: OK;  identity-class share of Var_G: 0.2500
+
+=== d=4, q=8: |G[2]| = q^2 = 64;  Var_G/q^5 = 2.625000 (direct 2.625000),  Var_H/q^5 = 56.000000 (direct 56.000000),  ratio = 21.3333 = q^2 x 0.3333
+   fibres over characters of H of order 1:     1 fibres;  share of Var_H 0.4375;  share of Var_G 0.1667;  coherence kappa: min 0.8750, mean 0.8750, max 0.8750
+   fibres over characters of H of order 2:     7 fibres;  share of Var_H 0.5625;  share of Var_G 0.8333;  coherence kappa: min 0.2250, mean 0.2250, max 0.2250
+   fibre sums: f_0 = -896, f_mu = -384 (mu != 0);  Theorem 8.2 prediction: OK;  identity-class share of Var_G: 0.2917
+
+=== d=4, q=16: |G[2]| = q^2 = 256;  Var_G/q^5 = 2.812500 (direct 2.812500),  Var_H/q^5 = 240.000000 (direct 240.000000),  ratio = 85.3333 = q^2 x 0.3333
+   fibres over characters of H of order 1:     1 fibres;  share of Var_H 0.0000;  share of Var_G 0.0417;  coherence kappa: min 0.0000, mean 0.0000, max 0.0000
+   fibres over characters of H of order 2:    15 fibres;  share of Var_H 1.0000;  share of Var_G 0.9583;  coherence kappa: min 0.3478, mean 0.3478, max 0.3478
+   fibre sums: f_0 = 0, f_mu = -4096 (mu != 0);  Theorem 8.2 prediction: OK;  identity-class share of Var_G: 0.3125
+
+=== d=4, q=32: |G[2]| = q^2 = 1024;  Var_G/q^5 = 2.906250 (direct 2.906250),  Var_H/q^5 = 992.000000 (direct 992.000000),  ratio = 341.3333 = q^2 x 0.3333
+   fibres over characters of H of order 1:     1 fibres;  share of Var_H 0.1211;  share of Var_G 0.0417;  coherence kappa: min 0.9688, mean 0.9688, max 0.9688
+   fibres over characters of H of order 2:    31 fibres;  share of Var_H 0.8789;  share of Var_G 0.9583;  coherence kappa: min 0.3057, mean 0.3057, max 0.3057
+   fibre sums: f_0 = -63488, f_mu = -30720 (mu != 0);  Theorem 8.2 prediction: OK;  identity-class share of Var_G: 0.3229
+
+=== d=6, q=2: |G[2]| = q^3 = 8;  Var_G/q^7 = 5.757812 (direct 5.757812),  Var_H/q^7 = 15.562500 (direct 15.562500),  ratio = 2.7028 = q^2 x 0.6757
+   fibres over characters of H of order 1:     1 fibres;  share of Var_H 0.0321;  share of Var_G 0.3039;  coherence kappa: min 0.0357, mean 0.0357, max 0.0357
+   fibres over characters of H of order 2:     1 fibres;  share of Var_H 0.2892;  share of Var_G 0.2388;  coherence kappa: min 0.4091, mean 0.4091, max 0.4091
+   fibres over characters of H of order 4:     2 fibres;  share of Var_H 0.6787;  share of Var_G 0.4573;  coherence kappa: min 0.5015, mean 0.5015, max 0.5015
+   A6 = 544, X = 96, Y = 104 = q^3 * 13;  fibre sums: f_1 = (A6 - q^9)/q^2 = 8.0, f_mu (order 2) = X/q^2 = 24.0;  order-4 part of Var_H = 1352.0 vs q^3 (q-1) m_k^2 = 1352.0
+
+=== d=6, q=4: |G[2]| = q^3 = 64;  Var_G/q^7 = 3.700378 (direct 3.700378),  Var_H/q^7 = 9.011719 (direct 9.011719),  ratio = 2.4354 = q^2 x 0.1522
+   fibres over characters of H of order 1:     1 fibres;  share of Var_H 0.2497;  share of Var_G 0.1203;  coherence kappa: min 0.0789, mean 0.0789, max 0.0789
+   fibres over characters of H of order 2:     3 fibres;  share of Var_H 0.7490;  share of Var_G 0.4054;  coherence kappa: min 0.0703, mean 0.0703, max 0.0703
+   fibres over characters of H of order 4:    12 fibres;  share of Var_H 0.0013;  share of Var_G 0.4743;  coherence kappa: min 0.0001, mean 0.0001, max 0.0001
+   A6 = 259072, X = -3072, Y = -64 = q^3 * -1;  fibre sums: f_1 = (A6 - q^9)/q^2 = -192.0, f_mu (order 2) = X/q^2 = -192.0;  order-4 part of Var_H = 192.0 vs q^3 (q-1) m_k^2 = 192.0
+
+=== d=6, q=8: |G[2]| = q^3 = 512;  Var_G/q^7 = 4.748336 (direct 4.748336),  Var_H/q^7 = 79.093506 (direct 79.093506),  ratio = 16.6571 = q^2 x 0.2603
+   fibres over characters of H of order 1:     1 fibres;  share of Var_H 0.0774;  share of Var_G 0.0360;  coherence kappa: min 0.0700, mean 0.0700, max 0.0700
+   fibres over characters of H of order 2:     7 fibres;  share of Var_H 0.8961;  share of Var_G 0.2282;  coherence kappa: min 0.1278, mean 0.1278, max 0.1278
+   fibres over characters of H of order 4:    56 fibres;  share of Var_H 0.0265;  share of Var_G 0.7358;  coherence kappa: min 0.0012, mean 0.0012, max 0.0012
+   A6 = 134447104, X = 294912, Y = -17920 = q^3 * -35;  fibre sums: f_1 = (A6 - q^9)/q^2 = 3584.0, f_mu (order 2) = X/q^2 = 4608.0;  order-4 part of Var_H = 4390400.0 vs q^3 (q-1) m_k^2 = 4390400.0
+
+=== d=6, q=16: |G[2]| = q^3 = 4096;  Var_G/q^7 = 4.351375 (direct 4.351375),  Var_H/q^7 = 225.505600 (direct 225.505600),  ratio = 51.8240 = q^2 x 0.2024
+   fibres over characters of H of order 1:     1 fibres;  share of Var_H 0.0624;  share of Var_G 0.0083;  coherence kappa: min 0.0949, mean 0.0949, max 0.0949
+   fibres over characters of H of order 2:    15 fibres;  share of Var_H 0.9354;  share of Var_G 0.1380;  coherence kappa: min 0.0857, mean 0.0857, max 0.0857
+   fibres over characters of H of order 4:   240 fibres;  share of Var_H 0.0022;  share of Var_G 0.8537;  coherence kappa: min 0.0000, mean 0.0000, max 0.0000
+   A6 = 68703748096, X = -15728640, Y = 192512 = q^3 * 47;  fibre sums: f_1 = (A6 - q^9)/q^2 = -61440.0, f_mu (order 2) = X/q^2 = -61440.0;  order-4 part of Var_H = 135720960.0 vs q^3 (q-1) m_k^2 = 135720960.0

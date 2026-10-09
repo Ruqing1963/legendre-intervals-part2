@@ -58,6 +58,7 @@ python quintic_check.py                           # factorisation types of v^5+v
 python kasami_sign.py 3 5 7 9                     # Theorem 6.12 via L-polynomials of y^2+y = x^5+t x^3+b x
 python legendre_d6_Wp_pattern.py 3 5 7            # W' (the sums behind X) by Frobenius class on ker L' (Table 3)
 python L_function_spectral.py                     # m_k = 13,-1,-35,47,733: recurrences, Weil moduli, 2-adic constraints, N_0, N_1
+python fourier_spectrum_folding.py                # spectral folding G^ -> (G^2)^: fibre sums, energies, coherence (Section 8)
 python generate_figures.py                        # fig_gold_cycle.pdf, fig_singular_planes.pdf
 cd ../paper && python make_figures.py && pdflatex paper_part2.tex
 ```

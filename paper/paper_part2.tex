@@ -8,6 +8,7 @@
 \usepackage{enumitem}
 \usepackage[margin=1in]{geometry}
 \usepackage{xcolor}
+\usepackage{float}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black}
 
@@ -859,9 +860,107 @@ whose trace formula is (a). In particular the weights of $H^j_c(X,\mathcal L)$ a
 Theorem~\ref{thm:twisted} and Propositions~\ref{prop:trace}--\ref{prop:ASsheaf}, \ref{prop:Ydiff}--\ref{prop:spectral} are unconditional. By Proposition~\ref{prop:Ydiff}, $m_k=O(q^{3/2})$ (hence $C_6=1$) would follow from: \emph{the eight-dimensional affine complete intersections $X_0=\{e_1=e_3=e_4=e_5=0\}$ and $X_1=\{e_1=e_3=e_5=0,\ e_4=1\}$ have $H^j_c(X_{c,\bar\F_2},\mathbb Q_\ell)$ of weight $\le9$ for $9\le j\le15$, and their top classes $H^{16}_c$ cancel in the sequence of \textup{(b)}}. For a smooth affine complete intersection in general position at infinity one expects even more (the cohomology of a bouquet of $8$-spheres plus the top class), which would give $Y=O(q^4)$ and $m_k=O(q)$; the data $|m_k|/q\le23$ do not exclude this for rank $\ge23$. Two obstacles stand in the way: the singular loci (of dimension $\le4$, where fewer than five coordinates are distinct), and the behaviour at infinity, where the projective closures of $X_0$ and $X_1$ meet the hyperplane at infinity in the same variety, the base $\mathbb P(X_0)$ of the cone $X_0$. We have \emph{not} shown that $H^j_c(X_{\bar\F_2},\mathcal L)$ vanishes for $9<j<18$ (Proposition~\ref{prop:ASsheaf} gives only $j=18$ and Proposition~\ref{prop:Ydiff}(c) only $j<9$), nor computed $b_9$: Katz's theorem on the concentration of $\sum\psi(f)$ in middle degree requires $p\nmid\deg f$ and a smooth ambient variety, whereas here $\deg e_4=4$ and $X$ is singular along the $1023$ planes of Proposition~\ref{prop:Xgeom}(b); a proof would need the Swan conductor of $\mathcal L$ along $X_\infty$ and local computations at $\mathrm{Sing}(X)$. Hence $m_k=O(q^{3/2})$, and with it $C_6=1$, is supported by the data but not proved. Two further cautions. First, the variety $V=\{p_1=p_3=p_5=0\}\subset\A^{12}_{\F_q}$ obtained by choosing an $\F_q$-basis of $\F_{q^{12}}$ is exactly $X^{(\sigma)}$, a nontrivial twist of $X\otimes\F_q$; so $(Y_k)_k$ is not a point-count sequence of a fixed variety, and the genuine ``closed form'' of $Y$ is the twisted $L$-function $L_\sigma(T)$, which Theorem~\ref{thm:twisted} shows is a rational function determined by finitely many $Y_k$ (Berlekamp--Massey on $Y_1,Y_2,\dots$ would identify it; $k\le5$ is not enough and $k=6$ means $\F_{2^{72}}$). Second, the untwisted counts $\#X(\F_q)$ for $q=2,4,8$ ($2048$, $2\,099\,200$, $1\,081\,081\,856$) far exceed $q^9$; this is not a sign of several components but of $q<12$, where no polynomial over $\F_q$ has twelve distinct roots. The tower reduction of Theorem~\ref{thm:towerred} exhibits $Y/G-1$ as a sum over $a\in\F_{q^6}$ of cubic Artin--Schreier sums over $\F_q$, i.e.\ as the trace of a relative $H^1$ of an elliptic Artin--Schreier family over a five-dimensional base; this is the natural starting point for computing $b_9$.
 \end{remark}
 
-\section{Summary of the numerical evidence}\label{sec:numerics}
+\section{Spectral folding: why the restriction to squares amplifies the variance}\label{sec:folding}
+
+At $d=4$ and $d=6$ the restriction of $\Psi$ to the subgroup of squares multiplies the normalised variance by a factor $\asymp q^2$ ($q^2/3$ exactly at $d=4$, $\approx q^2/4$ at $d=6$), while the full-group variances stay bounded. This section isolates the mechanism in the harmonic analysis of the pair $\G^2\subset\G$: the variance over a subgroup is the energy of the \emph{folded} spectrum, and folding can only increase the energy through phase coherence inside the fibres of the restriction map $\widehat\G\to\widehat{\G^2}$.
+
+\subsection{Folding}
+Let $G$ be a finite abelian group, $H\le G$, $H^\perp=\{\eps\in\widehat G:\eps|_H=1\}\cong\widehat{G/H}$, and $\varphi:G\to\mathbb C$ with Fourier expansion $\varphi=\sum_{\chi\in\widehat G}c_\chi\chi$, $c_\chi=|G|^{-1}\sum_g\varphi(g)\bar\chi(g)$. Write $\Var_G(\varphi)=|G|^{-1}\sum_{g\in G}|\varphi(g)|^2$ and $\Var_H(\varphi)=|H|^{-1}\sum_{h\in H}|\varphi(h)|^2$ (second moments, not centred on $H$).
+
+\begin{proposition}[folding]\label{prop:folding}
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2em]
+\item The restriction $\mathrm{Res}:\widehat G\to\widehat H$ is surjective and its fibres are the cosets $\chi H^\perp$, each of cardinality $|H^\perp|=[G:H]$.
+\item (Parseval on $G$ and on $H$) With $f_\psi=\sum_{\chi\in\mathrm{Res}^{-1}(\psi)}c_\chi$ and $E_\psi=\sum_{\chi\in\mathrm{Res}^{-1}(\psi)}|c_\chi|^2$,
+\[
+\Var_G(\varphi)=\sum_{\psi\in\widehat H}E_\psi,\qquad \Var_H(\varphi)=\sum_{\psi\in\widehat H}|f_\psi|^2 .
+\]
+Moreover, with $F_{gH}(\psi)=|H|^{-1}\sum_{h\in H}\varphi(gh)\bar\psi(h)$ the $\psi$-coefficient of $\varphi$ on the coset $gH$,
+\[
+f_\psi=F_H(\psi)=|H|^{-1}\sum_{h\in H}\varphi(h)\bar\psi(h),\qquad E_\psi=[G:H]^{-1}\sum_{gH\in G/H}|F_{gH}(\psi)|^2 .
+\]
+\item (Gram matrix) The matrix $M_{\chi_1,\chi_2}=|H|^{-1}\sum_{h\in H}\chi_1(h)\overline{\chi_2(h)}=[\chi_1\bar\chi_2\in H^\perp]$ is block diagonal with all-ones blocks indexed by the fibres; its eigenvalues are $[G:H]$ (on vectors constant on fibres) and $0$, and $\Var_H(\varphi)=c^*Mc$, $\Var_G(\varphi)=c^*c$. Writing $M=\sum_{\eps\in H^\perp}P_\eps$ with $P_\eps$ the translation $\chi\mapsto\chi\eps$, the Rayleigh quotient is
+\[
+\frac{\Var_H(\varphi)}{\Var_G(\varphi)}=1+\sum_{\eps\in H^\perp\setminus1}\rho(\eps),\qquad \rho(\eps)=\frac{\langle c,P_\eps c\rangle}{\langle c,c\rangle},
+\]
+which is \eqref{eq:rho}.
+\item (coherence bound) $|f_\psi|^2\le[G:H]\,E_\psi$ for every $\psi$, hence $\Var_H(\varphi)\le[G:H]\Var_G(\varphi)$, with equality iff $c_\chi$ is constant on every fibre, i.e.\ iff $\varphi$ is supported on $H$. We call $\kappa_\psi=|f_\psi|^2/([G:H]E_\psi)\in[0,1]$ the coherence of the fibre over $\psi$.
+\end{enumerate}
+For the Hayes group $G=\G_\ell$ and $H=\G^2$ one has $[G:H]=|\G[2]|=q^{\lfloor d/2\rfloor}$ (Lemma~\ref{lem:legendre}). In odd characteristic $\G_\ell$ has odd order, $\G[2]=1$, $\G^2=\G$, and there is nothing to fold: the Legendre intervals are then all the fibres of $\G$, and their variance is the full-group variance of Keating--Rudnick. The amplification is thus a consequence of the $2$-torsion of the Hayes group, which exists only in characteristic $2$ and has order $q^{d/2}$; the actual factor, $\asymp q^2$ rather than the maximal $q^{d/2}$, measures how much of the spectral energy is coherent along the fibres.
+\end{proposition}
+\begin{proof}
+(a) Characters of $H$ extend to $G$ and two extensions differ by an element of $H^\perp$; $|H^\perp|=|\widehat{G/H}|=[G:H]$. (b) $\varphi|_H=\sum_\psi f_\psi\psi$ and Parseval on $H$. The projection of $\varphi$ onto the fibre $\chi_0H^\perp$ is
+\[
+\varphi_\psi(g)=\sum_{\chi\in\chi_0H^\perp}c_\chi\chi(g)=\chi_0(g)\,|H|^{-1}\sum_{h\in H}\varphi(gh)\bar\chi_0(h),
+\]
+so $|\varphi_\psi(g)|=|F_{gH}(\psi)|$ and $E_\psi=|G|^{-1}\sum_g|\varphi_\psi(g)|^2$. (c) Orthogonality of characters on $H$; $c^*Mc=\sum_\psi|\sum_{\mathrm{fibre}}c_\chi|^2$. (d) Cauchy--Schwarz on each fibre; equality iff $c_{\chi\eps}=c_\chi$ for all $\eps\in H^\perp$ iff $\varphi(g)\eps(g)=\varphi(g)$ for all $g$ and $\eps\in H^\perp$ iff $\varphi$ vanishes off $H$.
+\end{proof}
+
+\subsection{The case $d=4$: a single class folded $q^2$ times}
+\begin{theorem}\label{thm:folding4}
+Let $d=4$, $\varphi=\Psi-q^5$ on $\G_3$, $H=\G^2=\{(0,c,0)\}\cong\F_q$ with characters $\psi_\mu(c)=\chi(\mu c)$. Then the fibre sums are
+\[
+f_{\psi_0}=\bigl((-1)^k-1\bigr)(q^3-q^2),\qquad f_{\psi_\mu}=-q^3+q^2-(-1)^kq^2\quad(\mu\ne0),
+\]
+so that $\Var_{\G^2}=\sum_\mu|f_{\psi_\mu}|^2=q^7-q^6$, while $\Var_\G=\sum_\mu E_{\psi_\mu}=3q^5-3q^4$, of which the identity class alone contributes $(q^4-q^3)^2/q^3=q^5-2q^4+q^3$. Hence
+\[
+\frac{\Var_{\G^2}}{\Var_\G}=\frac{q^2}3,\qquad \frac{\Var_\G}{q^5}=\underbrace{1-\frac2q+\frac1{q^2}}_{\text{identity class}}+\underbrace{2-\frac1q-\frac1{q^2}}_{\text{all other classes}},
+\]
+the second bracket tending to the Keating--Rudnick value $d-2=2$. The fibre over $\psi_\mu$ ($\mu\ne0$) consists of the $q^2$ characters $\chi$ of $\G_3$ with $\chi^2=\eps_{(\sqrt\mu,0)}$ (order $4$), the fibre over $\psi_0$ of the $q^2$ quadratic characters $\eps_\lambda$ with $c_{\eps_\lambda}=S_\lambda/q^3$, $S_\lambda=\sum_{x\in\F_{q^8}}\psi_0(\lambda_3x^3+\lambda_1x)$.
+\end{theorem}
+\begin{proof}
+By Theorem~\ref{thm:d4formula}, $\varphi(0,0,0)=-q^4+q^3$ and $\varphi(0,c,0)=(-1)^kq^3$ for $c\ne0$; so $f_{\psi_\mu}=q^{-1}\sum_c\varphi(0,c,0)\chi(\mu c)=(-1)^kq^3[\mu=0]+(-q^4+q^3-(-1)^kq^3)/q$. The sum of squares is $q^6(q-1)$ in both parities, and Theorem~\ref{thm:varG4} gives $\Var_\G$. For $g\in\G_3$, $\chi(g^2)=\chi(g)^2$ and $c_2(g^2)=c_1(g)^2$, so $\chi|_{\G^2}=\psi_\mu$ iff $\chi^2=\eps_{(\sqrt\mu,0)}$; for $\mu=0$ these are the characters trivial on $\G^2$, i.e.\ the $\eps_\lambda$ of Proposition~\ref{prop:quadchar}, whose coefficients are the Artin--Schreier sums of Section~\ref{sec:d4}.
+\end{proof}
+
+Thus at $d=4$ the whole anomaly is the identity class: its deficit $-(q^4-q^3)$ (the missing $\alpha\in\F_{q^8}$ with $e_1=e_2=e_3=0$) has a flat Fourier transform on $\widehat{\G^2}$, $f_{\psi_\mu}\approx-q^3$ for every $\mu$, so every fibre is coherent (Table~\ref{tab:folding}: $\kappa\approx1/3$); on the full group the same class is diluted by the factor $[\G:\G^2]=q^2$ and contributes only the ``$1$'' in $\Var_\G/q^5\to3=2+1$. Theorem~\ref{thm:rho4} is the same statement in the language of $\rho$: $\rho(\eps)=1$ exactly for the $\eps$ trivial on $\{c_1=0\}\supset\mathrm{supp}\,\varphi$ (translation by such $\eps$ fixes the coefficient vector), and the remaining $\rho(\eps)=(q-3)/(3(q-1))\to1/3$ is the coherence along the $\lambda_3$-direction.
+
+\subsection{The case $d=6$: $q$ coherent fibres out of $q^2$}
+\begin{proposition}\label{prop:folding6}
+Let $d=6$, $H=\G^2=\{(c_2,c_4)\}\cong W_2(\F_q)$ with the Witt law $(c_2,c_4)(c_2',c_4')=(c_2+c_2',c_4+c_4'+c_2c_2')$, whose $q^2$ characters are $\psi_{(a,b)}(x)=i^{\Tr_{W_2(\F_q)/\Z/4}((a,b)\cdot x)}$: $\psi_{(0,b)}=\chi(\sqrt b\,c_2)$ has order $\le2$ ($q$ characters) and $\psi_{(a,b)}$, $a\ne0$, has order $4$ ($q^2-q$ characters). Then, for all $k$,
+\[
+f_{\psi_{(0,0)}}=\frac{A_6-q^9}{q^2},\qquad f_{\psi_{(0,b)}}=\frac{X}{q^2}\ (b\ne0),\qquad \sum_{a\ne0,\,b}|f_{\psi_{(a,b)}}|^2=q^3(q-1)m_k^2 ,
+\]
+and consequently
+\begin{equation}\label{eq:varfold}
+\Var_{\G^2}(\Psi)=\frac{(A_6-q^9)^2+(q-1)X^2}{q^4}+q^3(q-1)\,m_k^2 .
+\end{equation}
+The fibre over $\psi_{(0,0)}$ consists of the $q^3$ quadratic characters $\eps_\lambda$ (coefficients $S(\lambda)/q^5$, Theorem~\ref{thm:supersing}), the fibre over $\psi_{(0,b)}$ of the $q^3$ characters of order $4$ with $\chi^2=\eps_{(b^{1/4},0,0)}$ (coefficients $S'(\lambda)/q^5$ up to the scaling $b$, \S\ref{subsec:Wp}), and the fibres over the order-$4$ characters of $\G^2$ of characters of order $8$ of $\G_5$, whose coefficients are Witt-vector sums of length $3$ and are not quadratic-form sums.
+\end{proposition}
+\begin{proof}
+$f_\psi=q^{-2}\sum_{g\in\G^2}\varphi(g)\bar\psi(g)$. For $\psi=\psi_{(0,b)}$ this is $q^{-2}\bigl(\sum_{\G^2}\Psi(g)\chi(\sqrt b\,c_2)-q^7\cdot q^2[b=0]\bigr)$, i.e.\ $(A_6-q^9)/q^2$ or $X_{\sqrt b}/q^2=X/q^2$ (scaling $\alpha\mapsto s\alpha$, $e_2\mapsto s^2e_2$). By Theorem~\ref{thm:threevalue}, $\varphi|_{\G^2}=\varphi_0[c_2=0]+(B+q^2m_k\,\chi(c_4/c_2^2))[c_2\ne0]$; the first two terms are functions of $c_2$ alone, hence combinations of the $\psi_{(0,b)}$, while $\sum_{c_4}\chi(c_4/c_2^2)\bar\psi_{(0,b)}(c_2,c_4)=0$ for $c_2\ne0$, so the last term is supported on the order-$4$ characters, where Parseval gives $q^{-2}\sum_{c_2\ne0,c_4}(q^2m_k)^2=q^3(q-1)m_k^2$. The description of the fibres follows from $\chi(g^2)=\chi(g)^2$ and $c_2(g^2)=c_1(g)^2$ as at $d=4$ (characters with $\chi^2=\eps$ of order $2$ have order $4$; those restricting to an order-$4$ character of $\G^2$ have order $8$).
+\end{proof}
+
+Formula \eqref{eq:varfold} separates the variance into a \emph{coherent} part carried by the $q$ fibres over the characters of order $\le2$, which is determined by the two constants $A_6$ and $X$, and an \emph{incoherent} part $q^3(q-1)m_k^2$ carried by the $q^2-q$ fibres over the order-$4$ characters, which is $Y$. With $A_6=q^9+(q-1)q^5$ (Corollary~\ref{cor:A6odd}) and $X=q^6+q^5$ (Conjecture~\ref{conj:Wp}) the coherent part is $(q-1)(q+3)q^7$, and the three-value variance of Theorem~\ref{thm:varH6} is recovered. The coherent fibres have sums $\approx q^4$, which is $q^3$ coefficients of typical size $q$ added with the same sign: the order-$4$ sums $S'(\lambda)$ of \S\ref{subsec:Wp} take the values $0,\pm q^6,\pm2q^6,\pm4q^6$ with the strong positive bias displayed in Table~\ref{tab:Wp}, and the quadratic sums $S(\lambda)$ are $+4q^6$ on the $4$-cycle classes of Theorem~\ref{thm:mixed}. This Arf-invariant bias of the supersingular quadratic forms is the arithmetic source of the coherence; the incoherent part, by contrast, involves no quadratic form and stays of the size $q^3(q-1)m_k^2$, negligible against $q^9$ as long as $m_k=o(q^{5/2})$. Since $\Var_\G/q^7\to4$ (Table~\ref{tab:d6var}), the amplification is $\Var_{\G^2}/\Var_\G\approx q^2/4$: $q$ coherent fibres with coherence $\kappa\approx1/10$ out of $|\G[2]|=q^3$ possible, carrying about $1/7$ of the total energy at $q=16$ (Table~\ref{tab:folding}).
 
 \begin{table}[ht]
+\centering
+\caption{Spectral folding data (\texttt{fourier\_spectrum\_folding.py}): the fibres of $\widehat\G\to\widehat{\G^2}$ grouped by the order of the character of $\G^2$; ``share'' is the fraction of $\Var_{\G^2}$, resp.\ $\Var_\G$, carried by the group of fibres, and $\kappa$ the coherence of Proposition~\ref{prop:folding}(d). At $d=4$ all classes come from Theorem~\ref{thm:d4formula}; at $d=6$ from the Hayes FFT.}\label{tab:folding}
+\small
+\begin{tabular}{@{}cccccccc@{}}
+\toprule
+$d$ & $q$ & $\Var_{\G^2}/\Var_\G$ & $[\G:\G^2]$ & order of $\psi$ & \#fibres & share of $\Var_{\G^2}$ / $\Var_\G$ & $\kappa$\\
+\midrule
+4 & 8 & $21.33=q^2/3$ & 64 & 1 & 1 & 0.438 / 0.167 & 0.875\\
+  &   &  &  & 2 & 7 & 0.563 / 0.833 & 0.225\\
+4 & 32 & $341.33=q^2/3$ & 1024 & 1 & 1 & 0.121 / 0.042 & 0.969\\
+  &   &  &  & 2 & 31 & 0.879 / 0.958 & 0.306\\
+6 & 8 & $16.66=0.260\,q^2$ & 512 & 1 & 1 & 0.077 / 0.036 & 0.070\\
+  &   &  &  & 2 & 7 & 0.896 / 0.228 & 0.128\\
+  &   &  &  & 4 & 56 & 0.027 / 0.736 & 0.001\\
+6 & 16 & $51.82=0.202\,q^2$ & 4096 & 1 & 1 & 0.062 / 0.008 & 0.095\\
+  &   &  &  & 2 & 15 & 0.935 / 0.138 & 0.086\\
+  &   &  &  & 4 & 240 & 0.002 / 0.854 & $3\cdot10^{-5}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}
+The two cases are instances of one pattern. In both, the deviation $\varphi$ is large on a small subgroup $K\subset\G^2$ ($K=\{1\}$ at $d=4$ with $\varphi\approx-q^4$; $K=\{c_2=0\}$ of order $q$ at $d=6$ with $\varphi\approx\sgn q^5$), and the Fourier transform of a function supported on $K$ is constant along the fibres of $\widehat{\G^2}\to\widehat K$. Folding to $\G^2$ therefore adds these coefficients in phase, whereas on $\G$ they are spread over $[\G:\G^2]$ times more classes. The size of $\varphi$ on $K$ is in turn a statement about the number of $\alpha\in\F_{q^n}$ with prescribed vanishing of symmetric functions ($e_1=e_2=e_3=0$ at $d=4$; $e_1=e_2=e_3=e_5=0$ at $d=6$, Proposition~\ref{prop:Ydiff}), i.e.\ about the point counts of the varieties $X$, $X_0$, $X_1$: the ``$q^2$'' is $|K|\varphi_K^2/|\G^2|$ divided by $q^{d+1}$, which equals $q^2$ in both cases ($1\cdot q^8/q$ and $q\cdot q^{10}/q^2$ against $q^5$ and $q^7$). What is specific to characteristic $2$ is not the folding identity but the existence of the subgroup $\G^2$ of index $q^{d/2}$ and the Arf-invariant bias that makes $\varphi_K$ as large as $q^{d}$, resp.\ $q^{d-1}$.
+\end{remark}
+
+\newpage
+\section{Summary of the numerical evidence}\label{sec:numerics}
+
+\begin{table}[H]
 \centering
 \caption{Status of the main identities. ``exact'' means verified by exact integer computation; the method is indicated.}\label{tab:status}
 \small
@@ -883,6 +982,7 @@ $d=6$: $A_6$ and $X$ for even $k$ (Conjecture~\ref{conj:A6X}) & open & exact, $q
 $d=6$: $\Var_{\G^2}/q^7$ formula (Theorem~\ref{thm:varH6}) & proved given Conj.~\ref{conj:A6X} ($X$-part only for odd $k$) & $q\le32$\\
 $Y=N_0-N_1$, lower vanishing $H^j_c(X,\mathcal L)=0$ ($j<9$), spectral constraints (Props.~\ref{prop:Ydiff}, \ref{prop:spectral}) & proved & $k\le5$\\
 $C_6=1$ & conditional on $m_k=o(q^{5/2})$ (Prop.~\ref{prop:Ydiff}(a)) & $q\le32$\\
+spectral folding: $\Var_{\G^2}=\sum_\psi|f_\psi|^2$, fibre sums at $d=4$ (Theorem~\ref{thm:folding4}) and $d=6$, \eqref{eq:varfold} & proved & $d=4$: $q\le32$; $d=6$: $q\le16$\\
 \bottomrule
 \end{tabular}
 \end{table}
