@@ -1,0 +1,37 @@
+m_k = [13, -1, -35, 47, 733]    Y_k = [104, -64, -17920, 192512, 24018944]
+
+[m_k] Berlekamp-Massey: minimal order L = 3 (five terms: the generic value is 3; 2L > 5 means the polynomial is not unique).  One connection polynomial: ['1', '24/19', '8157/361', '550/361']
+   order 1 from terms 1..2: c = ['-1/13'];  predicted terms 3..5 = ['1/13', '35/13', '-47/13']  vs actual [-35, 47, 733]  -> refuted
+      root -0.0769: |.|=2^-1.401  (not 2^{w/2})  [as eigenvalue of F on Y]
+   order 2 from terms 1..4: c = ['-24/19', '-53/19'];  predicted terms 5..5 = ['727/19']  vs actual [733]  -> refuted
+      root -0.6316+1.5462j: |.|=2^7.480  (not 2^{w/2})  [as eigenvalue of F on Y]
+      root -0.6316-1.5462j: |.|=2^7.480  (not 2^{w/2})  [as eigenvalue of F on Y]
+   order 3: two equations (n = 4, 5) in three unknowns -> a one-parameter family; no test possible.
+
+[Y_k] Berlekamp-Massey: minimal order L = 3 (five terms: the generic value is 3; 2L > 5 means the polynomial is not unique).  One connection polynomial: ['1', '192/19', '522048/361', '281600/361']
+   order 1 from terms 1..2: c = ['-8/13'];  predicted terms 3..5 = ['512/13', '143360/13', '-1540096/13']  vs actual [-17920, 192512, 24018944]  -> refuted
+      root -0.6154: |.|=2^-1.401  (not 2^{w/2})  [as eigenvalue of F on Y]
+   order 2 from terms 1..4: c = ['-192/19', '-3392/19'];  predicted terms 5..5 = ['23822336/19']  vs actual [24018944]  -> refuted
+      root -5.0526+12.3692j: |.|=2^7.480  (not 2^{w/2})  [as eigenvalue of F on Y]
+      root -5.0526-12.3692j: |.|=2^7.480  (not 2^{w/2})  [as eigenvalue of F on Y]
+   order 3: two equations (n = 4, 5) in three unknowns -> a one-parameter family; no test possible.
+
+Supersingular-shape constraints (eigenvalues 2^{w/2} * root of unity):
+   pure weight w=5: Y_2 / 2^w = -2  -> possible
+   pure weight w=6: Y_2 / 2^w = -1  -> possible
+   pure weight w=7: Y_2 / 2^w = -1/2  -> IMPOSSIBLE (not an algebraic integer)
+   pure weight w=8: Y_2 / 2^w = -1/4  -> IMPOSSIBLE (not an algebraic integer)
+   pure weight w=9: Y_2 / 2^w = -1/8  -> IMPOSSIBLE (not an algebraic integer)
+   pure weight w=10: Y_2 / 2^w = -1/16  -> IMPOSSIBLE (not an algebraic integer)
+   pure weight w=11: Y_2 / 2^w = -1/32  -> IMPOSSIBLE (not an algebraic integer)
+   v_2(Y_k) = [3, 6, 9, 12, 15]  = 3k exactly, i.e. m_k odd: [1, 1, 1, 1, 1]
+   => under the shape hypothesis a nonzero part of weight <= 6 (the 'q^3' twist itself) is forced.
+   Newton: e_1..e_5 of the eta_i from p_j = m_j: ['13', '85', '361', '1069', '2281'] ; |e_5| should be 2^{15/2} = 181.02 if b_9 = 5 and all |eta_i| = 2^1.5  -> excluded (Prop. 7.8)
+
+Point counts N_c = #{alpha in U : e_4(alpha) = c}:  Y = N_0 - N_1,  A_6 = N_0 + (q-1) N_1
+   k=1: N_1 = 220 = q^8 +- (q^5 - q^4) - q^2 m_k  [check: True],   N_0 = 324,   (N_1 - main)/q^3.5 = -4.596,  (N_1 - main)/q^4 = -3.250
+   k=2: N_1 = 64784 = q^8 +- (q^5 - q^4) - q^2 m_k  [check: True],   N_0 = 64720,   (N_1 - main)/q^3.5 = +0.125,  (N_1 - main)/q^4 = +0.062
+   k=3: N_1 = 16808128 = q^8 +- (q^5 - q^4) - q^2 m_k  [check: True],   N_0 = 16790208,   (N_1 - main)/q^3.5 = +1.547,  (N_1 - main)/q^4 = +0.547
+   k=4: N_1 = 4293972224 = q^8 +- (q^5 - q^4) - q^2 m_k  [check: True],   N_0 = 4294164736,   (N_1 - main)/q^3.5 = -0.734,  (N_1 - main)/q^4 = -0.184
+   k=5: N_1 = 1099543383040 = q^8 +- (q^5 - q^4) - q^2 m_k  [check: True],   N_0 = 1099567401984,   (N_1 - main)/q^3.5 = -4.049,  (N_1 - main)/q^4 = -0.716
+   (epsilon_0 m_k - 1)/12 = [Fraction(1, 1), Fraction(0, 1), Fraction(-3, 1), Fraction(-4, 1), Fraction(61, 1)]  (integers for k <= 5)

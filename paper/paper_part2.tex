@@ -822,8 +822,41 @@ The values $m_k=13,-1,-35,47,733$ ($k=1,\dots,5$) satisfy $|m_k|/q^{3/2}=4.60,\,
 Proposition~\ref{prop:trace}(b) was checked directly: enumerating $X^{(\sigma)}(\F_2)$ inside $\F_{2^{12}}$ gives $|U|=544$, $Y_1=104$, and the pushforward formula of (c) gives $(|U|,Y)=(544,104)$ and $(259072,-64)$ for $q=2,4$ (script \texttt{verify\_Y\_direct.py}; a SageMath version is \texttt{verify\_Y\_sage.sage}).
 \end{sloppypar}
 
-\begin{remark}[what is and is not established]
-Theorem~\ref{thm:twisted} and Propositions~\ref{prop:trace}--\ref{prop:ASsheaf} are unconditional. We have \emph{not} shown that $H^j_c(X_{\bar\F_2},\mathcal L)$ vanishes for $9<j<18$ (Proposition~\ref{prop:ASsheaf} gives only $j=18$), nor computed $b_9$: Katz's theorem on the concentration of $\sum\psi(f)$ in middle degree requires $p\nmid\deg f$ and a smooth ambient variety, whereas here $\deg e_4=4$ and $X$ is singular along the $1023$ planes of Proposition~\ref{prop:Xgeom}(b); a proof would need the Swan conductor of $\mathcal L$ along $X_\infty$ and local computations at $\mathrm{Sing}(X)$. Hence $m_k=O(q^{3/2})$, and with it $C_6=1$, is supported by the data but not proved. Two further cautions. First, the variety $V=\{p_1=p_3=p_5=0\}\subset\A^{12}_{\F_q}$ obtained by choosing an $\F_q$-basis of $\F_{q^{12}}$ is exactly $X^{(\sigma)}$, a nontrivial twist of $X\otimes\F_q$; so $(Y_k)_k$ is not a point-count sequence of a fixed variety, and the genuine ``closed form'' of $Y$ is the twisted $L$-function $L_\sigma(T)$, which Theorem~\ref{thm:twisted} shows is a rational function determined by finitely many $Y_k$ (Berlekamp--Massey on $Y_1,Y_2,\dots$ would identify it; $k\le5$ is not enough and $k=6$ means $\F_{2^{72}}$). Second, the untwisted counts $\#X(\F_q)$ for $q=2,4,8$ ($2048$, $2\,099\,200$, $1\,081\,081\,856$) far exceed $q^9$; this is not a sign of several components but of $q<12$, where no polynomial over $\F_q$ has twelve distinct roots. The tower reduction of Theorem~\ref{thm:towerred} exhibits $Y/G-1$ as a sum over $a\in\F_{q^6}$ of cubic Artin--Schreier sums over $\F_q$, i.e.\ as the trace of a relative $H^1$ of an elliptic Artin--Schreier family over a five-dimensional base; this is the natural starting point for computing $b_9$.
+\begin{proposition}[$Y$ as a difference of two point counts]\label{prop:Ydiff}
+Let $X_c=X\cap\{e_4=c\}$ ($c\in\F_2$) and $N_c=\#\{\alpha\in U:e_4(\alpha)=c\}=\#X_c^{(\sigma)}(\F_q)$.
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2em]
+\item $N_c=N_1$ for every $c\in\F_q^\times$, $Y=N_0-N_1$ and $A_6=N_0+(q-1)N_1$; hence $N_1=(A_6-Y)/q$ and $N_0=(A_6+(q-1)Y)/q$. For odd $k$, by Corollary~\ref{cor:A6odd},
+\[
+N_1=\#X_1^{(\sigma)}(\F_q)=q^8+q^5-q^4-q^2m_k ,
+\]
+so $m_k=O(q^{3/2})$ iff $N_1=q^8+q^5-q^4+O(q^{7/2})$, and $m_k=o(q^{5/2})$ (the hypothesis of Theorem~\ref{thm:varH6} for $C_6=1$) iff $N_1=q^8+q^5-q^4+o(q^{9/2})$.
+\item $X_0$ and $X_1$ are complete intersections of dimension $8$ in $\A^{12}_{\F_2}$, stable under $\sigma$. The morphism $\varphi:\mathbb G_m\times X_1\to X\setminus X_0$, $(s,z')\mapsto sz'$, satisfies $e_4\circ\varphi=s^4$ and is finite, surjective and radicial ($s^4=e_4(z)$ is integral and $s\mapsto s^4$ is injective in characteristic $2$), hence a universal homeomorphism; since $\mathcal L_{\psi_0}(s^4)\cong\mathcal L_{\psi_0}(s)$ and $H^\bullet_c(\mathbb G_m,\mathcal L_{\psi_0})=H^1_c$ is one-dimensional of weight $0$, there is a long exact sequence of $\sigma$- and $F$-modules
+\[
+\cdots\to H^{j-1}_c(X_{1,\bar\F_2},\mathbb Q_\ell)\to H^j_c(X_{\bar\F_2},\mathcal L)\to H^j_c(X_{0,\bar\F_2},\mathbb Q_\ell)\to H^j_c(X_{1,\bar\F_2},\mathbb Q_\ell)\to\cdots,
+\]
+whose trace formula is (a). In particular the weights of $H^j_c(X,\mathcal L)$ are bounded by those of $H^{j-1}_c(X_1)$ and $H^j_c(X_0)$.
+\item (lower vanishing) $H^j_c(X_{\bar\F_2},\mathcal L)=0$ for $j<9$ and $H^j_c(X_{c,\bar\F_2},\mathbb Q_\ell)=0$ for $j<8$; dually $H^j(X_{\bar\F_2},\mathcal L)=0$ for $j>9$. Hence in Theorem~\ref{thm:twisted} only $9\le j\le17$ contribute.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(a) $U$ is stable under $\alpha\mapsto s\alpha$ and $e_4(s\alpha)=s^4e_4(\alpha)$, and $s\mapsto s^4$ is a bijection of $\F_q^\times$; so $Y=\sum_c\chi(c)N_c=N_0-N_1$ and $A_6=\sum_cN_c$. (b) $e_4\notin I$ (on the diagonal line $e_4=u^4$), and $X$ is integral and Cohen--Macaulay, so $e_1,e_3,e_5,e_4-c$ is a regular sequence and $X_c$ is a complete intersection of dimension $8$. The coordinate ring of $\mathbb G_m\times X_1$ is generated over that of $X\setminus X_0$ by $s$, with $s^4=e_4$ and $z'_i=z_is^3/e_4$; $\varphi$ is bijective on geometric points because $s^4=e_4(z)$ determines $s$. A universal homeomorphism induces an equivalence of \'etale sites, and $s^4-s=(s^2+s)^2+(s^2+s)$ gives $\mathcal L_{\psi_0}(s^4)\cong\mathcal L_{\psi_0}(s)$; K\"unneth and excision for $X_0\subset X$ give the sequence. (c) $X$ and $X_c$ are local complete intersections of pure dimensions $9$ and $8$, so the shifted constant sheaves $\mathbb Q_\ell[9]$, $\mathbb Q_\ell[8]$ and the lisse rank-one twist $\mathcal L[9]$ are perverse; Artin's vanishing theorem for affine varieties \cite[4.1.1]{BBD} gives $H^i_c(X,\mathcal L[9])=0$ for $i<0$ and $H^i(X,\mathcal L[9])=0$ for $i>0$.
+\end{proof}
+
+\begin{proposition}[what five values do and do not say]\label{prop:spectral}
+\begin{sloppypar}
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=2em]
+\item The minimal linear recurrence over $\mathbb Q$ satisfied by $m_1,\dots,m_5$ (Berlekamp--Massey) has order $3$, the generic value for five numbers, and is not unique; the recurrences of order $1$ and $2$ fitted to the first two, resp.\ four, values predict $m_3=1/13$, resp.\ $m_5=727/19$; the characteristic roots of the order-$2$ fit have modulus $2^{7.48}$, which is not of the form $2^{w/2}$. Five values therefore carry no information about $L_\sigma(T)$ beyond Theorem~\ref{thm:twisted}.
+\item If every eigenvalue of $F$ on $H^\bullet_c(X_{\bar\F_2},\mathcal L)$ had the form $2^{w/2}\zeta$ with $\zeta$ a root of unity (the shape of the eigenvalues behind $A_6$ and $X$), then $Y_k=\sum_w2^{wk/2}A_w^{(k)}$ with algebraic integers $A_w^{(k)}$, and $Y_2=-2^6$ forces: no single weight $w\ge7$ can carry $Y$ (so the pure weight-$9$ case of Proposition~\ref{prop:Ydata} is impossible for every rank), and a nonzero part of weight $\le6$ must occur; indeed $v_2(Y_k)=3k$ exactly for $k\le5$ ($m_k$ is odd).
+\item For odd $k$, Corollary~\ref{cor:A6odd} reads $\Tr\bigl(\sigma F^k\mid H^\bullet_c(X_{\bar\F_2},\mathbb Q_\ell)\bigr)=2^{9k}+2^{6k}-2^{5k}$, and Conjecture~\ref{conj:A6X} for $A_6$ (all $k$) is equivalent to $\Tr(\sigma F^k\mid H^\bullet_c(X,\mathbb Q_\ell))=2^{9k}-(-64)^k+(-32)^k$ for all $k$: the untwisted cohomology of $X$ is Tate-like, with $\sigma$ acting by $-1$ on the classes of weights $12$ and $10$.
+\end{enumerate}
+\end{sloppypar}
+\end{proposition}
+\begin{proof}
+(a) is a computation (\texttt{L\_function\_spectral.py}). (b) $A_w^{(k)}$ is a sum of roots of unity with signs; if $Y_2=2^wA$ with $A$ an algebraic integer then $2^{w-6}\mid1$ in $\bar{\mathbb Z}$, so $w\le6$; and if all weights were $\ge7$ then $v_2(Y_2)\ge7>6$. (c) is Theorem~\ref{thm:twisted} with $\mathcal L$ replaced by $\mathbb Q_\ell$ and $A_6=\#X^{(\sigma)}(\F_q)$.
+\end{proof}
+
+\begin{remark}[what is and is not established, and a roadmap]
+Theorem~\ref{thm:twisted} and Propositions~\ref{prop:trace}--\ref{prop:ASsheaf}, \ref{prop:Ydiff}--\ref{prop:spectral} are unconditional. By Proposition~\ref{prop:Ydiff}, $m_k=O(q^{3/2})$ (hence $C_6=1$) would follow from: \emph{the eight-dimensional affine complete intersections $X_0=\{e_1=e_3=e_4=e_5=0\}$ and $X_1=\{e_1=e_3=e_5=0,\ e_4=1\}$ have $H^j_c(X_{c,\bar\F_2},\mathbb Q_\ell)$ of weight $\le9$ for $9\le j\le15$, and their top classes $H^{16}_c$ cancel in the sequence of \textup{(b)}}. For a smooth affine complete intersection in general position at infinity one expects even more (the cohomology of a bouquet of $8$-spheres plus the top class), which would give $Y=O(q^4)$ and $m_k=O(q)$; the data $|m_k|/q\le23$ do not exclude this for rank $\ge23$. Two obstacles stand in the way: the singular loci (of dimension $\le4$, where fewer than five coordinates are distinct), and the behaviour at infinity, where the projective closures of $X_0$ and $X_1$ meet the hyperplane at infinity in the same variety, the base $\mathbb P(X_0)$ of the cone $X_0$. We have \emph{not} shown that $H^j_c(X_{\bar\F_2},\mathcal L)$ vanishes for $9<j<18$ (Proposition~\ref{prop:ASsheaf} gives only $j=18$ and Proposition~\ref{prop:Ydiff}(c) only $j<9$), nor computed $b_9$: Katz's theorem on the concentration of $\sum\psi(f)$ in middle degree requires $p\nmid\deg f$ and a smooth ambient variety, whereas here $\deg e_4=4$ and $X$ is singular along the $1023$ planes of Proposition~\ref{prop:Xgeom}(b); a proof would need the Swan conductor of $\mathcal L$ along $X_\infty$ and local computations at $\mathrm{Sing}(X)$. Hence $m_k=O(q^{3/2})$, and with it $C_6=1$, is supported by the data but not proved. Two further cautions. First, the variety $V=\{p_1=p_3=p_5=0\}\subset\A^{12}_{\F_q}$ obtained by choosing an $\F_q$-basis of $\F_{q^{12}}$ is exactly $X^{(\sigma)}$, a nontrivial twist of $X\otimes\F_q$; so $(Y_k)_k$ is not a point-count sequence of a fixed variety, and the genuine ``closed form'' of $Y$ is the twisted $L$-function $L_\sigma(T)$, which Theorem~\ref{thm:twisted} shows is a rational function determined by finitely many $Y_k$ (Berlekamp--Massey on $Y_1,Y_2,\dots$ would identify it; $k\le5$ is not enough and $k=6$ means $\F_{2^{72}}$). Second, the untwisted counts $\#X(\F_q)$ for $q=2,4,8$ ($2048$, $2\,099\,200$, $1\,081\,081\,856$) far exceed $q^9$; this is not a sign of several components but of $q<12$, where no polynomial over $\F_q$ has twelve distinct roots. The tower reduction of Theorem~\ref{thm:towerred} exhibits $Y/G-1$ as a sum over $a\in\F_{q^6}$ of cubic Artin--Schreier sums over $\F_q$, i.e.\ as the trace of a relative $H^1$ of an elliptic Artin--Schreier family over a five-dimensional base; this is the natural starting point for computing $b_9$.
 \end{remark}
 
 \section{Summary of the numerical evidence}\label{sec:numerics}
@@ -848,12 +881,14 @@ $d=6$: $X$, $k$ odd: structure of $W'$ (Prop.~\ref{prop:Wp}), $W'(0,0)$, pure cu
 $d=6$: $X=q^6+q^5$, $k$ odd (Conjecture~\ref{conj:Wp}; $S_6$-structure of Table~\ref{tab:Wp}) & open & exact, $q\le128$; table $k\le7$\\
 $d=6$: $A_6$ and $X$ for even $k$ (Conjecture~\ref{conj:A6X}) & open & exact, $q\le128$ (Table~\ref{tab:A6X})\\
 $d=6$: $\Var_{\G^2}/q^7$ formula (Theorem~\ref{thm:varH6}) & proved given Conj.~\ref{conj:A6X} ($X$-part only for odd $k$) & $q\le32$\\
-$C_6=1$ & conditional on $m_k=o(q^{5/2})$ & $q\le32$\\
+$Y=N_0-N_1$, lower vanishing $H^j_c(X,\mathcal L)=0$ ($j<9$), spectral constraints (Props.~\ref{prop:Ydiff}, \ref{prop:spectral}) & proved & $k\le5$\\
+$C_6=1$ & conditional on $m_k=o(q^{5/2})$ (Prop.~\ref{prop:Ydiff}(a)) & $q\le32$\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{thebibliography}{99}
+\bibitem{BBD} A.~A.~Beilinson, J.~Bernstein and P.~Deligne, \emph{Faisceaux pervers}, Ast\'erisque \textbf{100} (1982).
 \bibitem{BEW} B.~C.~Berndt, R.~J.~Evans and K.~S.~Williams, \emph{Gauss and Jacobi Sums}, Wiley, New York, 1998.
 \bibitem{Bluher} A.~W.~Bluher, \emph{On $x^{q+1}+ax+b$}, Finite Fields Appl.\ \textbf{10} (2004), 285--305.
 \bibitem{Carlitz} L.~Carlitz, \emph{Explicit evaluation of certain exponential sums}, Math.\ Scand.\ \textbf{44} (1979), 5--16.
