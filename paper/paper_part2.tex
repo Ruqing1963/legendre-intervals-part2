@@ -42,7 +42,7 @@
 \author{Ruqing Chen}
 \address{GUT Geoservice Inc., Montreal, Canada}
 \email{ruqing@hotmail.com}
-\thanks{Preprint. Zenodo DOI: \href{https://doi.org/10.5281/zenodo.23224897}{10.5281/zenodo.23224897}. Code and data: \url{https://github.com/Ruqing1963/legendre-intervals-part2}.}
+\thanks{Preprint, version 2. Zenodo DOI: \href{https://doi.org/10.5281/zenodo.23252762}{10.5281/zenodo.23252762} (version 1: 10.5281/zenodo.23224897). Code and data: \url{https://github.com/Ruqing1963/legendre-intervals-part2}.}
 \date{\today}
 
 \begin{document}
@@ -231,7 +231,9 @@ By Lemma~\ref{lem:lambda1}, $S(0,a)=q^{-1}\sum_{b\in\F_q}S(b,a)=\sum_{\alpha:\Tr
 \end{proof}
 
 \begin{remark}
-The classical route \cite{Carlitz} uses the cubic Gauss sum $g_4=\sum_{y\in\F_4^\times}\chi_3(y)(-1)^{\Tr y}=2$ and the Hasse--Davenport relation $g_{4^m}=(-1)^{m-1}2^m$, giving $\sum_{x\in\F_{2^{2m}}}\psi_0(ax^3)=(-1)^{m+1}2^{m+1}$ for cubes and $(-1)^m2^m$ otherwise; with $m=4k$ this agrees with Proposition~\ref{prop:carlitz}.
+\begin{sloppypar}
+The classical route \cite{Carlitz} uses the cubic Gauss sum $g_4=\sum_{y\in\F_4^\times}\chi_3(y)(-1)^{\Tr y}=2$ and the Hasse--Davenport relation \cite{HD} $g_{4^m}=(-1)^{m-1}2^m$, giving $\sum_{x\in\F_{2^{2m}}}\psi_0(ax^3)=(-1)^{m+1}2^{m+1}$ for cubes and $(-1)^m2^m$ otherwise; with $m=4k$ this agrees with Proposition~\ref{prop:carlitz}.
+\end{sloppypar}
 \end{remark}
 
 \subsection{The full-group variance}
@@ -404,7 +406,7 @@ and $S(\lambda)=-\sum_j\omega_j(\lambda)^{12}$, where $\omega_j(\lambda)$ are th
 T_\lambda(x)=\lambda_5x^4+(\lambda_5x)^{1/4}+\lambda_3x^2+(\lambda_3x)^{1/2},\qquad
 R_\lambda=\ker T_\lambda=\{x:\lambda_5^4x^{16}+\lambda_3^4x^8+\lambda_3^2x^2+\lambda_5x=0\},
 \]
-so that $S(\lambda)\in\{0,\pm2^{(12k+r_\lambda)/2}\}$ with $r_\lambda=\dim_{\F_2}R_\lambda\le4$, $S(\lambda)=0$ iff $\Tr(\lambda_1x)\ne Q_\lambda(x)$ for some $x\in R_\lambda$, and the sign otherwise is the Arf invariant of $Q_\lambda$ on $\F_{q^{12}}/R_\lambda$ (shifted by $Q_\lambda(x_0)$, $B_\lambda(x_0,\cdot)=\Tr(\lambda_1\cdot)$). In particular all $C_\lambda$ are supersingular: $\omega_j(\lambda)=\sqrt q\,\zeta_j$ with roots of unity $\zeta_j$.
+so that $S(\lambda)\in\{0,\pm2^{(12k+r_\lambda)/2}\}$ with $r_\lambda=\dim_{\F_2}R_\lambda\le4$ (for the Gold and Kasami--Welch monomials this is the setting of \cite{LMW}), $S(\lambda)=0$ iff $\Tr(\lambda_1x)\ne Q_\lambda(x)$ for some $x\in R_\lambda$, and the sign otherwise is the Arf invariant of $Q_\lambda$ on $\F_{q^{12}}/R_\lambda$ (shifted by $Q_\lambda(x_0)$, $B_\lambda(x_0,\cdot)=\Tr(\lambda_1\cdot)$). In particular all $C_\lambda$ are supersingular: $\omega_j(\lambda)=\sqrt q\,\zeta_j$ with roots of unity $\zeta_j$.
 \end{theorem}
 \begin{proof}
 $A_6=\sum_{g\in\G^2}\Psi(g)=\frac{|\G^2|}{|\G|}\sum_{\eps^2=1}\psi_{12}(\eps)$ and $\psi_{12}(\eps_\lambda)=S(\lambda)$ by Proposition~\ref{prop:quadchar}; $S(0)=q^{12}$. The $L$-function interpretation is standard. $Q_\lambda(x)=\Tr(x(\lambda_5x^4+\lambda_3x^2))$ is of the form $\Tr(xL(x))$ with $L$ linearised, whence the quadratic-form statements; the kernel of $T_\lambda$ equals that of $T_\lambda^4$. Since the same structure persists over every $\F_{q^m}$, $\sum_{x\in\F_{q^m}}(-1)^{\Tr f_\lambda(x)}\in\{0,\pm2^{(mk+r)/2}\}$ for all $m$, which forces the normalised eigenvalues to be roots of unity \cite{GV}.

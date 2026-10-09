@@ -120,7 +120,7 @@ shareH = [q8["le2_H"], q16["le2_H"], q8["o4_H"], q16["o4_H"]]
 shareG = [q8["le2_G"], q16["le2_G"], q8["o4_G"], q16["o4_G"]]
 x = np.arange(4); w = 0.36
 bH = ax.bar(x - w / 2, shareH, w, color=C1, label=r"share of $\mathrm{Var}_{\mathcal{G}^2}$")
-bG = ax.bar(x + w / 2, shareG, w, color=C2, label=r"share of $\mathrm{Var}_{\mathcal{G}}$")
+bG = ax.bar(x + w / 2, shareG, w, color=C2, hatch="//", edgecolor="white", lw=0.5, label=r"share of $\mathrm{Var}_{\mathcal{G}}$")
 for bars in (bH, bG):
     for b in bars:
         ax.annotate(f"{b.get_height():.3f}", xy=(b.get_x() + b.get_width() / 2, b.get_height()), xytext=(0, 2),
@@ -189,11 +189,14 @@ classes = [("$1^6$", 1 / 720, 4), ("$2\\,1^4$", 1 / 48, 0), ("$2^2 1^2$", 1 / 16
            ("$4\\,2$", 1 / 8, -2), ("$5\\,1$", 1 / 5, -1), ("$6$", 1 / 6, 4)]
 assert abs(sum(c[1] for c in classes) - 1) < 1e-12 and abs(sum(c[1] * c[2] for c in classes) - 1) < 1e-12
 valcol = {4: C1, 2: C3, 0: GRAY, -2: C2, -1: "#c0392b"}
+valhatch = {4: "", 2: "//", 0: "..", -2: "xx", -1: "\\\\"}          # readable in black and white
+plt.rcParams["hatch.linewidth"] = 0.5
 fig, (axA, axB) = plt.subplots(1, 2, figsize=(7.0, 3.4), gridspec_kw={"width_ratios": [1.05, 1]})
 ax = axA
 x = np.arange(len(classes))
 dens = [c[1] for c in classes]
-bars = ax.bar(x, dens, 0.7, color=[valcol[c[2]] for c in classes], edgecolor="white", lw=0.5)
+bars = ax.bar(x, dens, 0.7, color=[valcol[c[2]] for c in classes], edgecolor="white", lw=0.5,
+              hatch=[valhatch[c[2]] for c in classes])
 for b, c in zip(bars, classes):
     ax.annotate(f"1/{round(1/c[1])}", xy=(b.get_x() + b.get_width() / 2, b.get_height()), xytext=(0, 2),
                 textcoords="offset points", ha="center", fontsize=6.3, color=INK)
@@ -201,14 +204,14 @@ ax.set_xticks(x); ax.set_xticklabels([c[0] for c in classes], fontsize=7.5, rota
 ax.set_ylabel(r"density of the class ($\times q^2$ pairs)", fontsize=8)
 ax.set_ylim(0, 0.25)
 from matplotlib.patches import Patch
-ax.legend(handles=[Patch(color=valcol[v], label=rf"$W'/q^7={v}$") for v in (4, 2, 0, -2, -1)], fontsize=6.8, frameon=False,
-          loc="upper left", ncol=2, title=r"value of $W'$", title_fontsize=7)
+ax.legend(handles=[Patch(facecolor=valcol[v], edgecolor="white", hatch=valhatch[v], label=rf"$W'/q^7={v}$") for v in (4, 2, 0, -2, -1)],
+          fontsize=6.8, frameon=False, loc="upper left", ncol=2, title=r"value of $W'$", title_fontsize=7)
 ax.grid(axis="y", color="#e5e7eb", lw=0.6)
 ax.set_title(r"(a) Frobenius classes in $S_6\cong Sp_4(\mathbb{F}_2)$", fontsize=9, loc="left")
 ax = axB
 contrib = [c[1] * c[2] for c in classes]
 cum = np.cumsum(contrib)
-ax.bar(x, contrib, 0.7, color=[valcol[c[2]] for c in classes], edgecolor="white", lw=0.5)
+ax.bar(x, contrib, 0.7, color=[valcol[c[2]] for c in classes], edgecolor="white", lw=0.5, hatch=[valhatch[c[2]] for c in classes])
 ax.plot(x, cum, color=INK, lw=1.2, marker="o", ms=3, label="running total")
 ax.axhline(1.0, color=INK, lw=0.8, ls="--")
 ax.axhline(0, color=GRAY, lw=0.6)

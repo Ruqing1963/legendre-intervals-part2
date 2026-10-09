@@ -5,7 +5,7 @@ Sequel to [legendre-intervals-explicit-formula](https://github.com/Ruqing1963/le
 (R. Chen, DOI 10.5281/zenodo.23219609), whose Open Problem 8.2 asked why the variance of the prime-power count
 over Legendre intervals `{f^2 + s : deg s <= d}` in even characteristic departs from the Keating–Rudnick prediction.
 
-Preprint DOI: 10.5281/zenodo.23224897.
+Preprint DOI (version 2, this release): 10.5281/zenodo.23252762 — version 1: 10.5281/zenodo.23224897.
 
 ## Results in one paragraph
 
@@ -72,19 +72,28 @@ cd ../paper && python make_figures.py && pdflatex paper_part2.tex
 ### Figures only
 
 All eight vector figures of the paper are produced by two scripts, which can be run from the repository root
-(they write into `paper/` regardless of the current directory):
+(they write into `paper/` regardless of the current directory). Dependencies: `pip install -r requirements.txt`
+(numpy, matplotlib; scipy and numba are needed only by the Hayes-FFT driver of the submodule).
 
 ```bash
-python code/generate_figures.py      # Figures 2, 3, 5, 6, 7, 8
-python paper/make_figures.py         # Figures 1, 4 (exact values from the paper, hard-coded in the script)
+python code/generate_figures.py      # Figures 2, 3, 5, 6, 7, 8   (~5 s)
+python paper/make_figures.py         # Figures 1, 4, exact values hard-coded in the script   (~2 s)
 ```
+
+### Extended symbolic verification (optional, requires SageMath)
+
+`code/verify_Y_sage.sage` recomputes $|U|$ and $Y$ for $q=2,4$ from the variety $X=V(e_1,e_3,e_5)$ (Proposition 7.4);
+the pure-Python equivalent is `code/verify_Y_direct.py`. Nothing else in the repository needs Sage.
+
+Approximate run times of the verification scripts (laptop): `legendre_d4_formula.py 7` 10 s; `legendre_d6_qf.py 7` 4 min;
+`legendre_d6_Wp_pattern.py 7` 5 min; `kasami_sign.py 9` 50 min; `general_d_scan.py 8,8` 1 min; everything else seconds.
 
 `legendre_d6_qf.py` for k = 7 takes about four minutes and `kasami_sign.py 9` about a quarter of an hour; everything else runs in seconds to a minute.
 
 ## Citation
 
 R. Chen, *Prime polynomials in Legendre intervals over F_{2^k}[t], II: exact variances via quadratic towers and
-supersingular Artin–Schreier curves*, preprint (2026), DOI 10.5281/zenodo.23224897.
+supersingular Artin–Schreier curves*, preprint, version 2 (2026), DOI 10.5281/zenodo.23252762.
 
 ## License
 
