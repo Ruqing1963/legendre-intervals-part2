@@ -21,7 +21,9 @@ Preprint DOI: 10.5281/zenodo.23224897.
   Frobenius permutes the roots of the Gold-type quintic v^5 + v + c, c = (λ_5^3/λ_3^5)^{1/2}, as a 4-cycle or not,
   and the exact count of 4-cycles, (q−2)/2, is proved; hence **A_6 = q^9 + (q−1)q^5 for all odd k** (Corollary 6.13).
   The conjectured closed forms A_6 = q^9 + (−1)^{k+1}(q−1)q^5 (even k) and X = (−1)^{k+1} q^6 + q^5 (all k)
-  are verified exactly for q ≤ 128.
+  are verified exactly for q ≤ 128. For X (odd k) the sums W' are order-4 character sums whose Frobenius classes
+  on the 4-dimensional kernel of L' = L + x^4 run through S_6 ≅ Sp_4(F_2) with exact polynomial frequencies
+  (Table 3); the structure, W'(0,0) and the pure parts are proved, the sign pattern is Conjecture 6.19.
   Y = q^3 m_k with m_k = 13, −1, −35, 47, 733 (k = 1..5) is a twisted Frobenius trace on a fixed nine-dimensional
   complete intersection X = V(e_1, e_3, e_5) ⊂ A^12 (no elementary closed form).
 * **Scaling.** Var_{G^2}/q^{d+1} ≍ q^2 at d = 6 (not q^4); C_6 = lim Var_{G^2}/q^9 = 1 holds if m_k = o(q^{5/2}).
@@ -52,6 +54,7 @@ python legendre_d6_qf.py 1 2 3 4 5 6 7            # exact A6, X via F_2-quadrati
 python legendre_d6_qf_mixed.py 3 5 7              # mixed terms W per class j, radicals, all S(lambda_1) (odd k)
 python quintic_check.py                           # factorisation types of v^5+v+c, k = 3..11 (Proposition 6.8)
 python kasami_sign.py 3 5 7 9                     # Theorem 6.12 via L-polynomials of y^2+y = x^5+t x^3+b x
+python legendre_d6_Wp_pattern.py 3 5 7            # W' (the sums behind X) by Frobenius class on ker L' (Table 3)
 python generate_figures.py                        # fig_gold_cycle.pdf, fig_singular_planes.pdf
 cd ../paper && python make_figures.py && pdflatex paper_part2.tex
 ```
