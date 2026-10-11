@@ -1,0 +1,8 @@
+
+k=5, q=32: theta in Theta (|Theta| = q^2-1), Gold parameter c = 1/theta with Tr_(q^3/q) c = 0
+   ('(1,1,1,2)', 'dim R', 3, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x30
+   ('(1,1,1,2)', 'dim R', 3, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 64, 'Arf', 0)  x120
+   ('(1,4)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x255
+   ('(1,4)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 64, 'Arf', 0)  x285
+   ('(2,3)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', False, 'G_H', 0, 'Arf', None)  x243
+   ('(2,3)', 'dim R', 1, 'dim R_H', 2, 'Q|R_H=0', True, 'G_H', 64, 'Arf', 0)  x90
