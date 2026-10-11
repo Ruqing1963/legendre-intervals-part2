@@ -155,6 +155,26 @@ def run(k, max_pairs=None):
             kappa0 = witt_Z4(Fd.add(r1, r5), 0, l3, l5)
             assert kappa0 % 2 == 0
             kappa0 //= 2
+            # explicit formula for q^(4)(r1)/2 through the quartic cofactor (Part IV, Lemma 3.4):
+            #   q^(4)(r1)/2 = e2abs(tau0) + Tr_{q/2}(tau0^2 + rho0 + l5 p5 + l3 p3),
+            #   p3 = tau0^3 + rho0 tau0,  p5 = tau0^5 + rho0^2 tau0 + b^2 tau0 / rho0  (b = 1/l5)
+            b_ = int(F.INV[l5])
+            t2 = int(F.M[t0, t0]); t3 = int(F.M[t2, t0]); t5 = int(F.M[t3, t2])
+            p3 = t3 ^ int(F.M[p, t0])
+            b2 = int(F.M[b_, b_])
+            p5 = t5 ^ int(F.M[int(F.M[p, p]), t0]) ^ int(F.M[int(F.M[b2, t0]), int(F.INV[p])])
+            # e2abs(tau0): second elementary symmetric function of the k conjugates of tau0 over F_2
+            conj = []
+            x = t0
+            for _ in range(k):
+                conj.append(x); x = int(F.SQ[x])
+            e2abs = 0
+            for i_ in range(k):
+                for j_ in range(i_ + 1, k):
+                    e2abs ^= int(F.M[conj[i_], conj[j_]])
+            e2abs = F.tr2(e2abs) if e2abs not in (0, 1) else e2abs   # e2abs lies in F_2
+            formula = (e2abs + F.tr2(t2 ^ p ^ int(F.M[l5, p5]) ^ int(F.M[l3, p3]))) % 2
+            formula_ok = (formula == I3 // 2)
             # s_4(l1) for all l1
             s4 = {l1: witt_sums(k, 4, l1, l3, l5, gf4, emb) for l1 in range(q)}
             nz = {l1: v for l1, v in s4.items() if abs(v) > 1e-9}
@@ -171,7 +191,7 @@ def run(k, max_pairs=None):
                 if abs(lhs - rhs) > 1e-6:
                     shift_ok = False
             key = (cls, "sign s_4", tuple(sorted(signs)), "#nonzero", len(nz), "hyperplane ok", hyper_ok, "shift ok", shift_ok,
-                   "I1=Tr(r5r6/tau0^2)", I1, "I2=q4(r5)", I2, "I3=q4(r1)", I3, "kappa0", kappa0)
+                   "I1=Tr(r5r6/tau0^2)", I1, "I2=q4(r5)", I2, "I3=q4(r1)", I3, "kappa0", kappa0, "cofactor formula ok", formula_ok)
             stats[key] += 1
     print(f"\nk={k}, q={q}: classes 4 1^2 = (1,1,4) and 4 2 = (2,4)")
     for key, n in sorted(stats.items(), key=str):
