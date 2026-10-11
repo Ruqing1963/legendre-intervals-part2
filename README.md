@@ -1,53 +1,53 @@
-# Prime polynomials in Legendre intervals over F_{2^k}[t], II
+﻿# Prime polynomials in Legendre intervals over F_{2^k}[t], II
 
-Exact variances via quadratic towers and supersingular Artin–Schreier curves.
+Exact variances via quadratic towers and supersingular Artinâ€“Schreier curves.
 Sequel to [legendre-intervals-explicit-formula](https://github.com/Ruqing1963/legendre-intervals-explicit-formula)
 (R. Chen, DOI 10.5281/zenodo.23219609), whose Open Problem 8.2 asked why the variance of the prime-power count
-over Legendre intervals `{f^2 + s : deg s <= d}` in even characteristic departs from the Keating–Rudnick prediction.
+over Legendre intervals `{f^2 + s : deg s <= d}` in even characteristic departs from the Keatingâ€“Rudnick prediction.
 
-Preprint DOI (version 2, this release): 10.5281/zenodo.23252762 — version 1: 10.5281/zenodo.23224897.
+Preprint DOI (version 2, this release): 10.5281/zenodo.23252762 â€” version 1: 10.5281/zenodo.23224897.
 
 ## Results in one paragraph
 
-* **d = 4, all q = 2^k (proved).** Closed formula for Ψ on every class of the Hayes group G_3 via the tower
-  F_q ⊂ F_{q^2} ⊂ F_{q^4} ⊂ F_{q^8}. Consequences: Var_{G^2}(Ψ)/q^5 = q(q−1), Var_G(Ψ)/q^5 = 3 − 3/q,
-  ratio q^2/3; the deviation is supported on {c_1 = 0}; ρ(ε) = 1 on the q−1 characters of conductor u^2 and
-  (q−3)/(3(q−1)) otherwise for odd k; an elementary proof of Carlitz's cubic evaluation over F_{2^{8k}}.
+* **d = 4, all q = 2^k (proved).** Closed formula for Î¨ on every class of the Hayes group G_3 via the tower
+  F_q âŠ‚ F_{q^2} âŠ‚ F_{q^4} âŠ‚ F_{q^8}. Consequences: Var_{G^2}(Î¨)/q^5 = q(qâˆ’1), Var_G(Î¨)/q^5 = 3 âˆ’ 3/q,
+  ratio q^2/3; the deviation is supported on {c_1 = 0}; Ï(Îµ) = 1 on the qâˆ’1 characters of conductor u^2 and
+  (qâˆ’3)/(3(qâˆ’1)) otherwise for odd k; an elementary proof of Carlitz's cubic evaluation over F_{2^{8k}}.
 * **d = 6, structure (proved).** The Legendre profile takes exactly three values, governed by [c_2 = 0] and
-  Tr(c_4/c_2^2); it is determined by three sums A_6, X, Y over U = {Tr α = Tr α^3 = Tr α^5 = 0} ⊂ F_{q^12}.
-* **d = 6, constants.** A_6 − q^9 and X are sums of Frobenius traces of the supersingular curves
-  y^2 + y = λ_5 x^5 + λ_3 x^3 + λ_1 x. The pure cubic and pure quintic parts are evaluated for all k.
-  For odd k the mixed part is evaluated completely (Theorem 6.12): W(λ_3, λ_5) = 2q^7 or 0 according as the
-  Frobenius permutes the roots of the Gold-type quintic v^5 + v + c, c = (λ_5^3/λ_3^5)^{1/2}, as a 4-cycle or not,
-  and the exact count of 4-cycles, (q−2)/2, is proved; hence **A_6 = q^9 + (q−1)q^5 for all odd k** (Corollary 6.13).
-  The conjectured closed forms A_6 = q^9 + (−1)^{k+1}(q−1)q^5 (even k) and X = (−1)^{k+1} q^6 + q^5 (all k)
-  are verified exactly for q ≤ 128. For X (odd k) the sums W' are order-4 character sums whose Frobenius classes
-  on the 4-dimensional kernel of L' = L + x^4 run through S_6 ≅ Sp_4(F_2) with exact polynomial frequencies
+  Tr(c_4/c_2^2); it is determined by three sums A_6, X, Y over U = {Tr Î± = Tr Î±^3 = Tr Î±^5 = 0} âŠ‚ F_{q^12}.
+* **d = 6, constants.** A_6 âˆ’ q^9 and X are sums of Frobenius traces of the supersingular curves
+  y^2 + y = Î»_5 x^5 + Î»_3 x^3 + Î»_1 x. The pure cubic and pure quintic parts are evaluated for all k.
+  For odd k the mixed part is evaluated completely (Theorem 6.12): W(Î»_3, Î»_5) = 2q^7 or 0 according as the
+  Frobenius permutes the roots of the Gold-type quintic v^5 + v + c, c = (Î»_5^3/Î»_3^5)^{1/2}, as a 4-cycle or not,
+  and the exact count of 4-cycles, (qâˆ’2)/2, is proved; hence **A_6 = q^9 + (qâˆ’1)q^5 for all odd k** (Corollary 6.13).
+  The conjectured closed forms A_6 = q^9 + (âˆ’1)^{k+1}(qâˆ’1)q^5 (even k) and X = (âˆ’1)^{k+1} q^6 + q^5 (all k)
+  are verified exactly for q â‰¤ 128. For X (odd k) the sums W' are order-4 character sums whose Frobenius classes
+  on the 4-dimensional kernel of L' = L + x^4 run through S_6 â‰… Sp_4(F_2) with exact polynomial frequencies
   (Table 3); the structure, W'(0,0) and the pure parts are proved, the sign pattern is Conjecture 6.19.
-  Y = q^3 m_k with m_k = 13, −1, −35, 47, 733 (k = 1..5) is a twisted Frobenius trace on a fixed nine-dimensional
-  complete intersection X = V(e_1, e_3, e_5) ⊂ A^12 (no elementary closed form); Y = N_0 − N_1 is the difference of
-  the twisted point counts of the 8-folds X ∩ {e_4 = 0}, X ∩ {e_4 = 1}, and C_6 = 1 is equivalent to
-  #X_1^(σ)(F_q) = q^8 + q^5 − q^4 + o(q^{9/2}) (Proposition 7.9).
-* **Scaling.** Var_{G^2}/q^{d+1} ≍ q^2 at d = 6 (not q^4); C_6 = lim Var_{G^2}/q^9 = 1 holds if m_k = o(q^{5/2}).
+  Y = q^3 m_k with m_k = 13, âˆ’1, âˆ’35, 47, 733 (k = 1..5) is a twisted Frobenius trace on a fixed nine-dimensional
+  complete intersection X = V(e_1, e_3, e_5) âŠ‚ A^12 (no elementary closed form); Y = N_0 âˆ’ N_1 is the difference of
+  the twisted point counts of the 8-folds X âˆ© {e_4 = 0}, X âˆ© {e_4 = 1}, and C_6 = 1 is equivalent to
+  #X_1^(Ïƒ)(F_q) = q^8 + q^5 âˆ’ q^4 + o(q^{9/2}) (Proposition 7.9).
+* **Scaling.** Var_{G^2}/q^{d+1} â‰ q^2 at d = 6 (not q^4); C_6 = lim Var_{G^2}/q^9 = 1 holds if m_k = o(q^{5/2}).
 * **Spectral folding and general d.** The amplification is the coherence of the Fourier coefficients along the fibres
-  of G^ → (G^2)^ (cosets of the 2-torsion G[2], of order q^{d/2}); at d = 6, Var_{G^2} = [(A_6−q^9)^2+(q−1)X^2]/q^4 + q^3(q−1)m_k^2
+  of G^ â†’ (G^2)^ (cosets of the 2-torsion G[2], of order q^{d/2}); at d = 6, Var_{G^2} = [(A_6âˆ’q^9)^2+(qâˆ’1)X^2]/q^4 + q^3(qâˆ’1)m_k^2
   exactly. The translation orbit K_d of the identity class has order 1 or q by Lucas' theorem. Exact variances for
-  d ≤ 10 show the q^2 amplification is special to d = 4, 6: at d = 8 the Legendre/full-group ratio is ≈ 2.3 for q = 4, 8.
+  d â‰¤ 10 show the q^2 amplification is special to d = 4, 6: at d = 8 the Legendre/full-group ratio is â‰ˆ 2.3 for q = 4, 8.
 
 See `paper/paper_part2.pdf` (and the status table in its last section) for exactly what is proved, verified, or conjectural.
 
 ## Part III (`paper3/`): the hexad of ker L' and the Witt sums behind X
 
-A standalone sequel, `paper3/paper_part3.tex` (own repository: [legendre-intervals-part3](https://github.com/Ruqing1963/legendre-intervals-part3), DOI 10.5281/zenodo.23290724), resolves the first open problem of Part II: the kernel of
-L' = λ_5^4 x^16 + λ_3^4 x^8 + x^4 + λ_3^2 x^2 + λ_5 x is the set of pairwise sums of the six roots of the sextic
-**B = λ_5^2 u^6 + λ_3^2 u^2 + λ_5 u + 1 = u·A(u) + 1** (A the Bluher quintic), via the identity L' = x^4 B^2 + B + 1.
-Hence the Frobenius acts on ker L' through S_6 ≅ Sp_4(F_2) as the permutation of the roots, the class is the
+A standalone sequel, `paper3/legendre_III_hexad_Sp4F2_witt_sums.tex` (own repository: [legendre-intervals-part3](https://github.com/Ruqing1963/legendre-intervals-part3), DOI 10.5281/zenodo.23290724), resolves the first open problem of Part II: the kernel of
+L' = Î»_5^4 x^16 + Î»_3^4 x^8 + x^4 + Î»_3^2 x^2 + Î»_5 x is the set of pairwise sums of the six roots of the sextic
+**B = Î»_5^2 u^6 + Î»_3^2 u^2 + Î»_5 u + 1 = uÂ·A(u) + 1** (A the Bluher quintic), via the identity L' = x^4 B^2 + B + 1.
+Hence the Frobenius acts on ker L' through S_6 â‰… Sp_4(F_2) as the permutation of the roots, the class is the
 factorisation type of B over F_q, and the class counts of Part II are factorisation statistics of the family
-u^6 + a u^2 + b u + b^2 (first moments proved, table verified to q = 512). The order-4 sums S''(λ) are treated as
-Frobenius traces of rank-4 Witt–Artin–Schreier sheaves: every S''(λ) is an integer, the normalised eigenvalues are
-roots of unity, in the class of 5-cycles W' = −q^7 is proved (L-polynomial (1−η^5 q^{5/2} T^5)/(1−η q^{1/2} T), η a
-primitive 8th root of unity), for the six classes with ker L' ⊂ F_{q^4} the F_{q^12}-sum equals q^4 times the
-F_{q^4}-sum, and the remaining classes have all S'' = ±4q^6. X = q^6 + q^5 is reduced to the class counts and to
+u^6 + a u^2 + b u + b^2 (first moments proved, table verified to q = 512). The order-4 sums S''(Î») are treated as
+Frobenius traces of rank-4 Wittâ€“Artinâ€“Schreier sheaves: every S''(Î») is an integer, the normalised eigenvalues are
+roots of unity, in the class of 5-cycles W' = âˆ’q^7 is proved (L-polynomial (1âˆ’Î·^5 q^{5/2} T^5)/(1âˆ’Î· q^{1/2} T), Î· a
+primitive 8th root of unity), for the six classes with ker L' âŠ‚ F_{q^4} the F_{q^12}-sum equals q^4 times the
+F_{q^4}-sum, and the remaining classes have all S'' = Â±4q^6. X = q^6 + q^5 is reduced to the class counts and to
 Brown invariants of explicit Z/4-forms over F_{q^4}, F_{q^6}. Scripts: `code/hexad_search.py`, `hexad_fit.py`,
 `sextic_identity.py`, `sextic_types.py`, `hexad_signs.py`, `hexad_traces.py`, `witt_lpoly.py`, `stable_stats.py`,
 `appendix_table_k3.py`; figures by `paper3/make_figures3.py`.
@@ -60,7 +60,7 @@ python hexad_search.py 3                  # Frobenius-stable hexads / symplectic
 python hexad_traces.py 3 5                # trace identities on the hexad (Lemma 4.4)
 python witt_lpoly.py 3                    # Witt sums over F_{q^m}, m <= 4, L-polynomials, S'' per lambda_1 (Tables 5, 6)
 python stable_stats.py 3 5                # stable symplectic structures per class (Proposition 4.5)
-cd ../paper3 && python make_figures3.py && pdflatex paper_part3.tex
+cd ../paper3 && python make_figures3.py && pdflatex legendre_III_hexad_Sp4F2_witt_sums.tex
 ```
 
 ## Layout
@@ -71,7 +71,7 @@ paper/     paper_part2.tex / .pdf and eight figures (fig_profile, fig_scaling fr
            from code/generate_figures.py)
 code/      verification scripts (numpy; the Hayes-FFT driver also needs numba + scipy via the submodule)
 data/      exact outputs quoted in the paper (text and CSV)
-reports/   working notes (Chinese) that accompany the paper, parts 1–7
+reports/   working notes (Chinese) that accompany the paper, parts 1â€“7
 legendre-intervals-explicit-formula/   git submodule: the paper-I repository (its code/ is imported)
 ```
 
@@ -120,7 +120,7 @@ Approximate run times of the verification scripts (laptop): `legendre_d4_formula
 ## Citation
 
 R. Chen, *Prime polynomials in Legendre intervals over F_{2^k}[t], II: exact variances via quadratic towers and
-supersingular Artin–Schreier curves*, preprint, version 2 (2026), DOI 10.5281/zenodo.23252762.
+supersingular Artinâ€“Schreier curves*, preprint, version 2 (2026), DOI 10.5281/zenodo.23252762.
 
 ## License
 
