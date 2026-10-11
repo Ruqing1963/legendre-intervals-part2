@@ -38,7 +38,7 @@ See `paper/paper_part2.pdf` (and the status table in its last section) for exact
 
 ## Part III (`paper3/`): the hexad of ker L' and the Witt sums behind X
 
-A standalone sequel, `paper3/paper_part3.tex`, resolves the first open problem of Part II: the kernel of
+A standalone sequel, `paper3/paper_part3.tex` (own repository: [legendre-intervals-part3](https://github.com/Ruqing1963/legendre-intervals-part3), DOI 10.5281/zenodo.23290724), resolves the first open problem of Part II: the kernel of
 L' = λ_5^4 x^16 + λ_3^4 x^8 + x^4 + λ_3^2 x^2 + λ_5 x is the set of pairwise sums of the six roots of the sextic
 **B = λ_5^2 u^6 + λ_3^2 u^2 + λ_5 u + 1 = u·A(u) + 1** (A the Bluher quintic), via the identity L' = x^4 B^2 + B + 1.
 Hence the Frobenius acts on ker L' through S_6 ≅ Sp_4(F_2) as the permutation of the roots, the class is the

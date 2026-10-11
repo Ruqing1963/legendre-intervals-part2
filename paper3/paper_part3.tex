@@ -50,7 +50,7 @@
 \author{Ruqing Chen}
 \address{GUT Geoservice Inc., Montreal, Canada}
 \email{ruqing@hotmail.com}
-\thanks{Preprint. Code and data: \url{https://github.com/Ruqing1963/legendre-intervals-part2} (directory \texttt{paper3/} and the scripts named in Section~\ref{sec:numerics}). Part~II: DOI 10.5281/zenodo.23252762.}
+\thanks{Preprint, DOI 10.5281/zenodo.23290724. Code and data: \url{https://github.com/Ruqing1963/legendre-intervals-part3} (the scripts are named in Section~\ref{sec:numerics}). Part~I: DOI 10.5281/zenodo.23225896; Part~II: DOI 10.5281/zenodo.23252762.}
 \date{\today}
 
 \begin{document}
@@ -381,7 +381,7 @@ Count pairs $(h,\omega)$ with $h\in C$, $h\in\Sp(V,\omega)$ of type $t$. For fix
 
 \begin{table}[H]
 \centering
-\caption{The classes of $\GL_4(\F_2)$ met by $S_6\cong\Sp_4(\F_2)$: for each $S_6$-class $t$, the $\GL_4(\F_2)$-class $C\supset t$ described by the Jordan or rational canonical form of its elements and its size $|C|=|\GL_4(\F_2)|/|\mathrm{Cent}(g)|$, and the number $28|t|/|C|$ of $g$-stable symplectic forms in which $g$ has type $t$ (Proposition~\ref{prop:symplectic}). The last column is the number of Frobenius-stable translation classes of hexads found by \texttt{hexad\_search.py} for every pair at $q=8$ and $q=32$, by canonical class, with the types of $\sigma$ in those classes (the class $5\,1$ was not searched since $\Kk_\lambda\not\subset\F_{q^{12}}$).}\label{tab:symplectic}
+\caption{The classes of $\GL_4(\F_2)$ met by $S_6\cong\Sp_4(\F_2)$: for each $S_6$-class $t$, the $\GL_4(\F_2)$-class $C\supset t$ described by the Jordan or rational canonical form of its elements and its size $|C|=|\GL_4(\F_2)|/|\mathrm{Cent}(g)|$, and the number $28|t|/|C|$ of $g$-stable symplectic forms in which $g$ has type $t$ (Proposition~\ref{prop:symplectic}). The last column is the number of Frobenius-stable translation classes of hexads found by \texttt{hexad\_search.py} for every pair at $q=8$, $32$ and $128$ ($16256$ pairs), by canonical class, with the types of $\sigma$ in those classes (the class $5\,1$ was not searched since $\Kk_\lambda\not\subset\F_{q^{12}}$).}\label{tab:symplectic}
 \small
 \begin{tabular}{@{}llllll@{}}
 \toprule
@@ -738,7 +738,7 @@ This is the mechanism behind the sign $(-1)^{k+1}$ in the conjectural formula $X
 
 \begin{table}[H]
 \centering
-\caption{Even $k$: the number of $(\lambda_3,\lambda_5)$ with $B_\lambda$ of each class and the value of $W'/q^7$. The polynomials are fitted to the exact counts at $q=4,64$ ($k\equiv2\bmod4$) and $q=16,256$ ($k\equiv0\bmod4$) with the leading coefficient $|C|/720$ imposed, so each is determined by two data points and is conjectural; they agree with the counts at $q=1024$ for the classes present there (see the text). The last column gives $W'/q^7$ at $q=4,16$ for the classes that occur there (\texttt{witt\_lpoly.py 2}, \texttt{4}, all pairs); the class $1^6$ first occurs at $q=64$.}\label{tab:evenk}
+\caption{Even $k$: the number of $(\lambda_3,\lambda_5)$ with $B_\lambda$ of each class and the value of $W'/q^7$. The polynomials were fitted to the exact counts at $q=4,64$ ($k\equiv2\bmod4$) and $q=16,256$ ($k\equiv0\bmod4$) with the leading coefficient $|C|/720$ imposed; the column $k\equiv2\bmod4$ is then confirmed exactly by all fifteen counts at $q=1024$ (\texttt{data/sextic\_types\_k10.txt}, $28$\,min), while the column $k\equiv0\bmod4$ rests on two data points ($q=4096$ is out of reach of the script). Both are conjectural. The last column gives $W'/q^7$ at $q=4,16$ for the classes that occur there (\texttt{witt\_lpoly.py 2}, \texttt{4}, all pairs); the class $1^6$ first occurs at $q=64$.}\label{tab:evenk}
 \small
 \begin{tabular}{@{}lllllc@{}}
 \toprule
@@ -762,7 +762,7 @@ $6$ & $q(q-1)/6$ & $q(q-1)/6$ & $0$ & $0$ & $-4$\\
 \section{Computations}\label{sec:numerics}
 All computations are exact. The scripts are in the directory \texttt{code/} of the repository; $\F_{q^{12}}$ is built as in Part~II.
 
-\textbf{\texttt{hexad\_search.py}} computes $\Kk_\lambda$ as an $\F_2$-nullspace, enumerates the $168$ frames and $28$ translation classes of hexads, and finds the Frobenius-stable classes and their normalised sextics. For $q=8,32$: every pair with $\Kk_\lambda\subset\F_{q^{12}}$ has at least one stable class; the normalised sextic of exactly one stable class is $B_\lambda/\lambda_5^2$ for every pair (\texttt{hexad\_fit.py} found the coefficients by solving linear systems over $\F_q$ for the exponents of $\lambda_3,\lambda_5$); its factorisation type is the class of Table~\ref{tab:classes}. The numbers of stable classes and the types of $\sigma$ with respect to them are exactly those predicted by Proposition~\ref{prop:symplectic} (Table~\ref{tab:symplectic}, last column; \texttt{stable\_stats.py}): e.g.\ every pair of class $2^21^2$ or $2^3$ has eight stable classes, six of type $2^21^2$ and two of type $2^3$, and every pair of order $4$ has two, one of each type. Thus the orbit structure alone does not determine the class, while the canonical hexad does.
+\textbf{\texttt{hexad\_search.py}} computes $\Kk_\lambda$ as an $\F_2$-nullspace, enumerates the $168$ frames and $28$ translation classes of hexads, and finds the Frobenius-stable classes and their normalised sextics. For $q=8,32,128$: every pair with $\Kk_\lambda\subset\F_{q^{12}}$ has at least one stable class; the normalised sextic of exactly one stable class is $B_\lambda/\lambda_5^2$ for every pair (\texttt{hexad\_fit.py} found the coefficients by solving linear systems over $\F_q$ for the exponents of $\lambda_3,\lambda_5$); its factorisation type is the class of Table~\ref{tab:classes}. The numbers of stable classes and the types of $\sigma$ with respect to them are exactly those predicted by Proposition~\ref{prop:symplectic} (Table~\ref{tab:symplectic}, last column; \texttt{stable\_stats.py}): e.g.\ every pair of class $2^21^2$ or $2^3$ has eight stable classes, six of type $2^21^2$ and two of type $2^3$, and every pair of order $4$ has two, one of each type. Thus the orbit structure alone does not determine the class, while the canonical hexad does.
 
 \textbf{\texttt{sextic\_identity.py}} verifies Lemma~\ref{lem:identity}, the membership of $L'_\lambda(r+s)$ in the ideal $(B_\lambda(r),B_\lambda(s))$ by a Gr\"obner basis over $\F_2[r,s,\lambda_3,\lambda_5]$, and the kernel description for all pairs at $q=8,32$.
 
@@ -847,7 +847,7 @@ Frobenius class $=$ factorisation type of $B_\lambda$; orbit structures, $N_0$, 
 Number of $\sigma$-stable symplectic forms of each type $=28|t|/|C|$ & proved; data $q=8,32$ & Prop.~\ref{prop:symplectic}\\
 Moments $(q-1)^2$, $(q-2)^2$, $q(q-2)$; pair lemma $\Tr(r+s)=0$ & proved, all $k$ & Thm~\ref{thm:moments}\\
 Class counts, $k$ odd (Table~\ref{tab:counts}) & verified $q\le512$; $\lambda_3=0$ proved & Conj.~\ref{conj:counts}\\
-Class counts, $k$ even (Table~\ref{tab:evenk}) & fitted to $q\le256$ & \S\ref{subsec:evenk}\\
+Class counts, $k$ even (Table~\ref{tab:evenk}) & $k\equiv2$ (4): verified $q\le1024$; $k\equiv0$ (4): fitted $q=16,256$ & \S\ref{subsec:evenk}\\
 $\Spp(\lambda)\in\Z$, $\in\{0,\pm4q^6\}$ or $\pm q^6$; $\Spp(\lambda_1)=\Spp(\lambda_1+1)$ & proved, all $k$ & Prop.~\ref{prop:real}\\
 $|\omega_j|=\sqrt q$, $\omega_j^{4N_0}$ all equal, $\zeta_j$ roots of unity & proved, all $k$ & Thm~\ref{thm:rootsofunity}\\
 Class $5\,1$: $L$-polynomial, $\Spp=(-1)^{k+1}q^6$, $W'=(-1)^{k+1}q^7$ & proved, all $k$ & Thms~\ref{thm:fivecycle}, \ref{thm:evenk}\\
@@ -888,7 +888,7 @@ Table~\ref{tab:k3} lists, for $q=8$, every $(\lambda_3,\lambda_5)\in\F_8\times\F
 \section{Algorithms and run times}\label{app:algo}
 \textbf{Fields.} $\F_{q^{12}}$ is represented as $\F_q[z]/(m(z))$ with $m$ irreducible of degree $12$ over $\F_q$ (fqlib tables of Part~II), and every $\F_2$-linear map ($x\mapsto x^2$, $x\mapsto x^{1/2}$, multiplication by a constant, $\Tr_{q^{12}/q}$, $T'_\lambda$) is stored as a $12k\times12k$ matrix over $\F_2$; $\Kk_\lambda$ is the nullspace of the matrix of $L'_\lambda=(T'_\lambda)^4$, computed by Gaussian elimination over $\F_2$.
 
-\textbf{Hexad search.} The $168$ frames of $\Kk_\lambda$ are the $4$-subsets of $\Kk_\lambda\setminus0$ of rank $4$ completed by their sum (there are $\binom{15}4=1365$ subsets, $840$ of rank $4$, and each frame arises from its $5$ four-subsets); a frame $F$ gives the hexad $H=\{0\}\cup F$, whose translation class is tested for $\sigma$-stability by checking whether $\sigma(H)+h\in\{H+v:v\in\Kk_\lambda\}$ for some $h$. For a stable class the polynomial $\prod_{h\in H}(u+h)$ is computed, the translate killing the $u^4$-coefficient is taken, and the coefficients are tested for membership in $\F_q$. Cost per pair: $O(168\cdot16)$ polynomial evaluations in $\F_{q^{12}}$; run times a few seconds ($q=8$), $5$\,min ($q=32$), several hours ($q=128$, $16256$ pairs).
+\textbf{Hexad search.} The $168$ frames of $\Kk_\lambda$ are the $4$-subsets of $\Kk_\lambda\setminus0$ of rank $4$ completed by their sum (there are $\binom{15}4=1365$ subsets, $840$ of rank $4$, and each frame arises from its $5$ four-subsets); a frame $F$ gives the hexad $H=\{0\}\cup F$, whose translation class is tested for $\sigma$-stability by checking whether $\sigma(H)+h\in\{H+v:v\in\Kk_\lambda\}$ for some $h$. For a stable class the polynomial $\prod_{h\in H}(u+h)$ is computed, the translate killing the $u^4$-coefficient is taken, and the coefficients are tested for membership in $\F_q$. Cost per pair: $O(168\cdot16)$ polynomial evaluations in $\F_{q^{12}}$; run times a few seconds ($q=8$), $5$\,min ($q=32$), $100$\,min ($q=128$, $16256$ pairs).
 
 \textbf{Class counts.} \texttt{sextic\_types.py} computes $\gcd(B_\lambda,u^{q^m}-u)$, $m=1,\dots,6$, by repeated squaring modulo $B_\lambda$ over $\F_q$; run times under a second for $q=8,32$, $11$\,s for $q=128$ and $5$\,min for $q=512$.
 

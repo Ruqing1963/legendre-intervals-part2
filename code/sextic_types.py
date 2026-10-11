@@ -21,10 +21,26 @@ PRED = {(1, 1, 1, 1, 1, 1): lambda q: Fraction((q - 2) * (q - 8), 720), (1, 1, 1
         (2, 4): lambda q: Fraction(q * (q - 2), 8), (1, 5): lambda q: Fraction(q * q + 1, 5), (6,): lambda q: Fraction((q + 1) * (q - 2), 6)}
 PRED0 = {(1, 1, 4): lambda q: Fraction(q - 2, 2), (2, 2, 2): lambda q: Fraction(q - 2, 6), (6,): lambda q: Fraction(q + 1, 3)}
 
+# even k (Part III, Table 11): the counts depend on k mod 4; fitted at q = 4, 64 (k = 2 mod 4; confirmed at q = 1024)
+# and q = 16, 256 (k = 0 mod 4)
+_EVEN_COMMON = {(1, 1, 1, 1, 2): lambda q: Fraction(q * (q - 4), 48), (2, 2, 2): lambda q: Fraction(q * (q - 4), 48),
+                (1, 1, 1, 3): lambda q: Fraction((q - 1) * (q - 4), 18), (3, 3): lambda q: Fraction((q - 1) * (q - 4), 18),
+                (1, 2, 3): lambda q: Fraction(q * (q - 1), 6), (6,): lambda q: Fraction(q * (q - 1), 6),
+                (1, 1, 4): lambda q: Fraction(q * q, 8), (2, 4): lambda q: Fraction(q * q, 8)}
+PRED_EVEN = {2: dict(_EVEN_COMMON, **{(1, 1, 1, 1, 1, 1): lambda q: Fraction((q - 4) * (q - 28), 720),
+                                      (1, 1, 2, 2): lambda q: Fraction((q - 4) ** 2, 16), (1, 5): lambda q: Fraction((q - 3) * (q + 1), 5)}),
+             0: dict(_EVEN_COMMON, **{(1, 1, 1, 1, 1, 1): lambda q: Fraction((q - 16) ** 2, 720),
+                                      (1, 1, 2, 2): lambda q: Fraction(q * (q - 8), 16), (1, 5): lambda q: Fraction((q - 1) ** 2, 5)})}
+PRED0_EVEN = {2: {(1, 1, 1, 1, 1, 1): lambda q: Fraction(q - 4, 60), (1, 1, 2, 2): lambda q: Fraction(q - 4, 4),
+                  (1, 5): lambda q: Fraction(2 * (q + 1), 5), (3, 3): lambda q: Fraction(q - 1, 3)},
+              0: {(1, 1, 1, 1, 1, 1): lambda q: Fraction(q - 16, 60), (1, 1, 2, 2): lambda q: Fraction(q, 4),
+                  (1, 5): lambda q: Fraction(2 * (q - 1), 5), (3, 3): lambda q: Fraction(q - 1, 3)}}
+
 
 def run(k):
     t0 = time.time()
     q = 1 << k
+    PRED, PRED0 = (globals()["PRED"], globals()["PRED0"]) if k % 2 else (PRED_EVEN[k % 4], PRED0_EVEN[k % 4])
     P = Poly(q)
     M = P.M
     mixed, pure = Counter(), Counter()

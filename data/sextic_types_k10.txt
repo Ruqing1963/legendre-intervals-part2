@@ -1,0 +1,18 @@
+
+k=10, q=1024  [1662.5s]   type of B over F_q -> count (prediction)
+   l3 != 0  (1, 1, 1, 1, 1, 1)         1411       64897/45  MISMATCH
+   l3 != 0  (1, 1, 1, 1, 2)           21760        64897/3  MISMATCH
+   l3 != 0  (1, 1, 1, 3)              57970       523775/9  MISMATCH
+   l3 != 0  (1, 1, 2, 2)              65025          65408  MISMATCH
+   l3 != 0  (1, 1, 4)                131072         130305  MISMATCH
+   l3 != 0  (1, 2, 3)                174592       523775/3  MISMATCH
+   l3 != 0  (1, 5)                   209305      1048577/5  MISMATCH
+   l3 != 0  (2, 2, 2)                 21760        64897/3  MISMATCH
+   l3 != 0  (2, 4)                   131072         130816  MISMATCH
+   l3 != 0  (3, 3)                    57970       523775/9  MISMATCH
+   l3 != 0  (6,)                     174592       523775/3  MISMATCH
+   l3 = 0   (1, 1, 1, 1, 1, 1)           17           None  MISMATCH
+   l3 = 0   (1, 1, 2, 2)                255           None  MISMATCH
+   l3 = 0   (1, 5)                      410           None  MISMATCH
+   l3 = 0   (3, 3)                      341           None  MISMATCH
+   all counts match the Table-3 polynomials: False
