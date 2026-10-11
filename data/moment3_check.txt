@@ -1,0 +1,6 @@
+k=3, q=8: sum N_3 by factoring = 103;  (q-1)^2 + q^-1 sum_Theta G_H = 103;  equal: True
+   |Theta| = 63 (= q^2 - 1: True);  values of G_H(theta) -> multiplicity: {0: 36, 16: 27}
+   G_H(theta) in {0, 2^(k+1)}: True;  #theta with G_H != 0 = 27 (= (q+1)(q-2)/2 = 27: True);  closed form (q-1)^2 + (q+1)(q-2) = 103: True
+k=5, q=32: sum N_3 by factoring = 1951;  (q-1)^2 + q^-1 sum_Theta G_H = 1951;  equal: True
+   |Theta| = 1023 (= q^2 - 1: True);  values of G_H(theta) -> multiplicity: {0: 528, 64: 495}
+   G_H(theta) in {0, 2^(k+1)}: True;  #theta with G_H != 0 = 495 (= (q+1)(q-2)/2 = 495: True);  closed form (q-1)^2 + (q+1)(q-2) = 1951: True
