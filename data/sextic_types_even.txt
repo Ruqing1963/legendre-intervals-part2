@@ -1,0 +1,62 @@
+
+k=2, q=4  [0.0s]   type of B over F_q -> count (prediction)
+   l3 != 0  (1, 1, 4)                     2              0  MISMATCH
+   l3 != 0  (1, 2, 3)                     2            5/3  MISMATCH
+   l3 != 0  (1, 5)                        1           17/5  MISMATCH
+   l3 != 0  (2, 4)                        2              1  MISMATCH
+   l3 != 0  (6,)                          2            5/3  MISMATCH
+   l3 = 0   (1, 5)                        2           None  MISMATCH
+   l3 = 0   (3, 3)                        1           None  MISMATCH
+   all counts match the Table-3 polynomials: False
+
+k=4, q=16  [0.1s]   type of B over F_q -> count (prediction)
+   l3 != 0  (1, 1, 1, 1, 2)               4            7/3  MISMATCH
+   l3 != 0  (1, 1, 1, 3)                 10          119/9  MISMATCH
+   l3 != 0  (1, 1, 2, 2)                  8             14  MISMATCH
+   l3 != 0  (1, 1, 4)                    32             21  MISMATCH
+   l3 != 0  (1, 2, 3)                    40          119/3  MISMATCH
+   l3 != 0  (1, 5)                       45          257/5  MISMATCH
+   l3 != 0  (2, 2, 2)                     4            7/3  MISMATCH
+   l3 != 0  (2, 4)                       32             28  MISMATCH
+   l3 != 0  (3, 3)                       10          119/9  MISMATCH
+   l3 != 0  (6,)                         40          119/3  MISMATCH
+   l3 = 0   (1, 1, 2, 2)                  4           None  MISMATCH
+   l3 = 0   (1, 5)                        6           None  MISMATCH
+   l3 = 0   (3, 3)                        5           None  MISMATCH
+   all counts match the Table-3 polynomials: False
+
+k=6, q=64  [2.7s]   type of B over F_q -> count (prediction)
+   l3 != 0  (1, 1, 1, 1, 1, 1)            3         217/45  MISMATCH
+   l3 != 0  (1, 1, 1, 1, 2)              80          217/3  MISMATCH
+   l3 != 0  (1, 1, 1, 3)                210         2015/9  MISMATCH
+   l3 != 0  (1, 1, 2, 2)                225            248  MISMATCH
+   l3 != 0  (1, 1, 4)                   512            465  MISMATCH
+   l3 != 0  (1, 2, 3)                   672         2015/3  MISMATCH
+   l3 != 0  (1, 5)                      793         4097/5  MISMATCH
+   l3 != 0  (2, 2, 2)                    80          217/3  MISMATCH
+   l3 != 0  (2, 4)                      512            496  MISMATCH
+   l3 != 0  (3, 3)                      210         2015/9  MISMATCH
+   l3 != 0  (6,)                        672         2015/3  MISMATCH
+   l3 = 0   (1, 1, 1, 1, 1, 1)            1           None  MISMATCH
+   l3 = 0   (1, 1, 2, 2)                 15           None  MISMATCH
+   l3 = 0   (1, 5)                       26           None  MISMATCH
+   l3 = 0   (3, 3)                       21           None  MISMATCH
+   all counts match the Table-3 polynomials: False
+
+k=8, q=256  [82.7s]   type of B over F_q -> count (prediction)
+   l3 != 0  (1, 1, 1, 1, 1, 1)           80        3937/45  MISMATCH
+   l3 != 0  (1, 1, 1, 1, 2)            1344         3937/3  MISMATCH
+   l3 != 0  (1, 1, 1, 3)               3570        32639/9  MISMATCH
+   l3 != 0  (1, 1, 2, 2)               3968           4064  MISMATCH
+   l3 != 0  (1, 1, 4)                  8192           8001  MISMATCH
+   l3 != 0  (1, 2, 3)                 10880        32639/3  MISMATCH
+   l3 != 0  (1, 5)                    13005        65537/5  MISMATCH
+   l3 != 0  (2, 2, 2)                  1344         3937/3  MISMATCH
+   l3 != 0  (2, 4)                     8192           8128  MISMATCH
+   l3 != 0  (3, 3)                     3570        32639/9  MISMATCH
+   l3 != 0  (6,)                      10880        32639/3  MISMATCH
+   l3 = 0   (1, 1, 1, 1, 1, 1)            4           None  MISMATCH
+   l3 = 0   (1, 1, 2, 2)                 64           None  MISMATCH
+   l3 = 0   (1, 5)                      102           None  MISMATCH
+   l3 = 0   (3, 3)                       85           None  MISMATCH
+   all counts match the Table-3 polynomials: False

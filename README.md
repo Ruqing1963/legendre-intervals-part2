@@ -36,6 +36,33 @@ Preprint DOI (version 2, this release): 10.5281/zenodo.23252762 — version 1: 1
 
 See `paper/paper_part2.pdf` (and the status table in its last section) for exactly what is proved, verified, or conjectural.
 
+## Part III (`paper3/`): the hexad of ker L' and the Witt sums behind X
+
+A standalone sequel, `paper3/paper_part3.tex`, resolves the first open problem of Part II: the kernel of
+L' = λ_5^4 x^16 + λ_3^4 x^8 + x^4 + λ_3^2 x^2 + λ_5 x is the set of pairwise sums of the six roots of the sextic
+**B = λ_5^2 u^6 + λ_3^2 u^2 + λ_5 u + 1 = u·A(u) + 1** (A the Bluher quintic), via the identity L' = x^4 B^2 + B + 1.
+Hence the Frobenius acts on ker L' through S_6 ≅ Sp_4(F_2) as the permutation of the roots, the class is the
+factorisation type of B over F_q, and the class counts of Part II are factorisation statistics of the family
+u^6 + a u^2 + b u + b^2 (first moments proved, table verified to q = 512). The order-4 sums S''(λ) are treated as
+Frobenius traces of rank-4 Witt–Artin–Schreier sheaves: every S''(λ) is an integer, the normalised eigenvalues are
+roots of unity, in the class of 5-cycles W' = −q^7 is proved (L-polynomial (1−η^5 q^{5/2} T^5)/(1−η q^{1/2} T), η a
+primitive 8th root of unity), for the six classes with ker L' ⊂ F_{q^4} the F_{q^12}-sum equals q^4 times the
+F_{q^4}-sum, and the remaining classes have all S'' = ±4q^6. X = q^6 + q^5 is reduced to the class counts and to
+Brown invariants of explicit Z/4-forms over F_{q^4}, F_{q^6}. Scripts: `code/hexad_search.py`, `hexad_fit.py`,
+`sextic_identity.py`, `sextic_types.py`, `hexad_signs.py`, `hexad_traces.py`, `witt_lpoly.py`, `stable_stats.py`,
+`appendix_table_k3.py`; figures by `paper3/make_figures3.py`.
+
+```bash
+cd code
+python sextic_identity.py                 # symbolic + numeric proof of the hexad identity
+python sextic_types.py 3 5 7 9            # class counts of B over F_q (Table 2 of Part III), q <= 512
+python hexad_search.py 3                  # Frobenius-stable hexads / symplectic forms (data/hexads_k3.json)
+python hexad_traces.py 3 5                # trace identities on the hexad (Lemma 4.4)
+python witt_lpoly.py 3                    # Witt sums over F_{q^m}, m <= 4, L-polynomials, S'' per lambda_1 (Tables 5, 6)
+python stable_stats.py 3 5                # stable symplectic structures per class (Proposition 4.5)
+cd ../paper3 && python make_figures3.py && pdflatex paper_part3.tex
+```
+
 ## Layout
 
 ```

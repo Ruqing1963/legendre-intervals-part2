@@ -1,0 +1,40 @@
+
+k=3: 56 records; keys of first record: ['N0', 'dim', 'l3', 'l5', 'n_stable', 'orbit_type', 'stable']
+  class (1, 1, 1, 3): #pairs 3; #stable classes -> #pairs {1: 3}
+      stable sextic types ((1, 1, 1, 3),)  x3
+  class (1, 1, 2, 2): #pairs 3; #stable classes -> #pairs {8: 3}
+      stable sextic types ((1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (2, 2, 2), (2, 2, 2))  x3
+  class (1, 1, 4): #pairs 6; #stable classes -> #pairs {2: 6}
+      stable sextic types ((1, 1, 4), (2, 4))  x6
+  class (1, 2, 3): #pairs 9; #stable classes -> #pairs {1: 9}
+      stable sextic types ((1, 2, 3),)  x9
+  class (2, 2, 2): #pairs 1; #stable classes -> #pairs {8: 1}
+      stable sextic types ((1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (2, 2, 2), (2, 2, 2))  x1
+  class (2, 4): #pairs 6; #stable classes -> #pairs {2: 6}
+      stable sextic types ((1, 1, 4), (2, 4))  x6
+  class (3, 3): #pairs 3; #stable classes -> #pairs {10: 3}
+      stable sextic types ((3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3))  x3
+  class (6,): #pairs 12; #stable classes -> #pairs {2: 12}
+      stable sextic types ((6,), (6,))  x12
+
+k=5: 992 records; keys of first record: ['N0', 'dim', 'l3', 'l5', 'n_stable', 'orbit_type', 'stable']
+  class (1, 1, 1, 1, 1, 1): #pairs 1; #stable classes -> #pairs {28: 1}
+      stable sextic types ((1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1), (1, 1, 1, 1, 1, 1))  x1
+  class (1, 1, 1, 1, 2): #pairs 15; #stable classes -> #pairs {4: 15}
+      stable sextic types ((1, 1, 1, 1, 2), (1, 1, 1, 1, 2), (1, 1, 1, 1, 2), (1, 1, 1, 1, 2))  x15
+  class (1, 1, 1, 3): #pairs 55; #stable classes -> #pairs {1: 55}
+      stable sextic types ((1, 1, 1, 3),)  x55
+  class (1, 1, 2, 2): #pairs 60; #stable classes -> #pairs {8: 60}
+      stable sextic types ((1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (2, 2, 2), (2, 2, 2))  x60
+  class (1, 1, 4): #pairs 120; #stable classes -> #pairs {2: 120}
+      stable sextic types ((1, 1, 4), (2, 4))  x120
+  class (1, 2, 3): #pairs 165; #stable classes -> #pairs {1: 165}
+      stable sextic types ((1, 2, 3),)  x165
+  class (2, 2, 2): #pairs 20; #stable classes -> #pairs {8: 20}
+      stable sextic types ((1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (1, 1, 2, 2), (2, 2, 2), (2, 2, 2))  x20
+  class (2, 4): #pairs 120; #stable classes -> #pairs {2: 120}
+      stable sextic types ((1, 1, 4), (2, 4))  x120
+  class (3, 3): #pairs 55; #stable classes -> #pairs {10: 55}
+      stable sextic types ((3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3), (3, 3))  x55
+  class (6,): #pairs 176; #stable classes -> #pairs {2: 176}
+      stable sextic types ((6,), (6,))  x176
