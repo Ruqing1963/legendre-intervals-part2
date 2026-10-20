@@ -43,7 +43,7 @@
 \address{GUT Geoservice Inc., Montreal, Canada}
 \email{ruqing@hotmail.com}
 \thanks{Preprint, version 2. Zenodo DOI: \href{https://doi.org/10.5281/zenodo.23252762}{10.5281/zenodo.23252762} (version 1: 10.5281/zenodo.23224897). Code and data: \url{https://github.com/Ruqing1963/legendre-intervals-part2}.}
-\date{\today}
+\date{October 2026}
 
 \begin{document}
 
@@ -1048,6 +1048,18 @@ The first assertion is the Keating--Rudnick asymptotic, which in characteristic 
 \end{enumerate}
 \end{sloppypar}
 
+\paragraph{Note added.}
+Open Problem 9.1 has since been taken up in Parts~III and IV \cite{ChenIII,ChenIV}. The sextic asked for is
+$B_\lambda(u)=\lambda_5^2u^6+\lambda_3^2u^2+\lambda_5u+1$: the identity $L'_\lambda=x^4B_\lambda^2+B_\lambda+1$
+shows that $\ker L'_\lambda$ is the set of pairwise sums of its six roots, which explains the action of the
+Frobenius through $S_6\cong Sp_4(\F_2)$ and identifies the class of $\lambda$ with the factorisation type of
+$B_\lambda$ over $\F_q$ (Part~III). The sums $W'$ are Frobenius traces of rank-four Witt--Artin--Schreier
+sheaves; their values are now proved in all eleven classes for odd $k$ (the value $-q^7$ on the class of
+$5$-cycles in Part~III, the remaining signs in Part~IV through a sixteen-point formula on the coset
+$T_\lambda'^{-1}(1)$ and a trace-parity theorem). The closed form $X=q^6+q^5$ for odd $k$ therefore depends
+only on the polynomial class counts of Table~\ref{tab:Wp}, which remain conjectural (verified for
+$q\le512$). Open Problems 9.2 and 9.3 are untouched.
+
 \newpage
 \subsection{Final checklist}\label{sec:numerics}
 Table~\ref{tab:status} lists every statement of the paper with its status (proved, conditional, or open) and the range in which it was checked by exact computation.
@@ -1087,6 +1099,8 @@ general even $d$: $q^2$-amplification only for $d=4,6$; bounded ratio at $d=8$ (
 \bibitem{Bluher} A.~W.~Bluher, \emph{On $x^{q+1}+ax+b$}, Finite Fields Appl.\ \textbf{10} (2004), 285--305.
 \bibitem{Carlitz} L.~Carlitz, \emph{Explicit evaluation of certain exponential sums}, Math.\ Scand.\ \textbf{44} (1979), 5--16.
 \bibitem{Chen} R.~Chen, \emph{Primes in Legendre intervals over $\F_q[t]$: an exact explicit-formula algorithm, verification for $d\le10$, and an anomaly in characteristic~2}, preprint (2026), version 2, DOI 10.5281/zenodo.23225896 (version 1: 10.5281/zenodo.23219609).
+\bibitem{ChenIII} R.~Chen, \emph{Prime polynomials in Legendre intervals over $\F_{2^k}[t]$, III: the hexad of a quartic linearised polynomial, the symplectic group $Sp_4(\F_2)$, and the Witt sums behind the constant $X$}, preprint (2026), DOI 10.5281/zenodo.23290724.
+\bibitem{ChenIV} R.~Chen, \emph{Prime polynomials in Legendre intervals over $\F_{2^k}[t]$, IV: point counts on hexad modular curves, Brown invariants of Witt sheaves, and the constant $X$}, preprint (2026), version 2, DOI 10.5281/zenodo.23308682.
 \bibitem{Coulter} R.~S.~Coulter, \emph{On the evaluation of a class of Weil sums in characteristic $2$}, New Zealand J.\ Math.\ \textbf{28} (1999), 171--184.
 \bibitem{Deligne} P.~Deligne, \emph{La conjecture de Weil. II}, Publ.\ Math.\ IHES \textbf{52} (1980), 137--252.
 \bibitem{DL} P.~Deligne and G.~Lusztig, \emph{Representations of reductive groups over finite fields}, Ann.\ of Math.\ (2) \textbf{103} (1976), 103--161.
